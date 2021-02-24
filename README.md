@@ -1,5 +1,13 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ef0441b4-e316-47ea-9961-e769a5c4407e/deploy-status)](https://app.netlify.com/sites/wai-resource-template/deploys)
 
-This template is for use with GitHub's [Create a new repository](https://github.com/new) feature.
+This repository includes the content for COGA Design Patterns for People with Cognitive and Learning Disabilities.
 
-For details of how to customise a new trepository and link into the WAI website see the [Creating a New Resource](https://wai-website-theme.netlify.app/technical/new-resource/).
+There are three types of pages, all in the `content` directory:
+
+* Individual pattern, including relevant meta data specified as front matter
+* “About“ page - information about what COGA Design Patterns are
+* “All” page - lists all individual patterns, separated by Objective
+
+## Front matter
+
+* …
