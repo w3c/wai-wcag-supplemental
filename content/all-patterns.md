@@ -1,15 +1,15 @@
 ---
 title: "All COGA Patterns"
-permalink: "/all/"
+permalink: "/patterns/"
 ---
 
-Here's a list of all COGA patterns, each listed under the `objective` they belong to.
+The patterns are grouped by <a href="{{ '/objectives' | relative_url'}}">Objectives</a>.
 
 {% for objective in site.objectives %}
-  <h2>{{ objective.name }}</h2>
+  <h2>{{ objective.title }}</h2>
   <ul>
   {% for pattern in site.patterns %}
-    {% if pattern.objective == objective.id %}
+    {% if pattern.objective == objective.ref %}
     <li><a href="{{ pattern.url | relative_url }}">{{ pattern.title }}</a></li>
     {% endif %}
   {% endfor %}

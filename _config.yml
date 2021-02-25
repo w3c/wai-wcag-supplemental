@@ -42,16 +42,10 @@ collections:
     title: Patterns
     permalink: /:collection/:name/
     output: true
-
-objectives: 
-  - id: 1
-    name: "Objective 1: Help Users Understand What Things are and How to Use Them"
-  - id: 2
-    name: "Objective 2: Help Users Find What They Need"
-  - id: 3
-    name: "Objective 3: Use Clear and Understandable Content"
-  - id: 4
-    name: "Objective 4: Help Users Avoid Mistakes and Know How to Correct Them"
+  objectives:
+    title: Objectives
+    permalink: /:collection/:name/
+    output: true
 
 defaults:
   -
@@ -69,7 +63,6 @@ defaults:
         <p><strong>Date:</strong> Updated @@ Month 2021. First published Month 20@@.</p>
         <p><strong>Editors:</strong> @@name, @@name. <strong>Contributors:</strong> @@name, @@name, and <a href="https://www.w3.org/groups/wg/@@wg/participants">participants of the @@WG</a>. ACKNOWLEDGEMENTS lists contributors and credits.</p>
         <p>Developed by the @@ Working Group (<a href="http://www.w3.org/WAI/@@/">@@WG</a>). Developed as part of the <a href="https://www.w3.org/WAI/@@/">WAI-@@ project</a>, @@co-funded by the European Commission.</p>
-      type_of_guidance: Pattern        
   -
     scope: 
       path: ""
@@ -78,9 +71,16 @@ defaults:
       permalink: /:path/:basename/
   -
     scope: 
-      path: "patterns"
+      type: "patterns"
+      path: "_patterns"
     values:
-      type_of_content: pattern
+      type_of_guidance: Pattern        
+  -
+    scope: 
+      type: "objectives"
+      path: "_objectives"
+    values:
+      type_of_guidance: Objective        
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
