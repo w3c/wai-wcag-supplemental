@@ -8,6 +8,10 @@ There are three types of pages, all in the `content` directory:
 * “About“ page - information about what COGA Design Patterns are
 * “All” page - lists all individual patterns, separated by Objective
 
-## Front matter
+## Adding a pattern
 
-* …
+* Add new patterns as `name.md` in the `/_patterns` folder.
+* In the frontmatter, specify at least: 
+  * `title`: will be displayed above pattern
+  * `ref`: is a unique reference to this page, can be used to identify it when it gets translated
+  * `objective`: the `id` of the objective this pattern belongs to. Objectives are specified in `_config.yml`
