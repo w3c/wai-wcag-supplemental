@@ -1,7 +1,7 @@
 ---
 title: "Make the purpose of your page clear"
 ref: /purpose-clear/ 
-objective: "Help Users Understand What Things are and How to Use Them"
+objective: 1
 ---
 
 ## User Need
