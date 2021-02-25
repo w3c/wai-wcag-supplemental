@@ -3,7 +3,7 @@ title: "All COGA Patterns"
 permalink: "/patterns/"
 ---
 
-The patterns are grouped by <a href="{{ '/objectives' | relative_url'}}">Objectives</a>.
+The patterns are grouped by <a href="{{ '/objectives' | relative_url }}">Objectives</a>.
 
 {% for objective in site.objectives %}
   <h2>{{ objective.title }}</h2>
