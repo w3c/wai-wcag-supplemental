@@ -7,7 +7,7 @@ There are two types of pages. Firstly, regular content pages are in the `content
 * “About“ page - information about what COGA Design Patterns are
 * “All” page - lists all individual patterns, separated by Objective
 
-Secondly, the patterns themselves, are in the `_patterns` directory. They are recognised by Jekyll as a “collection”.
+Secondly, the patterns and objectives themselves. Patterns are in `_patterns` directory. Objectives are in the `_objectives` directory. They are both recognised by Jekyll as collections.
 
 ## Adding a pattern
 
@@ -15,4 +15,12 @@ Secondly, the patterns themselves, are in the `_patterns` directory. They are re
 * In the frontmatter, specify at least: 
   * `title`: will be displayed above pattern
   * `ref`: is a unique reference to this page, can be used to identify it when it gets translated
-  * `objective`: the `id` of the objective this pattern belongs to. Objectives are specified in `_config.yml`
+  * `objective`: the `ref` of the objective this pattern belongs to`
+
+## Adding a new objective
+
+* Add new objectives as `name.md` in the `/_objectives` folder.
+* In the frontmatter, specify at least: 
+  * `title`: will be displayed above objective
+  * `ref`: is a unique reference to this page, is used by patterns to specifify which objective it belongs to
+
