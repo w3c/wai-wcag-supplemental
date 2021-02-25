@@ -51,8 +51,8 @@
     <div class="default-grid nav-container">
       <nav class="nav" aria-label="Context for this document">
         <ul>
-            <li class="nav__item"><a href="{{ '/patterns' | relative_url }}"{% if page.permalink == "/patterns/" %} class="active" aria-current="page"{% endif %}>All Patterns</a></li>
             <li class="nav__item"><a href="{{ '/objectives' | relative_url }}"{% if page.permalink == "/objectives/" %} class="active" aria-current="page"{% endif %}>All Objectives</a></li>
+            <li class="nav__item"><a href="{{ '/patterns' | relative_url }}"{% if page.permalink == "/patterns/" %} class="active" aria-current="page"{% endif %}>All Patterns</a></li>
             <li class="nav__item"{% if page.permalink == "/about/" %} class="active"{% endif %}><a href="{{ '/about' | relative_url }}"{% if page.permalink == "/about/" %} class="active" aria-current="page"{% endif %}>About this Design Guide</a></li>
             <li class="nav__item"><a href="https://w3c.github.io/wai-wcag-supporting-documents-redesign/alt-index.html">All WCAG 2 Guidance</a></li>
         </ul>
