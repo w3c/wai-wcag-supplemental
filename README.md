@@ -2,11 +2,12 @@
 
 This repository includes the content for COGA Design Patterns for People with Cognitive and Learning Disabilities.
 
-There are three types of pages, all in the `content` directory:
+There are two types of pages. Firstly, regular content pages are in the `content` directory:
 
-* Individual pattern, including relevant meta data specified as front matter
 * “About“ page - information about what COGA Design Patterns are
 * “All” page - lists all individual patterns, separated by Objective
+
+Secondly, the patterns themselves, are in the `_patterns` directory. They are recognised by Jekyll as a “collection”.
 
 ## Adding a pattern
 
