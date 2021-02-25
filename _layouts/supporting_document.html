@@ -60,8 +60,11 @@
 
     <div class="default-grid with-gap leftcol">
       <main id="main"{% if page.lang %} lang="{{page.lang}}"{% endif %} style="grid-column-start: 2;">
-        <header{%- if page.resource.ref %}{%- unless page.ref == page.resource.ref %} class="in-resource"{%- endunless -%}{%- endif -%}>
-          <h1>{% if page.title_icon %}<svg class="icon-in-title" aria-hidden="true"><use xlink:href="{{page.title_icon | relative_url}}"></use></svg> {% endif %}{% if page.title_html %}{{ page.title_html }}{% else %}{{ page.title }}{% endif %}</h1>
+        <header>
+          <h1>
+            <span style="display: block; font-size: .5em; margin-bottom: 0.25em;">{{ page.type_of_guidance }}</span>
+            {% if page.title_html %}{{ page.title_html }}{% else %}{{ page.title }}{% endif %}
+          </h1>
         </header>
 
         {{ content }}
