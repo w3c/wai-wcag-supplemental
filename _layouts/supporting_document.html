@@ -51,9 +51,9 @@
     <div class="default-grid nav-container">
       <nav class="nav" aria-label="Context for this document">
         <ul>
-            <li class="nav__item"><a href="/all">All Patterns</a></li>
-            <li class="nav__item"><a href="/about">About COGA Patterns</a></li>
-            <li class="nav__item"><a href="#">All WCAG 2 Guidance</a></li>
+            <li class="nav__item"><a href="{{ '/all' | relative_url }}"{% if page.permalink == "/all/" %} class="active" aria-current="page"{% endif %}>All Patterns</a></li>
+            <li class="nav__item"{% if page.permalink == "/about/" %} class="active"{% endif %}><a href="{{ '/about' | relative_url }}"{% if page.permalink == "/about/" %} class="active" aria-current="page"{% endif %}>About COGA Patterns</a></li>
+            <li class="nav__item"><a href="https://w3c.github.io/wai-wcag-supporting-documents-redesign/alt-index.html">All WCAG 2 Guidance</a></li>
         </ul>
       </nav>
     </div>
