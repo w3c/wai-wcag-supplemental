@@ -1,6 +1,7 @@
 ---
 title: "About the COGA design guide"
 permalink: "/about/"
+ref: "/about/"
 ---
 
 This guide provides assistance making websites and applications usable by people with cognitive and learning disabilities by providing guidance for designs and the design process.

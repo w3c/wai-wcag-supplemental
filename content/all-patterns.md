@@ -1,6 +1,7 @@
 ---
 title: "All COGA Patterns"
 permalink: "/patterns/"
+ref: "/patterns/"
 ---
 
 The patterns are grouped by <a href="{{ '/objectives' | relative_url }}">Objectives</a>.

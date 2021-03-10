@@ -1,6 +1,7 @@
 ---
 title: "All COGA Objectives"
 permalink: "/objectives/"
+ref: "/all/"
 ---
 
 Objectives are used to group the <a href="{{ '/patterns' | relative_url }}">patterns</a>.
