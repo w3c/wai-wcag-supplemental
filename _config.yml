@@ -37,6 +37,7 @@ remote_theme: w3c/wai-website-theme
 
 permalink: pretty
 
+collections_dir: content
 collections:
   patterns:
     title: Patterns
