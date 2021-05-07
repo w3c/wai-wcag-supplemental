@@ -90,8 +90,9 @@ standalone_resource_nav_links:
     ref: /patterns
   - name: About this Design Guide
     ref: /about
-standalone_resource_name: Design Guide
-standalone_resource_name_sub: "for People with Cognitive Disabilities and Learning Difficulties"
+standalone_resource_doc_name: Design Guide
+standalone_resource_doc_name_sub: "for People with Cognitive Disabilities and Learning Difficulties"
+
 
 
 plugins:
