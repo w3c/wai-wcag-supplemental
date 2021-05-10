@@ -2,8 +2,8 @@
 title: About Design Guide
 permalink: about
 github: 
-  repository: w3c/wai-coga-design-guide
-  path: content-usable/dg/about.md
+  repository: w3c/coga
+  path: design-guide/about.md
 feedbackemail: wai@w3.org
 ---
 
