@@ -84,6 +84,8 @@ defaults:
       type_of_guidance: Objective        
 
 standalone_resource_nav_links:
+  - name: Summary
+    ref: /summary
   - name: All Objectives
     ref: /objectives
   - name: All Patterns
