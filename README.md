@@ -7,7 +7,7 @@ There are two types of pages. Firstly, regular content pages are in the `content
 * “About“ page - information about what COGA Design Patterns are
 * “All” page - lists all individual patterns, separated by Objective
 
-Secondly, the patterns and objectives themselves. Patterns are in `_patterns` directory. Objectives are in the `_objectives` directory. They are both recognised by Jekyll as collections. These will eventually be generated and copied from design guie in the https://github.com/w3c/coga repo.
+Secondly, the patterns and objectives themselves. Patterns are in `_patterns` directory. Objectives are in the `_objectives` directory. They are both recognised by Jekyll as collections. These will eventually be generated and copied by an GitHub Action from the design guide source in the https://github.com/w3c/coga repo.
 
 ## Adding a pattern
 
