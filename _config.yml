@@ -37,6 +37,7 @@ remote_theme: w3c/wai-website-theme
 
 permalink: pretty
 
+collections_dir: content
 collections:
   patterns:
     title: Patterns
@@ -52,7 +53,7 @@ defaults:
     scope:
       path: ""
     values:
-      layout: supporting_document
+      layout: standalone_resource
       lang: en   # Change "en" to the translated-language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
       last_updated: 2021-@@-@@   # Put the date of this translation YYYY-MM-DD (with month in the middle)
       github:
@@ -82,15 +83,15 @@ defaults:
     values:
       type_of_guidance: Objective        
 
-supporting_doc_nav_links:
+standalone_resource_nav_links:
   - name: All Objectives
     ref: /objectives
   - name: All Patterns
     ref: /patterns
   - name: About this Design Guide
     ref: /about
-supporting_doc_name: Design Guide
-supporting_doc_name_sub: "for People with Cognitive Disabilities and Learning Difficulties"
+standalone_resource_name: Design Guide
+standalone_resource_name_sub: "for People with Cognitive Disabilities and Learning Difficulties"
 
 
 plugins:
