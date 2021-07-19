@@ -6,7 +6,6 @@ This repository includes the content for COGA Design Patterns for People with Co
 
 - content
 - content-images 
-- css
 
 
 
