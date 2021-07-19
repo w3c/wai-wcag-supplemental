@@ -84,14 +84,11 @@ defaults:
       type_of_guidance: Objective        
 
 standalone_resource_nav_links:
-  - name: All Objectives
-    ref: /objectives
-  - name: All Patterns
-    ref: /patterns
-  - name: About this Design Guide
+  - name: About Supplemental Guidance
     ref: /about
-standalone_resource_name: Design Guide
-standalone_resource_name_sub: "for People with Cognitive Disabilities and Learning Difficulties"
+  - name: All Supplemental Guidance to WCAG
+    ref: /patterns
+standalone_resource_doc_name: Supplemental Guidance to WCAG
 
 
 plugins:

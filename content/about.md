@@ -1,11 +1,13 @@
 --- 
-title: About Design Guide
+title: About Supplemental Guidance
 permalink: about
 github: 
   repository: w3c/coga
   path: design-guide/about.md
 feedbackemail: wai@w3.org
 ---
+
+<h2>Design Patterns for People with Cognitive and Learning Disabilities</h2>
 
 This guide provides assistance making web sites and applications friendly for
 people with <a>cognitive and learning disabilities</a>. The patterns in this
