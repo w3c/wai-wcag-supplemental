@@ -7,7 +7,17 @@ github:
 feedbackemail: wai@w3.org
 ---
 
-<h2>Design Patterns for People with Cognitive and Learning Disabilities</h2>
+{::nomarkdown}
+{% include box.html type="start" title="Note" icon="comments" %}
+{:/}
+
+Only Coga Patterns are included in their own section. Eventually we expect to include Low Vision and other Patterns as well.
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+## Design Patterns for People with Cognitive and Learning Disabilities
 
 This guide provides assistance making web sites and applications friendly for
 people with <a>cognitive and learning disabilities</a>. The patterns in this

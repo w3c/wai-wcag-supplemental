@@ -84,12 +84,13 @@ defaults:
       type_of_guidance: Objective        
 
 standalone_resource_nav_links:
+  - name: All Supplemental Guidance to WCAG
+    ref: /supplemental-guidance
   - name: About Supplemental Guidance
     ref: /about
-  - name: All Supplemental Guidance to WCAG
-    ref: /patterns
+  - name: Coga at a Glance
+    ref: /coga-patterns-glance
 standalone_resource_doc_name: Supplemental Guidance to WCAG
-
 
 plugins:
   - jekyll-seo-tag
