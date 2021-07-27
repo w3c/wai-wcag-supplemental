@@ -11,7 +11,17 @@ github:
   repository: w3c/coga
   path: design-guide/o1-understandable.html
 feedbackemail: wai@w3.org
+sidebar:
+  sections: 
+    - name: Background
+      items:
+        - title: User Stories
+          url: https://www.w3.org/TR/coga-usable/#objective-1-help-users-understand-what-things-are-and-how-to-use-them
+        - title: Glossary
+          url: https://www.w3.org/TR/coga-usable/#glossary
 ---
+
+<h2> Description</h2>
 
 <p>
   Users with cognitive and learning disabilities may have trouble with
@@ -49,3 +59,13 @@ feedbackemail: wai@w3.org
   users understand the effect of possible actions and reduce potential
   confusion.
 </p>
+
+<h2> Patterns included in this Objective</h2>
+
+{% for pattern in site.patterns %}
+<ul>
+{% if pattern.objective == page.ref %}
+  <li><a href="{{ pattern.url | relative_url }}">{{ pattern.title }}</a></li>
+{% endif %}
+</ul>
+{% endfor %}

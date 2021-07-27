@@ -75,13 +75,21 @@ defaults:
       type: "patterns"
       path: "_patterns"
     values:
-      type_of_guidance: Pattern        
+      type_of_guidance: Pattern   
+      sidebar:
+        title: About this Pattern
+        text: <em>Patterns</em> explain how to meet Cognitive Accessibility Requirements.
+      
   -
     scope: 
       type: "objectives"
       path: "_objectives"
     values:
-      type_of_guidance: Objective        
+      type_of_guidance: Objective
+      sidebar:
+        title: About this Objective
+        text: <em>Objectives</em> are collections of Cognitive Design Patterns on a topic.
+         
 
 standalone_resource_nav_links:
   - name: All Supplemental Guidance to WCAG
