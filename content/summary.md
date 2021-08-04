@@ -68,7 +68,9 @@ Read more about <a href="{{ objective.url | relative_url }}">{{ objective.title 
 #### Patterns
 
 {% for pattern in site.patterns %}
-  {% if pattern.objective == objective.ref %}
+  {%- assign obj_ref = pattern.ref | split: "p" | first -%}
+  {{ obj_ref }} {{objective.ref }}
+  {% if obj_ref == objective.ref %}
   - [{{ pattern.title }}]({{ pattern.url | relative_url }})
   {% endif %}
 {% endfor %}

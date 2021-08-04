@@ -21,8 +21,6 @@ sidebar:
           url: https://www.w3.org/TR/coga-usable/#glossary
 ---
 
-<h2> Description</h2>
-
 <p>
   Users with cognitive and learning disabilities may have trouble with
   orientation and learning. This can mean people get disoriented in a site.
@@ -60,12 +58,6 @@ sidebar:
   confusion.
 </p>
 
-<h2> Patterns included in this Objective</h2>
+{% include patterns.html obj_ref = page.ref %}
 
-{% for pattern in site.patterns %}
-<ul>
-{% if pattern.objective == page.ref %}
-  <li><a href="{{ pattern.url | relative_url }}">{{ pattern.title }}</a></li>
-{% endif %}
-</ul>
-{% endfor %}
+{% include pager.html %}
