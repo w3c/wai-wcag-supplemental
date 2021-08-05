@@ -26,10 +26,6 @@ Design Patterns that provide practical guidance on how to meet the accessibility
 {% for objective in site.objectives %}
 ### [{{ objective.title }}]({{ objective.url | relative_url }})
 
-{% for pattern in site.patterns %}
-  {% if pattern.objective == objective.ref %}
-  - [{{ pattern.title }}]({{ pattern.url | relative_url }})
-  {% endif %}
-{% endfor %}
+{% include patterns.html obj_ref = objective.ref %}
 
 {% endfor %}

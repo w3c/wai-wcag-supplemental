@@ -6,8 +6,6 @@ include file providing patterns list
   site.patterns
 {%- endcomment -%}
 
-<h2 id="patterns-for-objective">Design Patterns for this Objective</h2>
-
 <ul>
 {% for pattern in site.patterns -%}
   {%- assign obj_ref = pattern.ref | split: "p" | first -%}
