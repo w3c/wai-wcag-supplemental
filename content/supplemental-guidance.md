@@ -1,4 +1,5 @@
 ---
+doc-note-type: draft
 title: All Supplemental Guidance to WCAG
 permalink: /supplemental-guidance/
 ref: /supplemental-guidance/
@@ -12,7 +13,7 @@ feedbackemail: wai@w3.org
 {% include box.html type="start" title="Note" icon="comments"  %}
 {:/}
 
-Only Coga Patterns are included in their own section. Eventually we expect to include Low Vision and other Patterns as well.
+Eventually we expect to include other sections as well as Coga. For example, Low Vision.
 
 {::nomarkdown}
 {% include box.html type="end" %}
@@ -20,7 +21,7 @@ Only Coga Patterns are included in their own section. Eventually we expect to in
 
 ## Design Patterns for People with Cognitive and Learning Disabilities
 
-Design Patterns that provide detailed guidance on how to me meet the accessibility preferences of people with cognitive and learning disabilities. 
+Design Patterns that provide practical guidance on how to meet the accessibility requirements of people with cognitive and learning disabilities. 
 
 {% for objective in site.objectives %}
 ### [{{ objective.title }}]({{ objective.url | relative_url }})

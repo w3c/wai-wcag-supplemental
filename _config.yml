@@ -53,6 +53,7 @@ defaults:
     scope:
       path: ""
     values:
+      doc-note-type: draft
       layout: standalone_resource
       lang: en   # Change "en" to the translated-language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
       last_updated: 2021-@@-@@   # Put the date of this translation YYYY-MM-DD (with month in the middle)
@@ -75,11 +76,13 @@ defaults:
       type: "patterns"
       path: "_patterns"
     values:
-      type_of_guidance: Pattern   
+      type_of_guidance: Design Pattern   
       sidebar:
         title: About this Pattern
-        text: <em>Patterns</em> explain how to meet Cognitive Accessibility Requirements.
-      
+        text: <em>Design Patterns</em> explain how to meet Cognitive Accessibility Requirements.
+        toplinks: 
+          - title: Glossary
+            url: https://www.w3.org/TR/coga-usable/#glossary     
   -
     scope: 
       type: "objectives"
@@ -89,15 +92,15 @@ defaults:
       sidebar:
         title: About this Objective
         text: <em>Objectives</em> are collections of Cognitive Design Patterns on a topic.
-         
+        toplinks: 
+          - title: Glossary
+            url: https://www.w3.org/TR/coga-usable/#glossary     
 
 standalone_resource_nav_links:
   - name: All Supplemental Guidance to WCAG
     ref: /supplemental-guidance
   - name: About Supplemental Guidance
     ref: /about
-  - name: Coga at a Glance
-    ref: /coga-patterns-glance
 standalone_resource_doc_name: Supplemental Guidance to WCAG
 
 plugins:

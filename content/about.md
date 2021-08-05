@@ -1,4 +1,5 @@
 --- 
+doc-note-type: draft
 title: About Supplemental Guidance
 permalink: about
 github: 
@@ -11,7 +12,7 @@ feedbackemail: wai@w3.org
 {% include box.html type="start" title="Note" icon="comments" %}
 {:/}
 
-Only Coga Patterns are included in their own section. Eventually we expect to include Low Vision and other Patterns as well.
+Eventually we expect to include other sections as well as Coga. For example, Low Vision.
 
 {::nomarkdown}
 {% include box.html type="end" %}
@@ -33,7 +34,7 @@ in the normative WCAG [[WCAG22]] specification and may not otherwise be
 addressed.
 
 This guide is divided into design objectives. An outline of these objectives
-can also be found in the <a href="#summary">summary section</a>. Simply understanding the objectives
+can also be found in the <a href="./coga-patterns-glance">@@At a Glance</a> page. Simply understanding the objectives
 and related user stories may help designers make content more accessible to
 some users with <a>cognitive and learning disabilities</a>.
 
@@ -42,3 +43,18 @@ controls and other elements) that describe what to do to address user needs.
 Implementing these patterns is <strong>essential</strong> for some people with
 <a>cognitive and learning disabilities</a> to be able to use content
 independently.
+
+### Related Resources
+
+#### On the WAI website
+
+- [**Coga at a Glance**](./coga-patterns-glance)
+- [**Cognitive Accessibility**](https://www.w3.org/WAI/cognitive/)
+- [Cognitive and Learning Disabilities Taskforce](https://www.w3.org/WAI/GL/task-forces/coga/)
+
+#### Elsewhere on the W3C website
+
+- [**Coga Glossary**](https://www.w3.org/TR/coga-usable/#glossary)
+- [Usability Testing, Focus Groups, and Feedback](https://www.w3.org/TR/coga-usable/#Building_in_the_user)
+- [Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable)
+- [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1)
