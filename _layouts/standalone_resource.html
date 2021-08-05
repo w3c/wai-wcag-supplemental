@@ -102,6 +102,10 @@
         {{ page.rule_meta.description | markdownify }}
         {% endif %}
 
+        {% if page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
+        {% include pager.html %}
+        {% endif %}
+        
         {{ content }}
       </main>
     
