@@ -102,14 +102,15 @@
         {{ page.rule_meta.description | markdownify }}
         {% endif %}
 
+        {{ content }}
+
         {% if page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
         {% include pager.html %}
         {% endif %}
         
-        {{ content }}
       </main>
     
-        {% if page.sidebar != "" and page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
+        {% if page.sidebar != nill and page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
         <aside class="your-report your-report--expanded sidebar standalone-resource__sidebar">
           <h2 style="margin-top: 0">{{ page.sidebar.title}}</h2>
           <p>{{ page.sidebar.text }}</p>
@@ -120,9 +121,24 @@
           {% for section in page.sidebar.sections %}
           <dt>{{ section.name }}</dt>
           <dd><ul>
-          {% for item in section.items %}
-            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-          {% endfor %}
+          {% if section.name == "Personas" %}
+            {% assign personas = section.items | split: ", "%} 
+            {% for persona in personas %}
+              {% assign match = layout.persona-url-mappings | find_exp:"p", "p.name == persona" %}
+              {% if match != nill %}
+               <li><a href="{{ layout.persona-url-base | append: match.url | relative_url }}">{{ persona }}</a></li>
+              {% endif %}
+            {% endfor %}  
+          {% else %}
+            {% for item in section.items %}
+              {% if item.url != nil %}
+              <li><a href="{{ section.base | append: item.url | relative_url }}">{{ item.title }}</a></li>
+              {% else %}
+              {{ item.title }}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        
           </ul></dd>
           {% endfor %}
           </dl>              
