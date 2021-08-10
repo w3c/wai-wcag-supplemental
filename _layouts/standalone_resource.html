@@ -74,6 +74,12 @@
             <span class="standalone-resource__type-of-guidance">{{ page.type_of_guidance }}:</span>
             {% endif %}
             {% if page.title_html %}{{ page.title_html }}{% else %}{{ page.title }}{% endif %}
+            {% if page.type_of_guidance and page.type_of_guidance == "Design Pattern" %}
+            {% assign ref_parts = page.ref | split: "p" %}
+            {% assign objective_ref = ref_parts | first %}
+            {%- assign objective = site.objectives | find_exp: "obj", "obj.ref == objective_ref" -%}
+            <span class="standalone-resource__subtitle">In objective: {{ objective.title }}</span>
+            {% endif %}
           </h1>
 
           {% if page.type_of_guidance == "Test Rule" %}
@@ -115,38 +121,52 @@
           <h2 style="margin-top: 0">{{ page.sidebar.title}}</h2>
           <p>{{ page.sidebar.text }}</p>
           {% for link in page.sidebar.toplinks %}
-          <a href="{{ link.url | relative_url }}">{{ link.title }}</a></li></li>
+            {% comment %} Yes we have to do this as include won't accept braces!{% endcomment %}
+            {% capture label-arg %} 
+            {{ link.title }}
+            {% endcapture %} 
+            {% capture href-arg%}
+            {{ link.url | relative_url }}
+            {% endcapture %}
+            {% include resource-link.html label=label-arg href=href-arg %}
           {% endfor %}
           <dl>
           {% for section in page.sidebar.sections %}
             <dt>{{ section.name }}</dt>
-            <dd><ul>
-            {% if section.name == "Personas" or section.name == "User Story" %}
+            <dd>
+            {% if section.name == "Personas" or section.name == "User Story" or section.name == "User Stories" %}
               {% assign items = section.items | split: ", "%} 
               {% if section.name == "Personas" %}
-                {% assign url-base = layout.persona-url-base %}
-                {% assign mappings = layout.persona-url-mappings %}
+                {% assign url-base = site.data.design-guide-links.persona-url-base %}
+                {% assign mappings = site.data.design-guide-links.persona-url-mappings %}
               {% else %}
-                {% assign url-base = layout.userstory-url-base %}
-                {% assign mappings = layout.userstory-url-mappings %}
+                {% assign url-base = site.data.design-guide-links.userstory-url-base %}
+                {% assign mappings = site.data.design-guide-links.userstory-url-mappings %}
               {% endif %}  
                 {% for item in items %}
                 {% assign match = mappings | find_exp:"mapping", "mapping.name == item" %}
                 {% if match != nill %}
-                <li><a href="{{ url-base | append: match.url | relative_url }}">{{ item }}</a></li>
+                  {% comment %} Yes we have to do this as include won't accept braces!{% endcomment %}
+                  {% capture label-arg %} 
+                  {{ item }}
+                  {% endcapture %} 
+                  {% capture href-arg%}
+                  {{ url-base | append: match.url | relative_url }}
+                  {% endcapture %}
+                  {% include resource-link.html label=label-arg href=href-arg %}
                 {% endif %}
               {% endfor %}  
             {% else %}
               {% for item in section.items %}
                 {% if item.url != nil %}
-                <li><a href="{{ section.base | append: item.url | relative_url }}">{{ item.title }}</a></li>
+                <a href="{{ section.base | append: item.url | relative_url }}">{{ item.title }}</a>
                 {% else %}
                 {{ item.title }}
                 {% endif %}
               {% endfor %}
             {% endif %}
           
-            </ul></dd>
+            </dd>
           {% endfor %}
           </dl>              
         </aside>
