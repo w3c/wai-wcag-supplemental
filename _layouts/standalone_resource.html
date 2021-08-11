@@ -78,7 +78,7 @@
             {% assign ref_parts = page.ref | split: "p" %}
             {% assign objective_ref = ref_parts | first %}
             {%- assign objective = site.objectives | find_exp: "obj", "obj.ref == objective_ref" -%}
-            <span class="standalone-resource__subtitle">In objective: {{ objective.title }}</span>
+            <span class="standalone-resource__subtitle">In Objective: {{ objective.title }}</span>
             {% endif %}
           </h1>
 
@@ -121,6 +121,14 @@
           <h2 style="margin-top: 0">{{ page.sidebar.title}}</h2>
           <p>{{ page.sidebar.text }}</p>
           {% for link in page.sidebar.toplinks %}
+          <a 
+          href="{{ link.url }}"
+          class="resource-link"
+          target="_blank"
+          rel="noopener roreferrer">
+          {% include_cached icon.html name="external-link" %}
+          <span>{{link.title}}</span></a>
+{%comment%}
             {% comment %} Yes we have to do this as include won't accept braces!{% endcomment %}
             {% capture label-arg %} 
             {{ link.title }}
@@ -129,7 +137,8 @@
             {{ link.url | relative_url }}
             {% endcapture %}
             {% include resource-link.html label=label-arg href=href-arg %}
-          {% endfor %}
+{%endcomment%}
+            {% endfor %}
           <dl>
           {% for section in page.sidebar.sections %}
             <dt>{{ section.name }}</dt>
@@ -146,6 +155,15 @@
                 {% for item in items %}
                 {% assign match = mappings | find_exp:"mapping", "mapping.name == item" %}
                 {% if match != nill %}
+                
+                <a 
+                href="{{ url-base | append: match.url | relative_url }}"
+                class="resource-link"
+                target="_blank"
+                rel="noopener roreferrer">
+                {% include_cached icon.html name="external-link" %}
+                <span>{{item}}</span></a>
+{%comment%}
                   {% comment %} Yes we have to do this as include won't accept braces!{% endcomment %}
                   {% capture label-arg %} 
                   {{ item }}
@@ -154,7 +172,8 @@
                   {{ url-base | append: match.url | relative_url }}
                   {% endcapture %}
                   {% include resource-link.html label=label-arg href=href-arg %}
-                {% endif %}
+{%endcomment%}
+                  {% endif %}
               {% endfor %}  
             {% else %}
               {% for item in section.items %}
