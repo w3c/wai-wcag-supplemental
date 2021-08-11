@@ -79,7 +79,7 @@ defaults:
       type_of_guidance: Design Pattern   
       sidebar:
         title: About this Pattern
-        text: <em>Design Patterns</em> explain how to meet Cognitive Accessibility Requirements.
+        text: <em>Design Patterns</em> explain how to improve accessibility for people with cognitive and learning disabilities.
         toplinks: 
           - title: Cognitive Accessibility Glossary
             url: https://www.w3.org/TR/coga-usable/#glossary     
