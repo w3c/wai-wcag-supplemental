@@ -11,7 +11,8 @@ The generated files are:
 - `/content/_cogabuild`
 - `/content-images/wai-coa-design-guide`
 
+# Project planning and Work in Progress
 
-
-
-
+- The [requirements wiki page](https://www.w3.org/WAI/GL/task-forces/coga/wiki/Requirements_for_Design_Guide_in_WAI_Supporting_Documents)
+- Earlier proof of concept - [Preview](https://w3c.github.io/wai-coga/coga-draft/guide/design-notes) [repo](https://github.com/w3c/wai-coga)
+- Work on generating pages from the [coga design guide](https://github.com/w3c/coga/tree/steve-web-dg)
