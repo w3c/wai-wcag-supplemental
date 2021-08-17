@@ -2,10 +2,14 @@
 
 This repository includes the content for COGA Design Patterns for People with Cognitive and Learning Disabilities.
 
-**NB! The content is generated in the [wai/coga repositry](https://github.com/w3c/coga) using a github action which also commits here under:**
+NB! some of the content is generated from content in the w3c/coga repo using the script `scripts/buildcoga`.
+The coga content is accessed as a git submodule in `_external/resources/coga`.
 
-- content
-- content-images 
+The genrated files are:
+
+- `/content/_cogabuild`
+- `/content-images/wai-coa-design-guide`
+
 
 
 

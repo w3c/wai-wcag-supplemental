@@ -1,14 +1,14 @@
 #!/bin/bash
 # Process Design guide files and output to ./design-guide/_build/
 # NB run with cwd = repository root ./design-guide/generate
-  
-SOURCEDIR=design-guide
-IMG_SOURCEDIR=content-usable/img
-DESTROOT=$SOURCEDIR/_cogabuild
-CONTENT_DESTDIR=$DESTROOT/content
+
+COGADIR=_external/resources/coga/
+SOURCEDIR=$COGADIR/design-guide
+IMG_SOURCEDIR=$COGADIR/content-usable/img
+CONTENT_DESTDIR=content/_cogabuild
 PATTERN_DESTDIR=$CONTENT_DESTDIR/_patterns
 OBJECTIVE_DESTDIR=$CONTENT_DESTDIR/_objectives
-IMG_DESTDIR=$DESTROOT/content-images/wai-coga-design-guide
+IMG_DESTDIR=content-images/wai-coga-design-guide
 
 if [ ! -d $SOURCEDIR ]
 then
@@ -87,8 +87,8 @@ parse_file () {
 }
 
 # Clean dest and create empty folders
-rm -rf $DESTROOT 
-for dir in $DESTROOT $CONTENT_DESTDIR $PATTERN_DESTDIR $OBJECTIVE_DESTDIR $IMG_DESTDIR; do mkdir -p $dir; done
+rm -rf $CONTENT_DESTDIR $IMG_DESTDIR/*
+for dir in $CONTENT_DESTDIR $PATTERN_DESTDIR $OBJECTIVE_DESTDIR $IMG_DESTDIR; do mkdir -p $dir; done
 
 shopt -s extglob  # expanded pattern expansion
 shopt -s nullglob # no error if no md files
@@ -97,11 +97,3 @@ for file in $SOURCEDIR/o[[:digit:]]p*.{html,md}; do parse_file $file $PATTERN_DE
 
 IMAGE_FILES="StartHere.svg find.svg clear-text.svg glass.svg light.svg memory.svg support.svg tools.svg"
 for file in $IMAGE_FILES ; do cp $IMG_SOURCEDIR\/$file $IMG_DESTDIR\/; done
-
-if [ "${1,,}" = "--local-deploy" ]
-then
-  WAI_REPO="../wai/wai-coga-design-guide"
-  echo Deploying _build to local wai-coga-design-guide repo directory at $WAI_REPO
-  rm -rf $WAI_REPO/{content/objectives,content/patterns,content-images/wai-coga-design-guide}
-  cp -r $DESTROOT/* $WAI_REPO
-fi
