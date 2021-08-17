@@ -2,7 +2,7 @@
 	path = _external/data
 	url = https://github.com/w3c/wai-website-data.git
     branch = master
-[submodule "_external/coga"]
-	path = _external/coga
+[submodule "_external/resources/coga"]
+	path = _external/resources/coga
 	url = https://github.com/w3c/coga.git
-	branch = origin/steve-web-dg
+	branch = steve-web-dg
