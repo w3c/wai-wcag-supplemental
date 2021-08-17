@@ -2,25 +2,16 @@
 
 This repository includes the content for COGA Design Patterns for People with Cognitive and Learning Disabilities.
 
-There are two types of pages. Firstly, regular content pages are in the `content` directory:
+NB! some of the content is generated from content in the w3c/coga repo using the script `scripts/buildcoga`.
+The coga source content is accessed as a git submodule in `_external/resources/coga`.
+Build is manually triggered (run the script and commit) so the latest coga content is only included when wanted.
 
-* “About“ page - information about what COGA Design Patterns are
-* “All” page - lists all individual patterns, separated by Objective
+The generated files are:
 
-Secondly, the patterns and objectives themselves. Patterns are in `_patterns` directory. Objectives are in the `_objectives` directory. They are both recognised by Jekyll as collections.
+- `/content/_cogabuild`
+- `/content-images/wai-coa-design-guide`
 
-## Adding a pattern
 
-* Add new patterns as `name.md` in the `/_patterns` folder.
-* In the frontmatter, specify at least: 
-  * `title`: will be displayed above pattern
-  * `ref`: is a unique reference to this page, can be used to identify it when it gets translated
-  * `objective`: the `ref` of the objective this pattern belongs to`
 
-## Adding a new objective
 
-* Add new objectives as `name.md` in the `/_objectives` folder.
-* In the frontmatter, specify at least: 
-  * `title`: will be displayed above objective
-  * `ref`: is a unique reference to this page, is used by patterns to specifify which objective it belongs to
 

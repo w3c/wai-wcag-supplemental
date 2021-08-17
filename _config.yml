@@ -37,7 +37,7 @@ remote_theme: w3c/wai-website-theme
 
 permalink: pretty
 
-collections_dir: content
+collections_dir: content/_cogabuild
 collections:
   patterns:
     title: Patterns
@@ -53,6 +53,7 @@ defaults:
     scope:
       path: ""
     values:
+      doc-note-type: draft
       layout: standalone_resource
       lang: en   # Change "en" to the translated-language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
       last_updated: 2021-@@-@@   # Put the date of this translation YYYY-MM-DD (with month in the middle)
@@ -75,27 +76,32 @@ defaults:
       type: "patterns"
       path: "_patterns"
     values:
-      type_of_guidance: Pattern        
+      type_of_guidance: Design Pattern   
+      sidebar:
+        title: About this Pattern
+        text: <em>Design Patterns</em> explain how to improve accessibility for people with cognitive and learning disabilities.
+        toplinks: 
+          - title: Cognitive Accessibility Glossary
+            url: https://www.w3.org/TR/coga-usable/#glossary     
   -
     scope: 
       type: "objectives"
       path: "_objectives"
     values:
-      type_of_guidance: Objective        
+      type_of_guidance: Objective
+      sidebar:
+        title: About this Objective
+        text: <em>Objectives</em> are collections of Cognitive Design Patterns on a topic.
+        toplinks: 
+          - title: Cognitive Accessibility Glossary
+            url: https://www.w3.org/TR/coga-usable/#glossary     
 
 standalone_resource_nav_links:
-  - name: Summary
-    ref: /summary
-  - name: All Objectives
-    ref: /objectives
-  - name: All Patterns
-    ref: /patterns
-  - name: About this Design Guide
+  - name: All Supplemental Guidance to WCAG
+    ref: /supplemental-guidance
+  - name: About Supplemental Guidance
     ref: /about
-standalone_resource_doc_name: Design Guide
-standalone_resource_doc_name_sub: "for People with Cognitive Disabilities and Learning Difficulties"
-
-
+standalone_resource_doc_name: Supplemental Guidance to WCAG
 
 plugins:
   - jekyll-seo-tag

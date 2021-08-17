@@ -1,0 +1,16 @@
+{%- comment -%}
+include file providing patterns list
+
+ Parameters:
+  include.obj_ref
+  site.patterns
+{%- endcomment -%}
+
+<ul>
+{% for pattern in site.patterns -%}
+  {%- assign obj_ref = pattern.ref | split: "p" | first -%}
+  {% if obj_ref == include.obj_ref %}
+  <li><a href="{{ pattern.url | relative_url }}">{{ pattern.title }} </a></li>
+  {% endif %}
+{%- endfor -%}
+</ul>

@@ -1,5 +1,6 @@
 --- 
-title: About Design Guide
+doc-note-type: draft
+title: About Supplemental Guidance
 permalink: about
 github: 
   repository: w3c/coga
@@ -7,26 +8,31 @@ github:
 feedbackemail: wai@w3.org
 ---
 
-This guide provides assistance making web sites and applications friendly for
-people with <a>cognitive and learning disabilities</a>. The patterns in this
-guide provide practical guidance to improve the accessibility of designs and
-the design process.
+{::nomarkdown}
+{% include box.html type="start" title="Note" icon="comments" %}
+{:/}
 
-The objectives and patterns presented here provide
-<a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">
-supplemental guidance</a>
-beyond the requirements of The Web Content Accessibility Guidelines WCAG
-[[WCAG22]]. They are intended to address barriers that could not be included
-in the normative WCAG [[WCAG22]] specification and may not otherwise be
-addressed.
+Eventually we expect to include other sections as well as Coga. For example, Low Vision.
 
-This guide is divided into design objectives. An outline of these objectives
-can also be found in the <a href="#summary">summary section</a>. Simply understanding the objectives
-and related user stories may help designers make content more accessible to
-some users with <a>cognitive and learning disabilities</a>.
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
 
-Each objective contains a number of practical patterns (repeated designs for
-controls and other elements) that describe what to do to address user needs.
-Implementing these patterns is <strong>essential</strong> for some people with
-<a>cognitive and learning disabilities</a> to be able to use content
-independently.
+Supplemental guidance provides advice for content authors and designers on improving the accessibility of content and applications beyond what is required by [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG).
+
+While the guidance presented here focuses on particular groups, it is important to note that people may require different combinations of accessibility features unique to them and their current situation. For example, someone with a cognitive disability may also have auditory, physical, neurological, speech and visual disabilities. Thus, this guidance must always be applied in conjunction with WCAG in order to maximize accessibility for everyone.
+
+## Design Patterns for People with Cognitive and Learning Disabilities
+
+The Design Patterns focus on reducing barriers experienced by people with cognitive and learning disabilities. The Patterns describe what to do in order to improve accessibility and explain how this helps when applied. Examples are also provided.
+
+Related Design Patterns are grouped into Objectives. The Objectives provide a high level overview of the areas where people experience cognitive accessibility barriers. An easy read outline of these objectives can also be found in the @@At a Glance page on the WAI website.
+
+The Design Patterns and Objectives are drawn from the more comprehensive document “[Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable/)”. This provides additional background, user stories, personas, a glossary, and other guidance.
+
+### Related Resources
+
+- [Cognitive Accessibility at a Glance](./coga-patterns-glance)
+- [Cognitive Accessibility](https://www.w3.org/WAI/cognitive/)
+- [Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable){% include_cached icon.html name="external-link" %}
+- [WCAG Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1){% include_cached icon.html name="external-link" %}
