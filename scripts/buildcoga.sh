@@ -41,7 +41,6 @@ parse_file () {
     FILENAME_OBJREF=${FILENAME_REF%p*} # o1
     FILENAME_PATREF=${FILENAME_REF##o?} # p1
     PATHNAME="${FILE_PATH//\//\\/}"
-    echo $PATHNAME $FILE_PATH
     GITHUB_INFO="\n  repository: $REPOSITORY\n  path: $PATHNAME"
 
     # Note bash { grouping only used so we can add comments in line.
