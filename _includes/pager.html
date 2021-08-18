@@ -231,15 +231,15 @@ Set up tuples for the tag widgets
 {% assign item_type = "Objective" %}
 {% endif %}
 {% if prev_item %}
-{% assign prev = "Previous " | append: item_type | append: "??" | append: "./" | append: prev_item.permalink | append: "??" | append: prev_item.title | split: "??" %}
+{% assign prev = "Previous " | append: item_type | append: "??" | append: prev_item.url | append: "??" | append: prev_item.title | split: "??" %}
 {% endif %}
 {% if next_item %}
-{% assign next = "Next " | append: item_type | append: "??" | append: "./" | append: next_item.permalink | append: "??" | append: next_item.title | split: "??" %}
+{% assign next = "Next " | append: item_type | append: "??" | append: next_item.url | append: "??" | append: next_item.title | split: "??" %}
 {% endif %}
 {% if context_item %}
-{% assign context = "Part of " | append: context_type | append: "??" | append: "./" | append: context_item.permalink | append: "??" | append: context_item.title | split: "??" %}
+{% assign context = "Part of " | append: context_type | append: "??" | append: context_item.url | append: "??" | append: context_item.title | split: "??" %}
 {% else %}
-{% assign context = "Part of " | append: "??" | append: "./supplemental-guidance" | append: "??" | append: "All Supplemental Guidance" | split: "??" %}
+{% assign context = "Part of " | append: "??" | append: "../../supplemental-guidance" | append: "??" | append: "All Supplemental Guidance" | split: "??" %}
 {% endif %}
 
 {% comment %}
