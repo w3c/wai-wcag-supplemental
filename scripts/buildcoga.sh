@@ -2,7 +2,7 @@
 # Process Design guide files and output to ./design-guide/_build/
 # NB run with cwd = repository root ./design-guide/generate
 
-COGADIR=_external/resources/coga/
+COGADIR=_external/resources/coga
 SOURCEDIR=$COGADIR/design-guide
 IMG_SOURCEDIR=$COGADIR/content-usable/img
 CONTENT_DESTDIR=content/_cogabuild
@@ -41,6 +41,7 @@ parse_file () {
     FILENAME_OBJREF=${FILENAME_REF%p*} # o1
     FILENAME_PATREF=${FILENAME_REF##o?} # p1
     PATHNAME="${FILE_PATH//\//\\/}"
+    echo $PATHNAME $FILE_PATH
     GITHUB_INFO="\n  repository: $REPOSITORY\n  path: $PATHNAME"
 
     # Note bash { grouping only used so we can add comments in line.
