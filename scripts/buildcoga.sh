@@ -77,6 +77,10 @@ parse_file () {
         sed \
         -E 's/<a>(.*)<\/a>/\1/'
     } | {
+        # Fixup image location
+        sed \
+        -E "s/src=\"img\/([^\"]*\")/src=\"\/${IMG_DESTDIR//\//\\/}\/\1/"
+    } | {
         # Delete the header in lines 1 to 4 and any blank lines
         # Note multiple calls to sed as delete interferes with line numbers        
         sed \
@@ -95,5 +99,5 @@ shopt -s nullglob # no error if no md files
 for file in $SOURCEDIR/o[[:digit:]]-*.{html,md}; do parse_file $file $OBJECTIVE_DESTDIR; done
 for file in $SOURCEDIR/o[[:digit:]]p*.{html,md}; do parse_file $file $PATTERN_DESTDIR; done
 
-IMAGE_FILES="StartHere.svg find.svg clear-text.svg glass.svg light.svg memory.svg support.svg tools.svg"
+IMAGE_FILES="StartHere.svg find.svg clear-text.svg glass.svg light.svg memory.svg support.svg tools.svg common-region-1.png common-region-2.png "
 for file in $IMAGE_FILES ; do cp $IMG_SOURCEDIR\/$file $IMG_DESTDIR\/; done
