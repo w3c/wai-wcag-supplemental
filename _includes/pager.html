@@ -196,9 +196,9 @@ Assign collection and item_num variables
 
 {% comment %}
 Figure out next and prev numbers 
-"upcase" is used to convert number type to a string type for size operator
+"upcase" is used to convert number type to a string type and we pad to 2 chars
 {% endcomment %}
-{%- assign nitems = collection.size -%}
+{%- assign nitems = collection.size | prepend: '0' -%}
 {%- assign next_num = item_num | replace: nitems, "-1" | plus: 1 | upcase %}
 {%- assign prev_num = item_num | minus: 1 | upcase %}
 {% if next_num.size == 1 %}
@@ -222,8 +222,8 @@ Figure out next and refs and get items from collections
 {% if next_num != 0 %}
 {% assign next_ref = prefix | append: next_num %}
 {% endif %}
-{%- assign next_item = collection | find_exp: "item", "item.ref == next_ref" -%}
 {%- assign prev_item = collection| find_exp: "item", "item.ref == prev_ref" -%}
+{%- assign next_item = collection | find_exp: "item", "item.ref == next_ref" -%}
 {% if is_pattern %}
 {%- assign context_item = site.objectives | find_exp: "obj", "obj.ref == objective_ref" -%}
 {% endif %}
@@ -250,21 +250,38 @@ Set up tuples for the tag widgets
 {% endif %}
 
 {% comment %}
-params: 3 3 tuples: context (optional), prev, next. Each contains: label, url, text
+This section could be pulled out as a more genereric pager component
+
+params: 3 3 tuples: context (optional), prev, next. 
+        Each contains: label, url, text
 {% endcomment %}
 <nav class="pager" aria-label="Previous/Next Page">
 <ul id="navigation">
   {% if context %}
-   <li class="pager--item context"><a href="{{ context[1] }}"><span class="pager--item-text"><span class="pager--item-text-direction">{{ context[0] }}: </span><span class="pager--item-text-target">{{context[2]}}</span></span></a></li>
+    <li class="pager--item context"><a href="{{ context[1] }}"><span class="pager--item-text"><span class="pager--item-text-direction">{{ context[0] }}: </span><span class="pager--item-text-target">{{context[2]}}</span></span></a></li>
   {% endif %}
-   <li class="pager--item previous"><a href="{{ prev[1] }}">
-         <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
-            <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
-         </svg><span class="pager--item-text"><span class="pager--item-text-direction">{{ prev[0] }}: </span><span class="pager--item-text-target">{{ prev[2] }}</span></span></a></li>
-   <li class="pager--item next"><a href="{{ next[1] }}">
-         <svg focusable="false" aria-hidden="true" class="icon-arrow-right pager--item-icon" viewBox="0 0 23 28">
-            <path d="M23 15c0 0.531-0.203 1.047-0.578 1.422l-10.172 10.172c-0.375 0.359-0.891 0.578-1.422 0.578s-1.031-0.219-1.406-0.578l-1.172-1.172c-0.375-0.375-0.594-0.891-0.594-1.422s0.219-1.047 0.594-1.422l4.578-4.578h-11c-1.125 0-1.828-0.938-1.828-2v-2c0-1.062 0.703-2 1.828-2h11l-4.578-4.594c-0.375-0.359-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.406l1.172-1.172c0.375-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l10.172 10.172c0.375 0.359 0.578 0.875 0.578 1.406z"></path>
-         </svg><span class="pager--item-text"><span class="pager--item-text-direction">{{ next[0] }}:</span><span class="pager--item-text-target">{{ next[2] }}</span></span></a></li>
+    <li class="pager--item previous">
+    {% if prev %}
+      <a href="{{ prev[1] }}">
+        <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
+          <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
+        </svg>
+        <span class="pager--item-text"><span class="pager--item-text-direction">{{ prev[0] }}: </span>
+        <span class="pager--item-text-target">{{ prev[2] }}</span></span>
+    </a>
+    {% endif %}
+    </li>
+    <li class="pager--item next">
+    {% if next %}
+      <a href="{{ next[1] }}">
+        <svg focusable="false" aria-hidden="true" class="icon-arrow-right pager--item-icon" viewBox="0 0 23 28">
+        <path d="M23 15c0 0.531-0.203 1.047-0.578 1.422l-10.172 10.172c-0.375 0.359-0.891 0.578-1.422 0.578s-1.031-0.219-1.406-0.578l-1.172-1.172c-0.375-0.375-0.594-0.891-0.594-1.422s0.219-1.047 0.594-1.422l4.578-4.578h-11c-1.125 0-1.828-0.938-1.828-2v-2c0-1.062 0.703-2 1.828-2h11l-4.578-4.594c-0.375-0.359-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.406l1.172-1.172c0.375-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l10.172 10.172c0.375 0.359 0.578 0.875 0.578 1.406z"></path>
+        </svg>
+        <span class="pager--item-text"><span class="pager--item-text-direction">{{ next[0] }}:</span>
+        <span class="pager--item-text-target">{{ next[2] }}</span></span>
+    </a>
+    {% endif %}
+    </li>
 </ul>
 </nav>
 
