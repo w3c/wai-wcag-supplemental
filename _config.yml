@@ -43,10 +43,12 @@ collections:
     title: Patterns
     permalink: /:collection/:name/
     output: true
+    sort_by: ref
   objectives:
     title: Objectives
     permalink: /:collection/:name/
     output: true
+    sort_by: ref
 
 defaults:
   -

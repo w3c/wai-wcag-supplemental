@@ -196,10 +196,17 @@ Assign collection and item_num variables
 
 {% comment %}
 Figure out next and prev numbers 
+"upcase" is used to convert number type to a string type for size operator
 {% endcomment %}
-{%- assign size = collection | size -%}
-{%- assign next_num = item_num | replace: size, "-1" | plus: 1 %}
-{%- assign prev_num = item_num | minus: 1 %}
+{%- assign nitems = collection.size -%}
+{%- assign next_num = item_num | replace: nitems, "-1" | plus: 1 | upcase %}
+{%- assign prev_num = item_num | minus: 1 | upcase %}
+{% if next_num.size == 1 %}
+  {% assign next_num = next_num | prepend: '0' %}
+{% endif %}
+{% if prev_num.size == 1 %}
+  {% assign prev_num = prev_num | prepend: '0' %}
+{% endif %}
 
 {% comment %}
 Figure out next and refs and get items from collections

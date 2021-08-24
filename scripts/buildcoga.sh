@@ -37,9 +37,10 @@ parse_file () {
     FILENAME=${FILE_PATH##*/}; FILENAME=${FILENAME%.md}; FILENAME=${FILENAME%.html}
     FOLDER=${FILE_PATH%/*}
     FILENAME_TEXT=${FILENAME#o*-} # text
-    FILENAME_REF="${FILENAME%%-*}" # o1p1 TODO make empty for filename with ut a ref - eg about.md
-    FILENAME_OBJREF=${FILENAME_REF%p*} # o1
-    FILENAME_PATREF=${FILENAME_REF##o?} # p1
+    FILENAME_REF="${FILENAME%%-*}" # o1p1 TODO make empty for filename without a ref - eg about.md
+#    FILENAME_OBJREF=${FILENAME_REF%p*} # o1
+#    FILENAME_PATREF=${FILENAME_REF##o?} # p1
+
     PATHNAME="${FILE_PATH//\//\\/}"
     GITHUB_INFO="\n  repository: $REPOSITORY\n  path: $PATHNAME"
 
@@ -56,10 +57,8 @@ parse_file () {
         s/\${{ GITHUB_INFO }}/$GITHUB_INFO/;\
         s/\${{ FEEDBACK_EMAIL }}/$FEEDBACK_EMAIL/;\
         s/\${{ FILENAME }}/$FILENAME/;\
-        s/\${{ FILENAME_OBJREF }}/$FILENAME_OBJREF/;\
         s/\${{ FILENAME_REF }}/$FILENAME_REF/;\
         s/\${{ FILENAME_TEXT }}/$FILENAME_TEXT/;\
-        s/\${{ FILENAME_PATREF }}/$FILENAME_PATREF/\
         }"
     } | { 
         # Convert h5 to h2
