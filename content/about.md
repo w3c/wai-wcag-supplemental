@@ -1,7 +1,7 @@
 --- 
 doc-note-type: draft
 title: About Supplemental Guidance
-permalink: about
+permalink: /coga-dg/about/
 github: 
   repository: w3c/coga
   path: design-guide/about.md

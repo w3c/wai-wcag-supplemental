@@ -1,7 +1,7 @@
 ---
 doc-note-type: draft
 title: All Supplemental Guidance to WCAG
-permalink: /supplemental-guidance/
+permalink: /coga-dg/supplemental-guidance/
 ref: /supplemental-guidance/
 github: 
   repository: w3c/wai-coga-design-guide

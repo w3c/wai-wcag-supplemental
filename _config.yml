@@ -75,10 +75,10 @@ defaults:
       permalink: /:path/:basename/
   -
     scope: 
-      layout: "pattern"
       type: "patterns"
       path: "_patterns"
     values:
+      layout: pattern
       type_of_guidance: Design Pattern   
       sidebar:
         title: About this Pattern
@@ -88,10 +88,10 @@ defaults:
             url: https://www.w3.org/TR/coga-usable/#glossary     
   -
     scope: 
-      layout: "objective"
       type: "objectives"
       path: "_objectives"
     values:
+      layout: objective
       type_of_guidance: Objective
       sidebar:
         title: About this Objective
@@ -102,9 +102,9 @@ defaults:
 
 standalone_resource_nav_links:
   - name: All Supplemental Guidance to WCAG
-    ref: /supplemental-guidance
+    ref: /coga-dg/supplemental-guidance
   - name: About Supplemental Guidance
-    ref: /about
+    ref: /coga-dg/about
 standalone_resource_doc_name: Supplemental Guidance to WCAG
 
 plugins:
