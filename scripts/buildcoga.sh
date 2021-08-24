@@ -5,9 +5,9 @@
 COGADIR=_external/resources/coga
 SOURCEDIR=$COGADIR/design-guide
 IMG_SOURCEDIR=$COGADIR/content-usable/img
-CONTENT_DESTDIR=content/_cogabuild
-PATTERN_DESTDIR=$CONTENT_DESTDIR/_patterns
-OBJECTIVE_DESTDIR=$CONTENT_DESTDIR/_objectives
+COLLECTION_DESTDIR=_collections
+PATTERN_DESTDIR=$COLLECTION_DESTDIR/_patterns
+OBJECTIVE_DESTDIR=$COLLECTION_DESTDIR/_objectives
 IMG_DESTDIR=content-images/wai-coga-design-guide
 
 if [ ! -d $SOURCEDIR ]
@@ -90,8 +90,8 @@ parse_file () {
 }
 
 # Clean dest and create empty folders
-rm -rf $CONTENT_DESTDIR $IMG_DESTDIR/*
-for dir in $CONTENT_DESTDIR $PATTERN_DESTDIR $OBJECTIVE_DESTDIR $IMG_DESTDIR; do mkdir -p $dir; done
+rm -rf $COLLECTION_DESTDIR $IMG_DESTDIR/*
+for dir in $PATTERN_DESTDIR $OBJECTIVE_DESTDIR $IMG_DESTDIR; do mkdir -p $dir; done
 
 shopt -s extglob  # expanded pattern expansion
 shopt -s nullglob # no error if no md files
