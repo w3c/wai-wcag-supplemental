@@ -1,14 +1,21 @@
 ---
 layout: standalone_resource
 ---
+
+{% include box.html type="start" title="About this Objective" %}
+
+{{page.summary}}
+
+{% include box.html type="end" %}
+
 <p>See the <a href="#patterns-for-objective">Design Patterns</a> for this objective.</p>
 
 <h2>Description</h2>
 
 {{ content }}
 
-{% include pager.html %}
-
 <h2 id="patterns-for-objective">Design Patterns for this Objective</h2>
 
 {% include patterns.html obj_ref = page.ref %}
+
+{% include pager.html %}
