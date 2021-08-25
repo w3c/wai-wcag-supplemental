@@ -1,15 +1,19 @@
 ---
 layout: standalone_resource
 ---
-<style>
-.standalone-resource__subtitle{
-  display: block;
-  font-size: 0.5em; 
-  margin-block-start: 0.35em;
-  font-style: italic;
-  font-weight: 300;
-  zopacity: 80%;
-}
-</style>
+
+{% assign ref_parts = page.ref | split: "p" %}
+{% assign objective_ref = ref_parts | first %}
+{%- assign objective = site.objectives | find_exp: "obj", "obj.ref == objective_ref" -%}
+
+{% include box.html type="start" title="About this Pattern" %}
+
+This Design Pattern is included in the Design Guide Objective <a href="{{ objective.url }}">{{ objective.title }}</a>.
+
+{% include box.html type="end" %}
 
 {{ content }}
+
+{% include pager.html %}
+
+
