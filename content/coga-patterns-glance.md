@@ -2,11 +2,9 @@
 doc-note-type: draft
 title: Design Patterns for People with Cognitive and Learning Disabilities
 permalink: /coga-dg/coga-patterns-glance/
-ref: coga-patterns-glance/
 github: 
   repository: w3c/wai-coga-design-guide
   path: content/coga-patterns-glance.md
-feedbackemail: wai@w3.org
 inline_css: "
   aside.box-obj div.box-i::before {
     width: 40px;

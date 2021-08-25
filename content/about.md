@@ -3,20 +3,9 @@ doc-note-type: draft
 title: About Supplemental Guidance
 permalink: /coga-dg/about/
 github: 
-  repository: w3c/coga
-  path: design-guide/about.md
-feedbackemail: wai@w3.org
+  repository: w3c/wai-coga-design-guide
+  path: content/about.md
 ---
-
-{::nomarkdown}
-{% include box.html type="start" title="Note" icon="comments" %}
-{:/}
-
-Eventually we expect to include other sections as well as Coga. For example, Low Vision.
-
-{::nomarkdown}
-{% include box.html type="end" %}
-{:/}
 
 Supplemental guidance provides advice for content authors and designers on improving the accessibility of content and applications beyond what is required by [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG).
 
