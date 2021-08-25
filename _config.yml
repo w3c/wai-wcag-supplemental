@@ -99,7 +99,7 @@ defaults:
       type_of_guidance: Objective
       sidebar:
         title: About this Page
-        text: <em>Objectives</em> are collections of Cognitive Design Patterns on a topic.
+        text: <em>Objectives</em> are collections of Cognitive Design Patterns with a common theme.
         toplinks: 
           - title: Cognitive Accessibility Glossary
             url: https://www.w3.org/TR/coga-usable/#glossary     
