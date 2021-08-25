@@ -19,7 +19,6 @@ fi
 # Static Template variables for frontmatter 
 # NB escape special caracters for sed eg / as \\/
 REPOSITORY=w3c\\/coga
-FEEDBACK_EMAIL=wai@w3.org
 
 ## Parse design guide files - converting to format required by wai-coga-design-guide
 # $1 = source file
@@ -41,8 +40,9 @@ parse_file () {
 #    FILENAME_OBJREF=${FILENAME_REF%p*} # o1
 #    FILENAME_PATREF=${FILENAME_REF##o?} # p1
 
-    PATHNAME="${FILE_PATH//\//\\/}"
-    GITHUB_INFO="\n  repository: $REPOSITORY\n  path: $PATHNAME"
+    GIT_PATHNAME=${FILE_PATH##*coga/}
+    GIT_PATHNAME="${GIT_PATHNAME//\//\\/}"
+    GITHUB_INFO="\n  repository: $REPOSITORY\n  path: $GIT_PATHNAME"
 
     # Note bash { grouping only used so we can add comments in line.
     {   
@@ -55,7 +55,6 @@ parse_file () {
         sed \
         -e "1,20{\
         s/\${{ GITHUB_INFO }}/$GITHUB_INFO/;\
-        s/\${{ FEEDBACK_EMAIL }}/$FEEDBACK_EMAIL/;\
         s/\${{ FILENAME }}/$FILENAME/;\
         s/\${{ FILENAME_REF }}/$FILENAME_REF/;\
         s/\${{ FILENAME_TEXT }}/$FILENAME_TEXT/;\

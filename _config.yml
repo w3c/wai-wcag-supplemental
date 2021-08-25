@@ -56,13 +56,17 @@ defaults:
       path: ""
     values:
       doc-note-type: draft
-      layout: standalone_resource
       lang: en   # Change "en" to the translated-language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
       last_updated: 2021-@@-@@   # Put the date of this translation YYYY-MM-DD (with month in the middle)
-      github:
-        repository: w3c/wai-coga-design-guide
       license: creative-commons   # NEW: delete if not creative-commons
       feedbackmail: wai@w3.org  # NEW: delete this line if it’s an EOWG resource (the default is wai-eo-editors@w3.org)
+      layout: standalone_resource
+      standalone_resource_nav_links:
+        - name: All Supplemental Guidance to WCAG
+          ref: /coga-dg/supplemental-guidance
+        - name: About Supplemental Guidance
+          ref: /coga-dg/about
+      standalone_resource_doc_name: Supplemental Guidance to WCAG
       footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
         <p><strong>Date:</strong> Updated @@ Month 2021. First published Month 20@@.</p>
         <p><strong>Editors:</strong> @@name, @@name. <strong>Contributors:</strong> @@name, @@name, and <a href="https://www.w3.org/groups/wg/@@wg/participants">participants of the @@WG</a>. ACKNOWLEDGEMENTS lists contributors and credits.</p>
@@ -81,7 +85,7 @@ defaults:
       layout: pattern
       type_of_guidance: Design Pattern   
       sidebar:
-        title: About this Pattern
+        title: About this Page
         text: <em>Design Patterns</em> explain how to improve accessibility for people with cognitive and learning disabilities.
         toplinks: 
           - title: Cognitive Accessibility Glossary
@@ -94,18 +98,11 @@ defaults:
       layout: objective
       type_of_guidance: Objective
       sidebar:
-        title: About this Objective
+        title: About this Page
         text: <em>Objectives</em> are collections of Cognitive Design Patterns on a topic.
         toplinks: 
           - title: Cognitive Accessibility Glossary
             url: https://www.w3.org/TR/coga-usable/#glossary     
-
-standalone_resource_nav_links:
-  - name: All Supplemental Guidance to WCAG
-    ref: /coga-dg/supplemental-guidance
-  - name: About Supplemental Guidance
-    ref: /coga-dg/about
-standalone_resource_doc_name: Supplemental Guidance to WCAG
 
 plugins:
   - jekyll-seo-tag
