@@ -21,7 +21,7 @@ The Design Patterns and Objectives are drawn from the more comprehensive documen
 
 ### Related Resources
 
-- [Cognitive Accessibility at a Glance](./coga-patterns-glance)
+- [Cognitive Accessibility at a Glance](coga-patterns-glance)
 - [Cognitive Accessibility](https://www.w3.org/WAI/cognitive/)
 - [Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable){% include_cached icon.html name="external-link" %}
 - [WCAG Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1){% include_cached icon.html name="external-link" %}
