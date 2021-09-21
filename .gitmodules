@@ -5,4 +5,4 @@
 [submodule "_external/resources/coga"]
 	path = _external/resources/coga
 	url = https://github.com/w3c/coga.git
-	branch = steve-web-dg
+	branch = main
