@@ -3,7 +3,7 @@ doc-note-type: draft
 title: Design Patterns for People with Cognitive and Learning Disabilities
 permalink: /coga-dg/coga-patterns-glance/
 github: 
-  repository: w3c/wai-coga-design-guide
+  repository: w3c/wai-wcag-supplemental
   path: content/coga-patterns-glance.md
 inline_css: "
   aside.box-obj div.box-i::before {
@@ -15,35 +15,35 @@ inline_css: "
   }
   aside:nth-of-type(3) div.box-i::before 
   {   
-    content: url(/content-images/wai-coga-design-guide/StartHere.svg);
+    content: url(/content-images/wai-wcag-supplemental/StartHere.svg);
   }
   aside.box-obj:nth-of-type(4) div.box-i::before 
   {   
-    content: url(/content-images/wai-coga-design-guide/find.svg);
+    content: url(/content-images/wai-wcag-supplemental/find.svg);
   }
   aside.box-obj:nth-of-type(5) div.box-i::before 
   {   
-    content: url(/content-images/wai-coga-design-guide/clear-text.svg);
+    content: url(/content-images/wai-wcag-supplemental/clear-text.svg);
   }
   aside.box-obj:nth-of-type(6) div.box-i::before 
   {   
-    content: url(/content-images/wai-coga-design-guide/glass.svg);
+    content: url(/content-images/wai-wcag-supplemental/glass.svg);
   }
   aside.box-obj:nth-of-type(7) div.box-i::before 
   {   
-    content: url(/content-images/wai-coga-design-guide/light.svg);
+    content: url(/content-images/wai-wcag-supplemental/light.svg);
   }
   aside.box-obj:nth-of-type(8) div.box-i::before 
   {   
-    content: url(/content-images/wai-coga-design-guide/memory.svg);
+    content: url(/content-images/wai-wcag-supplemental/memory.svg);
   }
   aside.box-obj:nth-of-type(9) div.box-i::before 
   {   
-    content: url(/content-images/wai-coga-design-guide/support.svg);
+    content: url(/content-images/wai-wcag-supplemental/support.svg);
   }
   aside.box-obj:nth-of-type(10) div.box-i::before 
   {   
-    content: url(/content-images/wai-coga-design-guide/tools.svg);
+    content: url(/content-images/wai-wcag-supplemental/tools.svg);
   }
   "
 ---

@@ -3,7 +3,7 @@ doc-note-type: draft
 title: About Supplemental Guidance
 permalink: /coga-dg/about/
 github: 
-  repository: w3c/wai-coga-design-guide
+  repository: w3c/wai-wcag-supplemental
   path: content/about.md
 ---
 

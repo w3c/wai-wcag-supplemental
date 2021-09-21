@@ -8,7 +8,7 @@ IMG_SOURCEDIR=$COGADIR/content-usable/img
 COLLECTION_DESTDIR=_collections
 PATTERN_DESTDIR=$COLLECTION_DESTDIR/_patterns
 OBJECTIVE_DESTDIR=$COLLECTION_DESTDIR/_objectives
-IMG_DESTDIR=content-images/wai-coga-design-guide
+IMG_DESTDIR=content-images/wai-wcag-supplemental
 
 if [ ! -d $SOURCEDIR ]
 then
@@ -20,7 +20,7 @@ fi
 # NB escape special caracters for sed eg / as \\/
 REPOSITORY=w3c\\/coga
 
-## Parse design guide files - converting to format required by wai-coga-design-guide
+## Parse design guide files - converting to format required by wai-wcag-supplemental
 # $1 = source file
 # $2 = dest folder
 # output - sideeffect, writes files into $2
