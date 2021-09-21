@@ -49,6 +49,10 @@ collections:
     permalink: /:collection/:name/
     output: true
     sort_by: ref
+  objectives:
+    title: LV
+    permalink: /:collection/:name/
+    output: true
 
 defaults:
   -
@@ -103,6 +107,13 @@ defaults:
         toplinks: 
           - title: Cognitive Accessibility Glossary
             url: https://www.w3.org/TR/coga-usable/#glossary     
+ -
+    scope: 
+      type: "lv"
+      path: "_lv"
+    values:
+      layout: objective
+      type_of_guidance: Objective
 
 plugins:
   - jekyll-seo-tag
