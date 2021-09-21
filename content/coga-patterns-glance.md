@@ -1,7 +1,7 @@
 ---
 doc-note-type: draft
 title: Design Patterns for People with Cognitive and Learning Disabilities
-permalink: /coga-dg/coga-patterns-glance/
+permalink: /wcag-supplemental/coga-patterns-glance/
 github: 
   repository: w3c/wai-wcag-supplemental
   path: content/coga-patterns-glance.md

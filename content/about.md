@@ -1,7 +1,7 @@
 --- 
 doc-note-type: draft
 title: About Supplemental Guidance
-permalink: /coga-dg/about/
+permalink: /wcag-supplemental/about/
 github: 
   repository: w3c/wai-wcag-supplemental
   path: content/about.md

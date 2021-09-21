@@ -63,9 +63,9 @@ defaults:
       layout: standalone_resource
       standalone_resource_nav_links:
         - name: All Supplemental Guidance to WCAG
-          ref: /coga-dg/supplemental-guidance
+          ref: /wcag-supplemental/supplemental-guidance
         - name: About Supplemental Guidance
-          ref: /coga-dg/about
+          ref: /wcag-supplemental/about
       standalone_resource_doc_name: Supplemental Guidance to WCAG
       footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
         <p><strong>Date:</strong> Updated @@ Month 2021. First published Month 20@@.</p>
