@@ -5,14 +5,19 @@ github:
   path: design-guide/template.html
 ---
 
+**Page Contents:**
+* ...
+* ...
+* ...
+
 ## User Experience
 
 This quote from a persona (fictional person) helps you understand some aspects of this guidance.
 
-'''Persona:''' Parent with low vision – 20/400 [Can change this. For examples, see [https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/ What's New in 2.1]]
+**Persona:** Parent with low vision – 20/400 [Can change this. For examples, see [What's New in 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/)]
 
-<div style="margin-left: 25px">'''Problem:''' "[...]"</div>
-<div style="margin-left: 25px">'''Works Well:''' "[...]"</div>
+<div style="margin-left: 25px"><strong>Problem:</strong> "[...]"</div>
+<div style="margin-left: 25px"><strong>Works Well:</strong> "[...]"</div>
 
 ##  What To Do
 
