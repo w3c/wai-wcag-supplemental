@@ -5,7 +5,7 @@ github:
   path: design-guide/template.html
 ---
 
-::nomarkdown}
+{::nomarkdown}
 {% include toc.html type="start" title="Page Contents" %}
 {:/}
 
