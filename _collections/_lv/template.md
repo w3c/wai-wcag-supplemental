@@ -1,5 +1,5 @@
 ---
-title: LV Template for Low Vision Supplemental Guidance
+title: Template for Low Vision Supplemental Guidance
 github: 
   repository: w3c/wai-wcag-supplemental
   path: design-guide/template.html
