@@ -59,8 +59,8 @@ github:
 ##  Related Resources
 * [only list here if particularly useful]
 
-##  Key Term
-* [only list here if needed. can use WCAG termsor add new one if needed]
+##  Key Terms
+* [only list here if needed. can use WCAG termsor to add new one if needed]
 
 ##  <em>Editorial Notes </em>
 
