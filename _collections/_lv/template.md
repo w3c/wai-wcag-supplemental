@@ -19,7 +19,7 @@ github:
 {:/}
 
 
-## User [ Needs | Experience | Issues | Objectives ]
+## User [ Stories | Needs | Experience | Issues | Objectives ]
 { see examples in [What's New in 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/) }
 
 <div style="margin-left: 25px"><strong>Problem:</strong> "{ ... }"</div>
