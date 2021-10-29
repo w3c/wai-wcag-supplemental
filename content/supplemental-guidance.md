@@ -12,18 +12,21 @@ feedbackemail: wai@w3.org
 
 Design Patterns that provide practical guidance on how to better meet the accessibility requirements of people with cognitive and learning disabilities. 
 
-{% include excol.html type="all" %}
-
 {% for objective in site.objectives %}
 
-{% include excol.html type="start" %}
+### {{ objective.title }}
 
-### [{{ objective.title }}]({{ objective.url | relative_url }})
+{{ objective.summary }} [More...]({{ objective.url | relative_url }})
 
-{% include excol.html type="middle" %}
+{% capture btarget -%} {{ objective.ref }}-pats {%- endcapture %}
+{% capture btarget-sel -%} #{{ btarget }} {%- endcapture %}
+{% include showhidebutton.html 
+           showtext="Show Patterns" 
+           hidetext="Hide Patterns" 
+           target=btarget-sel %}
 
+<div id="{{ btarget }}">
 {% include patterns.html obj_ref = objective.ref %}
-
-{% include excol.html type="end" %}
+</div>
 
 {% endfor %}
