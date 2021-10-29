@@ -14,11 +14,13 @@ inline_css: "
     width: 40px;
     height: 40px;
     display: inline-block;
+    position: relative;
+    float:left;   
     margin-right: .5em;
     margin-bottom: .5em;
     vertical-align: text-top;	
   }
-  .obj-summary:nth-of-type(1)::before 
+  .obj-summary-container:nth-of-type(1) .obj-summary::before 
   {   
     content: url(/content-images/wai-wcag-supplemental/StartHere.svg);
   }
@@ -61,9 +63,7 @@ Design Patterns that provide practical guidance on how to better meet the access
 
 ### {{ objective.title }}
 
-<div class="obj-summary-container">
-<p class="obj-summary">{{ objective }}</p>
-</div>
+{{ objective.summary }}
 
 [Read more about {{ objective.title }}]({{ objective.url | relative_url }}).
 
