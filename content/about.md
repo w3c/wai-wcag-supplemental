@@ -4,6 +4,7 @@ title: About Supplemental Guidance
 permalink: /wcag-supplemental/about/
 github: 
   repository: w3c/wai-wcag-supplemental
+  branch: main
   path: content/about.md
 ---
 

@@ -18,7 +18,8 @@ fi
 
 # Static Template variables for frontmatter 
 # NB escape special caracters for sed eg / as \\/
-REPOSITORY=w3c\\/coga
+SRC_REPOSITORY=w3c\\/coga
+THIS_REPOSITORY=w3c\\/wai-wcag-supplemental
 
 ## Parse design guide files - converting to format required by wai-wcag-supplemental
 # $1 = source file
@@ -33,31 +34,34 @@ REPOSITORY=w3c\\/coga
 parse_file () {
     # Filename based Template variables for frontmatter 
     FILE_PATH=$1
-    FILENAME=${FILE_PATH##*/}; FILENAME=${FILENAME%.md}; FILENAME=${FILENAME%.html}
+    FILENAME=${FILE_PATH##*/}; BASENAME=${FILENAME%.md}; BASENAME=${FILENAME%.html}
     FOLDER=${FILE_PATH%/*}
-    FILENAME_TEXT=${FILENAME#o*-} # text
-    FILENAME_REF="${FILENAME%%-*}" # o1p1 TODO make empty for filename without a ref - eg about.md
-#    FILENAME_OBJREF=${FILENAME_REF%p*} # o1
-#    FILENAME_PATREF=${FILENAME_REF##o?} # p1
+    BASENAME_TEXT=${BASENAME#o*-} # text
+    BASENAME_REF="${BASENAME%%-*}" # o1p1
+#    FILENAME_OBJREF=${BASENAME_REF%p*} # o1
+#    FILENAME_PATREF=${BASENAME_REF##o?} # p1
 
-    GIT_PATHNAME=${FILE_PATH##*coga/}
+    
+    GIT_SRC_PATHNAME=${FILE_PATH##*coga/}
+    GIT_SRC_PATHNAME="${GIT_SRC_PATHNAME//\//\\/}"
+    GIT_PATHNAME=$2/$FILENAME
     GIT_PATHNAME="${GIT_PATHNAME//\//\\/}"
-    GITHUB_INFO="\n  repository: $REPOSITORY\n  path: $GIT_PATHNAME"
+    GITHUB_INFO="\n  repository: $THIS_REPOSITORY\n  branch: main\n  path: $GIT_PATHNAME\ngithub-src:\n  repository: $SRC_REPOSITORY\n  path: $GIT_SRC_PATHNAME"
 
     # Note bash { grouping only used so we can add comments in line.
     {   
         # Replace pre element with ---
         sed \
-        -e 's/^<pre class=\"yaml remove\">/---/' \
+        -e 's/^<pre class=\"yaml remove\">/---\n# WARNING!! Changes will be lost if not also made to the src file. See `github-src` below\n/' \
         -e 's/^<\/pre>$/---/' $1
     } | {
         # Expand template variables in lines 1 to 20 only
         sed \
         -e "1,20{\
         s/\${{ GITHUB_INFO }}/$GITHUB_INFO/;\
-        s/\${{ FILENAME }}/$FILENAME/;\
-        s/\${{ FILENAME_REF }}/$FILENAME_REF/;\
-        s/\${{ FILENAME_TEXT }}/$FILENAME_TEXT/;\
+        s/\${{ FILENAME }}/$BASENAME/;\
+        s/\${{ BASENAME_REF }}/$BASENAME_REF/;\
+        s/\${{ BASENAME_TEXT }}/$BASENAME_TEXT/;\
         }"
     } | { 
         # Convert h5 to h2

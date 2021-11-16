@@ -4,6 +4,7 @@ title: Design Patterns for People with Cognitive and Learning Disabilities
 permalink: /wcag-supplemental/coga-patterns-glance/
 github: 
   repository: w3c/wai-wcag-supplemental
+  branch: main
   path: content/coga-patterns-glance.md
 inline_css: "
   aside.box-obj div.box-i::before {

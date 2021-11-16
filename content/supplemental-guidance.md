@@ -4,6 +4,7 @@ title: All Supplemental Guidance to WCAG
 permalink: /wcag-supplemental/supplemental-guidance/
 github: 
   repository: w3c/wai-wcag-supplemental
+  branch: main
   path: content/supplemental-guidance.md
 feedbackemail: wai@w3.org
 inline_css: "
