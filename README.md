@@ -5,9 +5,9 @@ This repository includes the content for COGA Design Patterns for People with Co
 #WARNING!!
 Files in `/_collections` and `/content-images/wai-wcag-supplemental` are built from [source content files](https://github.com/w3c/coga/tree/main/design-guide) in the coga repository. 
 Changes to these built files will be lost on the next build so you need to edit the source files in the coga repository, possibly via the git submodule here at `_external/resources/coga/design-guide`.
+
 Build is manually triggered (run the script and commit) so the latest coga content is only included when wanted.
 This built content is also checked in to git so it can be used by the wai-website
-Coga source content is accessed as a git submodule in `_external/resources/coga`.
 
 The generated files are:
 
