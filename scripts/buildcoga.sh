@@ -60,8 +60,8 @@ parse_file () {
         -e "1,20{\
         s/\${{ GITHUB_INFO }}/$GITHUB_INFO/;\
         s/\${{ FILENAME }}/$BASENAME/;\
-        s/\${{ BASENAME_REF }}/$BASENAME_REF/;\
-        s/\${{ BASENAME_TEXT }}/$BASENAME_TEXT/;\
+        s/\${{ FILENAME_REF }}/$BASENAME_REF/;\
+        s/\${{ FLENAME_TEXT }}/$BASENAME_TEXT/;\
         }"
     } | { 
         # Convert h5 to h2

@@ -53,30 +53,38 @@ inline_css: "
   {   
     content: url(/content-images/wai-wcag-supplemental/tools.svg);
   }
+  zsummary > :first-child::before
+  {
+    display: none;
+  }
+  summary > :first-child::marker
+  {
+    display: none;
+  }
+}
   "
 ---
 
 ## Design Patterns for People with Cognitive and Learning Disabilities
 
-Design Patterns that provide practical guidance on how to better meet the accessibility requirements of people with cognitive and learning disabilities. 
+Design Patterns provide practical guidance on how to better meet the accessibility requirements of people with cognitive and learning disabilities. 
 
+The Patterns are organised into the following "Objectives":
+
+{% include excol.html type="all" %}
+
+<ul>
 {% for objective in site.objectives %}
 
-### {{ objective.title }}
+{% include excol.html type="start" id=objective.ref %}
 
-{{ objective.summary }}
+<li><a href="{{ objective.url | relative_url }}">{{ objective.title }}</a></li>
 
-[Read more about {{ objective.title }}]({{ objective.url | relative_url }}).
-
-{% capture btarget -%} {{ objective.ref }}-pats {%- endcapture %}
-{% capture btarget-sel -%} #{{ btarget }} {%- endcapture %}
-{% include showhidebutton.html 
-           showtext="Show Patterns" 
-           hidetext="Hide Patterns" 
-           target=btarget-sel %}
-
-<div id="{{ btarget }}">
+{% include excol.html type="middle" %}
 {% include patterns.html obj_ref = objective.ref %}
-</div>
+{% include excol.html type="end" %}
 
 {% endfor %}
+</ul>
+
+{% include excol.html type="all" %}
