@@ -52,7 +52,7 @@ parse_file () {
     {   
         # Replace pre element with ---
         sed \
-        -e 's/^<pre class=\"yaml remove\">/---\n# WARNING!! Changes will be lost if not also made to the src file. See `github-src` below\n/' \
+        -e 's/^<pre class=\"yaml remove\">/---/' \
         -e 's/^<\/pre>$/---/' $1
     } | {
         # Expand template variables in lines 1 to 20 only
@@ -92,9 +92,11 @@ parse_file () {
     } > $2/${1#$SOURCEDIR/}
 }
 
+WARNING="#WARNING!!\n\nChanges to these built files will be lost on the next build from coga source.\nYou need to edit the source files in the coga repository \`${SRC_REPOSITORY//\\/}\`, possibly via the git submodule here at \`$SOURCEDIR\`"
+
 # Clean dest and create empty folders
 rm -rf $COLLECTION_DESTDIR $IMG_DESTDIR/*
-for dir in $PATTERN_DESTDIR $OBJECTIVE_DESTDIR $IMG_DESTDIR; do mkdir -p $dir; done
+for dir in $PATTERN_DESTDIR $OBJECTIVE_DESTDIR $IMG_DESTDIR; do mkdir -p $dir; echo -e $WARNING >$dir/README.md; done
 
 shopt -s extglob  # expanded pattern expansion
 shopt -s nullglob # no error if no md files
