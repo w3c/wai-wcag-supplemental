@@ -83,15 +83,12 @@ defaults:
     values:
       layout: pattern
       type_of_guidance: Design Pattern   
-      sidebar:
+      sidebarz:
         title: About this Page
         text: <em>Design Patterns</em> explain how to improve accessibility for people with cognitive and learning disabilities.
         toplinks: 
           - title: Cognitive Accessibility Glossary
             url: https://www.w3.org/TR/coga-usable/#glossary
-      github: 
-        repository: w3c/wai-wcag-supplemental
-        path: _collections/patterns/xxx
   -
     scope: 
       type: "objectives"
