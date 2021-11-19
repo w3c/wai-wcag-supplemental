@@ -70,7 +70,38 @@
     </div>
 
     <div class="default-grid with-gap leftcol">
-      <main id="main"{% if page.lang %} lang="{{page.lang}}"{% endif %} class="standalone-resource__main">
+
+      {% if page.sidebar2 != null and page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
+      <aside class="your-report your-report--expanded sidebar standalone-resource__sidebar">
+        <dl>
+        {% for section in page.sidebar2.sections %}
+          <dt>{{ section.name }}</dt>
+          <dd>
+            {% if section.name == "Navigation" %}
+              {% assign ob = section.items | first %}
+              <a href=""{{ section.base | append: ob.url | relative_url }}" rel="noopener roreferrer">{{ ob.title }}</a>
+              {% assign offs = 1 %}
+              {% else %}
+              {% assign offs = 0 %}
+              {% endif %}
+            <ul>
+            {% for item in section.items offset:offs %}
+              <li>{% if item.url != null %}<a href="{{ section.base | append: item.url | relative_url }}"
+                 rel="noopener roreferrer">{{ item.title }}</a>
+                 {% else %}
+                 {{ item.title }}
+                 {% endif %}
+                </li>
+            {% endfor %}
+            </ul>         
+          </dd>
+        {% endfor %}
+        </dl>
+        <p></em>{{ page.sidebar2.footer }}</em></p>
+      </aside>
+      {% endif %}
+
+    <main id="main"{% if page.lang %} lang="{{page.lang}}"{% endif %} class="standalone-resource__main">
         <header>
           <h1>
             {% if page.type_of_guidance %}
@@ -161,37 +192,6 @@
           </dl>
         </aside>
       {% endif %}
-
-      {% if page.sidebar2 != null and page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
-        <aside class="your-report your-report--expanded sidebar standalone-resource__sidebar">
-          <dl>
-          {% for section in page.sidebar2.sections %}
-            <dt>{{ section.name }}</dt>
-            <dd>
-              {% if section.name == "Navigation" %}
-                {% assign ob = section.items | first %}
-                <a href=""{{ section.base | append: ob.url | relative_url }}" rel="noopener roreferrer">{{ ob.title }}</a>
-                {% assign offs = 1 %}
-                {% else %}
-                {% assign offs = 0 %}
-                {% endif %}
-              <ul>
-              {% for item in section.items offset:offs %}
-                <li>{% if item.url != null %}<a href="{{ section.base | append: item.url | relative_url }}"
-                   rel="noopener roreferrer">{{ item.title }}</a>
-                   {% else %}
-                   {{ item.title }}
-                   {% endif %}
-                  </li>
-              {% endfor %}
-              </ul>         
-            </dd>
-          {% endfor %}
-          </dl>
-          <p></em>{{ page.sidebar2.footer }}</em></p>
-        </aside>
-      {% endif %}
-
 
       {% if page.type_of_guidance == "Test Rule" %}
         <aside class="your-report your-report--expanded sidebar standalone-resource__sidebar">
