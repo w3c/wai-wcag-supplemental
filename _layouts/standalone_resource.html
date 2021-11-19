@@ -72,7 +72,7 @@
     <div class="default-grid with-gap leftcol">
 
       {% if page.sidebar2 != null and page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
-      <aside class="your-report your-report--expanded sidebar standalone-resource__sidebar">
+      <nav class="your-report your-report--expanded sidebar standalone-resource__sidebar">
         <dl>
         {% for section in page.sidebar2.sections %}
           <dt>{{ section.name }}</dt>
@@ -98,7 +98,7 @@
         {% endfor %}
         </dl>
         <p></em>{{ page.sidebar2.footer }}</em></p>
-      </aside>
+      </nav>
       {% endif %}
 
     <main id="main"{% if page.lang %} lang="{{page.lang}}"{% endif %} class="standalone-resource__main">
