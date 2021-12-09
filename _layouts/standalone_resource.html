@@ -71,33 +71,57 @@
 
     <div class="default-grid with-gap leftcol">
 
-      {% if page.sidebar2 != null and page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
-      <nav class="your-report your-report--expanded sidebar standalone-resource__sidebar">
-        <dl>
-        {% for section in page.sidebar2.sections %}
-          <dt>{{ section.name }}</dt>
-          <dd>
+<style>
+.nav-hack {
+  font-size: .85rem;
+}
+.nav-hack ul {
+    list-style: none;
+    border-bottom: 1px solid #BCBCBC;
+}
+.nav-hack li {
+    padding-bottom: 0;
+    margin-bottom: 0.3em;
+    border-top: 1px solid #BCBCBC;
+}
+.nav-hack a {
+    text-decoration: none;
+}
+.nav-hack h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+</style>
+      {% if layout.sidebar2 != null and page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
+      <nav class="nav-hack your-report your-report--expanded sidebar standalone-resource__sidebar">
+        {% for section in layout.sidebar2.sections %}
+          <h3>{{ section.name }}</h3>
             {% if section.name == "Navigation" %}
-              {% assign ob = section.items | first %}
-              <a href=""{{ section.base | append: ob.url | relative_url }}" rel="noopener roreferrer">{{ ob.title }}</a>
-              {% assign offs = 1 %}
-              {% else %}
-              {% assign offs = 0 %}
+              {% include pager2.html %}
+              {% if context %}
+                <p><a href="{{ context[1] }}">{{ context[0] }}: {{context[2]}}</a></p>
               {% endif %}
-            <ul>
-            {% for item in section.items offset:offs %}
-              <li>{% if item.url != null %}<a href="{{ section.base | append: item.url | relative_url }}"
-                 rel="noopener roreferrer">{{ item.title }}</a>
-                 {% else %}
-                 {{ item.title }}
-                 {% endif %}
+              <ul>
+              {% if prev %}
+                <li><a href="{{ prev[1] }}">{{ prev[0] }}: {{ prev[2] }}</a></li>
+              {% endif %}
+              {% if next %}
+                <li><a href="{{ next[1] }}">{{ next[0] }}: {{ next[2] }}</a></li>
+              {% endif %}
+            {% else %}
+              <ul>
+              {% for item in section.items %}
+                <li>
+                {% if item.url != null %}<a href="{{ section.base | append: item.url | relative_url }}">{{ item.title }}</a>
+                {% else %}
+                  {{ item.title }}
+                {% endif %}
                 </li>
-            {% endfor %}
-            </ul>         
-          </dd>
+              {% endfor %}
+            {% endif %}
+          </ul>         
         {% endfor %}
-        </dl>
-        <p></em>{{ page.sidebar2.footer }}</em></p>
+        <p><em>{{ layout.sidebar2.footer }}</em></p>
       </nav>
       {% endif %}
 

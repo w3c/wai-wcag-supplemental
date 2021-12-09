@@ -1,24 +1,34 @@
 persona-url-base: https://www.w3.org/TR/coga-usable/
 persona-url-mappings:
   - name: Alison
+    title: An Aging User with Mild Cognitive Impairment
     url: "#alison-an-aging-user-with-mild-cognitive-impairment"
   - name: Amy
+    title: An Autistic Computer Scientist
     url: "#amy-an-autistic-computer-scientist"
   - name: George
+    Title: A User who Works in a Supermarket and has Down Syndrome
     url: "#george-a-user-who-works-in-a-supermarket-and-has-down-syndrome"
   - name: Gopal
+    title: A Retired Lawyer with Dementia
     url: "#gopal-a-retired-lawyer-with-dementia"
   - name: Jonathan
+    title: A Therapist with Dyscalculia
     url: "#jonathan-a-therapist-with-dyscalculia"
   - name: Kwame
+    title: A Traumatic Brain Injury Survivor
     url: "#kwame-a-traumatic-brain-injury-survivor"
   - name: Maria
+    title: A User who has Memory Loss
     url: "#maria-a-user-who-has-memory-loss"
   - name: Sam
+    title: A Librarian who has a Hemiplegia and Aphasia
     url: "#sam-a-librarian-who-has-a-hemiplegia-and-aphasia"
   - name: Tal
+    title: A Student who has Dyslexia and Impaired Eye Hand Coordination
     url: "#tal-a-student-who-has-dyslexia-and-impaired-eye-hand-coordination"
   - name: Yuki
+    title: A Yoga Teacher who has AD(H)D
     url: "#yuki-a-yoga-teacher-who-has-ad-h-d"
 
 userstory-url-base: https://www.w3.org/TR/coga-usable/

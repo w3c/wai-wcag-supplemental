@@ -1,5 +1,31 @@
 ---
 layout: standalone_resource
+sidebar2:
+  footer: This understanding document is not normative, which means it is <a href="">not required to meet WCAG</a>. 
+  sections: 
+    - name: Navigation
+      items: 
+        - title: "<em>Objective</em>: Help Users Understand What Things are and How to Use Them"
+          url: 01
+        - title: "<em>Previous</em>:" 
+          url:   p0
+        - title: "<em>This</em>: Make the Purpose of Your Page Clear"
+        - title: "<em>Next</em>: Use a Familiar Hierarchy and Design"
+          url: 02
+    - name: This Page Contents
+      items:
+        - title: User Need
+          url: s1
+        - title: What to Do
+          url: s1
+        - title: How it Helps
+          url: s1
+        - title: More Details
+          url: s1
+        - title: Examples
+          url: s1
+        - title: Related Information
+          url: s1
 ---
 
 {% assign ref_parts = page.ref | split: "p" %}
@@ -8,7 +34,4 @@ layout: standalone_resource
 
 {{ content }}
 
-<h2>Related Information</h2> 
-
-Blah...
-
+{% include related-info.html sections=page.related.sections %}
