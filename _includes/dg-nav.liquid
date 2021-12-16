@@ -94,10 +94,16 @@ Set up tuples for the tag widgets
 {% endif %}
 {% if context_item %}
 {% assign context = context_type | append: "??" | append: context_item.url | append: "??" | append: context_item.title | split: "??" %}
-{% else %}
-{% assign context = "Part of " | append: "??" | append: "../../coga-dg/supplemental-guidance" | append: "??" | append: "All Supplemental Guidance" | split: "??" %}
 {% endif %}
 
-
-
+{% comment %}
+ Get all the h2.text 
+{% assign h2s = "," | split: "," %}
+{% assign segs = content | split: "<h2>" | shift %}
+{% for seg in segs %}
+{% assign heading = seg | split: "</h2>" %}
+{% assign h2s = h2s | push: heading[0] %}
+{% endfor %}
+xxx {{ h2s | inspect}} /xxx
+{% endcomment %}
 

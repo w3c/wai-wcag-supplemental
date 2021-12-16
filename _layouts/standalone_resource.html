@@ -92,12 +92,18 @@
   font-size: 1rem;
 }
 </style>
-      {% if layout.sidebar2 != null and page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
+      {% if page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
+        {% if page.related.sections != null %} 
+          {% capture content %}{{ content }}{% include related-info.html sections=page.related.sections %}{% endcapture %}   
+        {% endif%}
+      {% endif%}
+
+      {% if layout.sidebar != null %}
       <nav class="nav-hack your-report your-report--expanded sidebar standalone-resource__sidebar">
-        {% for section in layout.sidebar2.sections %}
+        {% for section in layout.sidebar.sections %}
           <h3>{{ section.name }}</h3>
-            {% if section.name == "Navigation" %}
-              {% include pager2.html %}
+            {% if section.type == "autoNav" %}
+              {% include dg-nav.liquid %}
               {% if context %}
                 <p><a href="{{ context[1] }}">{{ context[0] }}: {{context[2]}}</a></p>
               {% endif %}
@@ -108,7 +114,17 @@
               {% if next %}
                 <li><a href="{{ next[1] }}">{{ next[0] }}: {{ next[2] }}</a></li>
               {% endif %}
-            {% else %}
+            {% elsif section.type == "autoContents" %}
+            {% capture content %}{{ content | add_h2_ids }} {% endcapture %}
+            <ul>
+              {% assign h2links = content | get_h2_links %}
+              {% for link in h2links %}
+                <li><a href="#{{ link[1] }}">{{ link[0] }}</a></li>
+              {% endfor %}
+              </ul>
+              {% elsif section.type == "footer" %}
+                <p><em>{{ section.content }}</em></p>
+              {% else %}
               <ul>
               {% for item in section.items %}
                 <li>
@@ -121,7 +137,6 @@
             {% endif %}
           </ul>         
         {% endfor %}
-        <p><em>{{ layout.sidebar2.footer }}</em></p>
       </nav>
       {% endif %}
 
@@ -167,56 +182,6 @@
 
       </main>
     
-      {% if page.sidebar != null and page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
-        <aside class="your-report your-report--expanded sidebar standalone-resource__sidebar">
-          <h2 style="margin-top: 0">{{ page.sidebar.title}}</h2>
-          <p>{{ page.sidebar.text }}</p>
-          {% for link in page.sidebar.toplinks %}
-          <a href="{{ link.url }}"
-            class="resource-link resource-link--no-icon"
-            rel="noopener roreferrer">
-            {{link.title}}</a>
-          {% endfor %}
-          <dl>
-          {% for section in page.sidebar.sections %}
-            <dt>{{ section.name }}</dt>
-            <dd>
-            {% if section.name == "Personas" or section.name == "User Story" or section.name == "User Stories" %}
-              {% assign items = section.items | split: ", "%} 
-              {% if section.name == "Personas" %}
-                {% assign url-base = site.data.design-guide-links.persona-url-base %}
-                {% assign mappings = site.data.design-guide-links.persona-url-mappings %}
-              {% else %}
-                {% assign url-base = site.data.design-guide-links.userstory-url-base %}
-                {% assign mappings = site.data.design-guide-links.userstory-url-mappings %}
-              {% endif %}  
-                {% for item in items %}
-                {% assign match = mappings | find_exp:"mapping", "mapping.name == item" %}
-                {% if match != nill %}        
-                <a href="{{ url-base | append: match.url | relative_url }}"
-                  class="resource-link resource-link--no-icon"
-                  rel="noopener roreferrer">
-                {{item}}</a>
-                {% endif %}
-              {% endfor %}  
-            {% else %}
-              {% for item in section.items %}
-                {% if item.url != nil %}
-                <a href="{{ section.base | append: item.url | relative_url }}"
-                   class="resource-link resource-link--no-icon"
-                   rel="noopener roreferrer">{{ item.title }}</a>
-                {% else %}
-                {{ item.title }}
-                {% endif %}
-              {% endfor %}
-            {% endif %}
-          
-            </dd>
-          {% endfor %}
-          </dl>
-        </aside>
-      {% endif %}
-
       {% if page.type_of_guidance == "Test Rule" %}
         <aside class="your-report your-report--expanded sidebar standalone-resource__sidebar">
           <h2 style="margin-top: 0">About this page</h2>
