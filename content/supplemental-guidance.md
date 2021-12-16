@@ -1,14 +1,14 @@
 ---
 doc-note-type: draft
 title: All Supplemental Guidance to WCAG
-permalink: /wcag-supplemental/supplemental-guidance/
+permalink: /wcag-supplemental/all-supplemental-guidance/
 github: 
   repository: w3c/wai-wcag-supplemental
   branch: main
   path: content/supplemental-guidance.md
 feedbackemail: wai@w3.org
 inline_css: "
-  zsummary > :first-child::before
+  summary > :first-child::before
   {
     display: none;
   }
@@ -22,11 +22,11 @@ inline_css: "
 
 ## Design Patterns for People with Cognitive and Learning Disabilities
 
-Design Patterns provide practical guidance on how to better meet the accessibility requirements of people with cognitive and learning disabilities. 
+These Design Patterns provide practical guidance on how to better meet the accessibility requirements of people with cognitive and learning disabilities. 
 
 The Patterns are organised into the following "Objectives":
 
-{% include excol.html type="all" %}
+{% include excol.html type="all" expand-text="Show all Patterns" collapse-text="Show only Objectives"%}
 
 <ul>
 {% for objective in site.objectives %}
