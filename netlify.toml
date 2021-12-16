@@ -7,7 +7,7 @@ RUBY_VERSION = "2.6.2"
 
 [[redirects]]
   from = "/"
-  to = "/wcag-supplemental/supplemental-guidance"
+  to = "/wcag-supplemental/all-supplemental-guidance"
 
 [dev]
 publish = "_site"
