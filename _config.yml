@@ -63,7 +63,7 @@ defaults:
       layout: standalone_resource
       standalone_resource_nav_links:
         - name: All Supplemental Guidance to WCAG
-          ref: /wcag-supplemental/supplemental-guidance
+          ref: /wcag-supplemental/all-supplemental-guidance
         - name: About Supplemental Guidance
           ref: /wcag-supplemental/about
       standalone_resource_doc_name: Supplemental Guidance to WCAG
