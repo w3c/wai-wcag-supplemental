@@ -25,7 +25,6 @@ inline_css: "
 }
   "
 ---
-class-"">
 
 ## Design Patterns for People with Cognitive and Learning Disabilities
 
