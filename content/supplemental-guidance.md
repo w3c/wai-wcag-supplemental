@@ -16,9 +16,16 @@ inline_css: "
   {
     content: \"\";
   }
+  summary > :first-child > span
+  {
+    display: list-item;
+    list-style-position: inside;
+    list-style-type: disc;
+  }
 }
   "
 ---
+class-"">
 
 ## Design Patterns for People with Cognitive and Learning Disabilities
 
@@ -28,14 +35,12 @@ The Patterns are organised into the following "Objectives":
 
 {% include excol.html type="all" expand-text="Show all Patterns" collapse-text="Show only Objectives"%}
 
-<ul>
 {% for objective in site.objectives %}
   {% include excol.html type="start" id=objective.ref %}
-  <li><a href="{{ objective.url | relative_url }}">{{ objective.title }}</a></li>
+  <span><a href="{{ objective.url | relative_url }}">{{ objective.title }}</a></span>
   {% include excol.html type="middle" %}
   {% include patterns.html obj_ref = objective.ref %}
   {% include excol.html type="end" %}
 {% endfor %}
-</ul>
 
 {% include excol.html type="all" %}
