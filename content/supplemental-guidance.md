@@ -22,6 +22,10 @@ inline_css: "
     list-style-position: inside;
     list-style-type: disc;
   }
+  div[data-details][aria-expanded=false] div:not([data-summary])
+  {
+    display:none;
+  }
 }
   "
 ---
@@ -32,14 +36,16 @@ These Design Patterns provide practical guidance on how to better meet the acces
 
 The Patterns are organised into the following "Objectives":
 
-{% include excol.html type="all" expand-text="Show all Patterns" collapse-text="Show only Objectives"%}
+{% include excol2.html type="all" expand-text="Show Patterns" collapse-text="Hide Patterns"%}
 
+<ul>
 {% for objective in site.objectives %}
-  {% include excol.html type="start" id=objective.ref %}
-  <span><a href="{{ objective.url | relative_url }}">{{ objective.title }}</a></span>
-  {% include excol.html type="middle" %}
+  {% include excol2.html type="start" id=objective.ref %}
+  <li><a href="{{ objective.url | relative_url }}">{{ objective.title }}</a></li>
+  {% include excol2.html type="middle" %}
   {% include patterns.html obj_ref = objective.ref %}
-  {% include excol.html type="end" %}
+  {% include excol2.html type="end" %}
 {% endfor %}
+</ul>
 
-{% include excol.html type="all" %}
+{% include excol2.html type="all" expand-text="Show Patterns" collapse-text="Hide Patterns"%}
