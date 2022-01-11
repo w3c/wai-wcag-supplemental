@@ -321,7 +321,6 @@ if (document.querySelector('main')) {
       setTimeout(function(){
         var open  = document.querySelectorAll('details[open]').length + document.querySelectorAll('div[data-details][aria-expanded=true]').length;
         var close = document.querySelectorAll('details:not([open])').length + document.querySelectorAll('div[data-details][aria-expanded=false]').length;
-        console.log(open, close)
         if((open > 0) && (close === 0)) {
           enableButtons(document.querySelectorAll('.excol-all .collapse'));
           disableButtons(document.querySelectorAll('.excol-all .expand'));
@@ -339,27 +338,25 @@ if (document.querySelector('main')) {
       el.addEventListener("click", function() {setExColAllButtons()});
     });
 
-    console.log(excolAll)
     Array.prototype.forEach.call(excolAll, function(el, i){
       const expandText = el.dataset.expandText || 'Expand All Sections';
       const collapseText = el.dataset.collapseText || 'Collapse All Sections';
       el.innerHTML = '<button class="expand button button-secondary button-small">+ ' + t(expandText) + '</button> <button class="collapse button button-secondary button-small">&minus; ' + t(collapseText) + '</button>';
-    });
 
-    Array.prototype.forEach.call(document.querySelectorAll('.excol-all'), function(el, i){
       el.addEventListener("click", function(element) {
         if (hasclass(element.target, 'expand')) {
-          Array.prototype.forEach.call(document.querySelectorAll('details'), function(el, i){
+          Array.prototype.forEach.call(excols, function(el, i){
             el.setAttribute('open', 'true');
           });
         }
         if (hasclass(element.target, 'collapse')) {
-          Array.prototype.forEach.call(document.querySelectorAll('details'), function(el, i){
+          Array.prototype.forEach.call(excols, function(el, i){
             el.removeAttribute('open');
           });
         }
-        Array.prototype.forEach.call(document.querySelectorAll('div[data-details]'), function(el, i){
-          el.setAttribute('aria-expanded', (hasclass(element.target, 'expand')) ? "true" : "false");
+        var exp = (hasclass(element.target, 'expand')) ? "true" : "false";
+        Array.prototype.forEach.call(excols2, function(el, i){
+          el.setAttribute('aria-expanded', exp);
         });
         setExColAllButtons();
       });
