@@ -36,22 +36,35 @@
   <meta name="twitter:image" property="og:image" content="{{ twimage | relative_url | prepend: site.url }}">
   {%- endunless -%}
   <style>
-    .visually-hidden-focusable:not(:focus):not(:focus-within) {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
-  }
+
+
+.button--skip-link {
+  background-color: var(--ocean) !important;
+  border-color: var(--ocean) !important;
+  outline-color: currentColor  !important;
+  font-weight: 600;
+  font-size: larger;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  top: 0.5em;
+  width: 10em;
+  opacity: 1;
+  transition: transform 0.1875s ease-out, opacity 0.1875s ease-out;
+}
+
+.button--skip-link:not(:focus):not(:hover) {
+  transform: translateY(-4em);
+  opacity: 0;
+}
+
   </style>
   {% include_cached head.html type="end" %}
   <body id="top" class="page-{{page.title | slugify}} {% include_cached body-class.html collection=page.collection doc-note-type=page.doc-note-type %}">
 
-    <a href="#main" class="visually-hidden-focusable">Skip to content</a>
+    <a href="#main" class="button button--skip-link">Skip to content</a>
 
     <div class="minimal-header-container default-grid">
       {% if site.standalone_resource_doc_name_sub %}
