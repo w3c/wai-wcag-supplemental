@@ -67,7 +67,7 @@ defaults:
           ref: /wcag-supplemental/about
       standalone_resource_doc_name: Supplemental Guidance to WCAG
       footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
-        <p><strong>Date:</strong> Updated November 2021. First published November 2021.</p>
+        <p><strong>Date:</strong>Updated April 2021.</p>
         <p>The Design Guide content is automatically generated from the W3C note <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>. The user interface was developed by Steve Lee and Hidde de Vries, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide project</a>, co-funded by the European Commission.</p>
   -
     scope: 
