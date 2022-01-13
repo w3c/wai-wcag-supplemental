@@ -58,8 +58,7 @@ defaults:
       doc-note-type: draft
       lang: en   # Change "en" to the translated-language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
       last_updated: 2021-@@-@@   # Put the date of this translation YYYY-MM-DD (with month in the middle)
-      license: creative-commons   # NEW: delete if not creative-commons
-      feedbackmail: wai@w3.org  # NEW: delete this line if it’s an EOWG resource (the default is wai-eo-editors@w3.org)
+      feedbackmail: wai@w3.org  # delete this line if it’s an EOWG resource (the default is wai-eo-editors@w3.org)
       layout: standalone_resource
       standalone_resource_nav_links:
         - name: All Supplemental Guidance
