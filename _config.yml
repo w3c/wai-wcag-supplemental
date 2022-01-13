@@ -41,12 +41,12 @@ collections_dir: _collections
 collections:
   patterns:
     title: Patterns
-    permalink: /:collection/:name/
+    permalink: /wcag-supplemental/:collection/:name/
     output: true
     sort_by: ref
   objectives:
     title: Objectives
-    permalink: /:collection/:name/
+    permalink: /wcag-supplemental/:collection/:name/
     output: true
     sort_by: ref
 
@@ -58,17 +58,16 @@ defaults:
       doc-note-type: draft
       lang: en   # Change "en" to the translated-language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
       last_updated: 2021-@@-@@   # Put the date of this translation YYYY-MM-DD (with month in the middle)
-      license: creative-commons   # NEW: delete if not creative-commons
-      feedbackmail: wai@w3.org  # NEW: delete this line if it’s an EOWG resource (the default is wai-eo-editors@w3.org)
+      feedbackmail: wai@w3.org  # delete this line if it’s an EOWG resource (the default is wai-eo-editors@w3.org)
       layout: standalone_resource
       standalone_resource_nav_links:
-        - name: All Supplemental Guidance to WCAG
-          ref: /wcag-supplemental/supplemental-guidance
+        - name: All Supplemental Guidance
+          ref: /wcag-supplemental/all-supplemental-guidance
         - name: About Supplemental Guidance
           ref: /wcag-supplemental/about
       standalone_resource_doc_name: Supplemental Guidance to WCAG
       footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
-        <p><strong>Date:</strong> Updated November 2021. First published November 2021.</p>
+        <p><strong>Date:</strong>Updated April 2021.</p>
         <p>The Design Guide content is automatically generated from the W3C note <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>. The user interface was developed by Steve Lee and Hidde de Vries, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide project</a>, co-funded by the European Commission.</p>
   -
     scope: 
@@ -83,15 +82,6 @@ defaults:
     values:
       layout: pattern
       type_of_guidance: Design Pattern   
-      sidebar:
-        title: About this Page
-        text: <em>Design Patterns</em> explain how to improve accessibility for people with cognitive and learning disabilities.
-        toplinks: 
-          - title: Cognitive Accessibility Glossary
-            url: https://www.w3.org/TR/coga-usable/#glossary
-      github: 
-        repository: w3c/wai-wcag-supplemental
-        path: _collections/patterns/xxx
   -
     scope: 
       type: "objectives"
@@ -99,12 +89,6 @@ defaults:
     values:
       layout: objective
       type_of_guidance: Objective
-      sidebar:
-        title: About this Page
-        text: <em>Objectives</em> are collections of Cognitive Design Patterns with a common theme.
-        toplinks: 
-          - title: Cognitive Accessibility Glossary
-            url: https://www.w3.org/TR/coga-usable/#glossary     
 
 plugins:
   - jekyll-seo-tag

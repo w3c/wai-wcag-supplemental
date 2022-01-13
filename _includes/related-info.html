@@ -1,0 +1,28 @@
+<section>
+    <h2>Related Information</h2> 
+
+    {% for section in include.sections %}
+    <h3>{{ section.name }}</h3>
+    <ul>
+    {% if section.name == "Personas" or section.name == "User Story" or section.name == "User Stories" %}
+        {% assign items = section.items | split: ", "%} 
+        {% if section.name == "Personas" %}
+            {% assign url-base = site.data.design-guide-links.persona-url-base %}
+            {% assign mappings = site.data.design-guide-links.persona-url-mappings %}
+        {% else %}
+            {% assign url-base = site.data.design-guide-links.userstory-url-base %}
+            {% assign mappings = site.data.design-guide-links.userstory-url-mappings %}
+        {% endif %}  
+        {% for item in items %}
+            {% assign match = mappings | find_exp:"mapping", "mapping.name == item" %}
+            {% if match != nill %}        
+                <li><a href="{{ url-base | append: match.url | relative_url }}">{{item}}: {{match.title}}</a></li>
+            {% endif %}
+        {% endfor %}  
+    {% endif %}
+    </ul>
+    {% endfor %}
+
+    <h3>Reference</h3>
+        <ul><li><a href="https://www.w3.org/TR/coga-usable/#glossary">Cognitive Accessibility Glossary</a></li></ul>
+</section>

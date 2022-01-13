@@ -1,21 +1,16 @@
 ---
 layout: standalone_resource
+sidebar:
+  autoNav:
+    titles: false
+  footer:
+    content: Supplemental Guidance is informative, <a href="../../about">not required to meet WCAG</a>.
 ---
-
-{% include box.html type="start" title="About this Objective" %}
-
-{{page.summary}}
-
-{% include box.html type="end" %}
-
-<p>See the <a href="#patterns-for-objective">Design Patterns</a> for this objective.</p>
 
 <h2>Description</h2>
 
 {{ content }}
 
-<h2 id="patterns-for-objective">Design Patterns for this Objective</h2>
+<h2>Design Patterns for this Objective</h2>
 
 {% include patterns.html obj_ref = page.ref %}
-
-{% include pager.html %}
