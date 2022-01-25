@@ -7,6 +7,9 @@ github:
   branch: main
   path: content/supplemental-guidance.md
 feedbackemail: wai@w3.org
+sidebar:
+  footer:
+    content: Supplemental Guidance is informative, <a href="../../about">not required to meet WCAG</a>.
 inline_css: "
   summary > :first-child::before
   {
@@ -30,7 +33,7 @@ inline_css: "
   "
 ---
 
-## Cognitive Accessibility &mdash; Design Patterns for People with Cognitive and Learning Disabilities
+## Cognitive Accessibility Design Patterns
 
 These Design Patterns provide practical guidance on how to better meet the accessibility needs of people with cognitive and learning disabilities. 
 
