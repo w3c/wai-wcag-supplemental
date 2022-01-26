@@ -9,7 +9,7 @@ github:
 feedbackemail: wai@w3.org
 sidebar:
   footer:
-    content: Supplemental Guidance is informative, <a href="../../about">not required to meet WCAG</a>.
+    content: Supplemental Guidance is informative, <a href="/wcag-supplemental/about">not required to meet WCAG</a>.
 inline_css: "
   summary > :first-child::before
   {
@@ -37,7 +37,7 @@ inline_css: "
 
 These Design Patterns provide practical guidance on how to better meet the accessibility needs of people with cognitive and learning disabilities. 
 
-The Patterns are organised under the following "Objectives":
+<div id="allcogapatterns">The Patterns are organised under the following "Objectives":</div>
 
 {% include excol2.html type="all" expand-text="Show Patterns" collapse-text="Hide Patterns"%}
 

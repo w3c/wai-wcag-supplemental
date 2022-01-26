@@ -8,7 +8,7 @@ github:
   path: content/about.md
 sidebar:
   footer:
-    content: Supplemental Guidance is informative, <a href="../../about">not required to meet WCAG</a>.
+    content: Supplemental Guidance is informative, not required to meet WCAG.
 ---
 
 Supplemental guidance provides advice for content authors and designers on improving the accessibility of content and applications beyond what is required by [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG).
