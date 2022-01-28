@@ -43,7 +43,7 @@ Supplemental guidance provides advice for content authors and designers on impro
 
 These Design Patterns provide practical guidance on how to better meet the accessibility needs of people with cognitive and learning disabilities.
 
-<div id="allcogapatterns">The Patterns are organised under the following "Objectives":</div>
+The Patterns are organised under the following "Objectives":
 
 {% include excol2.html type="all" expand-text="Show Patterns" collapse-text="Hide Patterns"%}
 
