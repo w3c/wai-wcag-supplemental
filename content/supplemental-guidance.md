@@ -1,7 +1,7 @@
 ---
 doc-note-type: draft
 title: All Supplemental Guidance
-permalink: /wcag-supplemental/all-supplemental-guidance/
+permalink: /wcag-supplemental/all-supplemental-guidance
 github: 
   repository: w3c/wai-wcag-supplemental
   branch: main
@@ -35,7 +35,7 @@ inline_css: "
 
 ## Cognitive Accessibility Design Patterns
 
-These Design Patterns provide practical guidance on how to better meet the accessibility needs of people with cognitive and learning disabilities. 
+These Design Patterns provide practical guidance on how to better meet the accessibility needs of people with cognitive and learning disabilities.
 
 <div id="allcogapatterns">The Patterns are organised under the following "Objectives":</div>
 
