@@ -1,8 +1,8 @@
---- 
+---
 doc-note-type: draft
 title: About Supplemental Guidance
 permalink: /wcag-supplemental/about
-github: 
+github:
   repository: w3c/wai-wcag-supplemental
   branch: main
   path: content/about.md
@@ -15,7 +15,7 @@ Supplemental guidance provides advice for content authors and designers on impro
 
 While the guidance presented here focuses on particular groups, it is important to note that people may require different combinations of accessibility features unique to them and their current situation. For example, someone with a cognitive disability may also have auditory, physical, neurological, speech and visual disabilities. Thus, this guidance must always be applied in conjunction with WCAG in order to maximize accessibility for everyone.
 
-## Cognitive Accessibility Design Patterns
+## About Cognitive Accessibility Design Patterns
 
 The Design Patterns focus on reducing barriers experienced by people with cognitive and learning disabilities. The Patterns describe what to do in order to improve accessibility and explain how this helps when applied. Examples are also provided.
 
@@ -29,6 +29,6 @@ The Design Patterns and Objectives are drawn from the more comprehensive documen
 - [Making Content Usable for People with Cognitive and Learning Disabilities <svg focusable="false" aria-hidden="true" class="icon-different-view "><use xlink:href="/assets/images/icons.svg#icon-different-view"></use></svg>](https://www.w3.org/TR/coga-usable)
 - [WCAG Quick Reference <svg focusable="false" aria-hidden="true" class="icon-different-view "><use xlink:href="/assets/images/icons.svg#icon-different-view"></use></svg>](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1)
 
-## Low Vision Accessibility Guidance
+## About Low Vision Accessibility Guidance
 
 Guidance on how to better meet the needs of people with low vision will be added in 2022.
