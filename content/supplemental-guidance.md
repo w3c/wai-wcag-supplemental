@@ -33,6 +33,12 @@ inline_css: "
   "
 ---
 
+{::nomarkdown} {% include box.html type="start" title="Summary" class="" %} {:/}
+
+Supplemental guidance provides advice for content authors and designers on improving the accessibility of content and applications beyond what is required by [Web Content Accessibility Guidelines {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG). To learn more, see: [About Supplemental Guidance](/wcag-supplemental/about).
+
+{::nomarkdown} {% include box.html type="end" %} {:/}
+
 ## Cognitive Accessibility Design Patterns
 
 These Design Patterns provide practical guidance on how to better meet the accessibility needs of people with cognitive and learning disabilities.
