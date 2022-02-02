@@ -35,7 +35,7 @@ inline_css: "
 
 {::nomarkdown} {% include box.html type="start" title="Summary" class="" %} {:/}
 
-Supplemental guidance provides advice for content authors and designers on improving the accessibility of content and applications beyond what is required by [Web Content Accessibility Guidelines {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG). To learn more, see: [About Supplemental Guidance](/wcag-supplemental/about).
+Supplemental guidance provides advice for developers, designers and content authors on improving the accessibility of content and applications beyond what is required by [Web Content Accessibility Guidelines {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG). To learn more, see: [About Supplemental Guidance](/wcag-supplemental/about). To learn more, see: [WCAG Overview {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/) and [All WCAG 2 Guidance {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/docs/).
 
 {::nomarkdown} {% include box.html type="end" %} {:/}
 
