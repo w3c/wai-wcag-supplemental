@@ -17,11 +17,9 @@ While the guidance presented here focuses on particular groups, it is important 
 
 ## About Cognitive Accessibility Design Patterns
 
-The Design Patterns focus on reducing barriers experienced by people with cognitive and learning disabilities. The Patterns describe what to do in order to improve accessibility and explain how this helps when applied. Examples are also provided.
+This guidance provides a set of "Objectives" for reducing barriers experienced by people with cognitive and learning disabilities. The Objectives provide an overview and include a set of Design Patterns. Each Pattern explains what to do in order to improve accessibility, how this helps when applied, and includes examples.
 
-Related Design Patterns are grouped into Objectives. The Objectives provide a high level overview of the areas where people experience cognitive accessibility barriers.
-
-The Design Patterns and Objectives are drawn from the more comprehensive document “[Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable/)”. This provides additional background, user stories, personas, a glossary, and other guidance.
+The Objectives and Design Patterns are drawn from the more comprehensive document “[Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable/)”. This provides additional background, user stories, personas, a glossary, and other guidance.
 
 ### Related Resources
 
