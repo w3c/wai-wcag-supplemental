@@ -67,8 +67,15 @@ defaults:
       standalone_resource_doc_name: Supplemental Guidance to WCAG 2
       footer:
         > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
-        <p><strong>Date:</strong> Content first published 29 April 2021 in [Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable/) ("Content Usable"). This user interface posted in January 2022.</p>
-        <p>This content is from the "Content Usable" Working Group Note by Cognitive and Learning Disabilities Accessibility Task Force ([Coga TF](https://www.w3.org/groups/tf/cognitive-a11y-tf)) [participants](https://www.w3.org/groups/tf/cognitive-a11y-tf/participants). It is published by the Accessibility Guidelines Working Group ([AG WG](https://www.w3.org/groups/wg/ag)) and the Accessible Platform Architectures ([APA](https://www.w3.org/groups/wg/apa)) Working Group. This user interface was designed by the Accessibility Education and Outreach Working Groups ([EOWG](https://www.w3.org/groups/wg/eowg)) with contributions from Steve Lee, Hidde de Vries, Shadi Abou-Zahra, and Shawn Lawton Henry, as part of the [WAI-Guide project](https://www.w3.org/WAI/about/projects/wai-guide/), co-funded by the European Commission.</p>
+        <p><strong>Date:</strong> Content first published 29 April 2021 in <a href="https://www.w3.org/TR/coga-usable/">Making Content 
+        Usable for People with Cognitive and Learning Disabilities</a> ("Content Usable"). This user interface posted in January 2022.</p>
+        <p>This content is from the "Content Usable" Working Group Note by <a href="https://www.w3.org/TR/coga-usable/">Making Content 
+        Usable for People with Cognitive and Learning Disabilities</a> <a href="https://www.w3.org/groups/tf/cognitive-a11y-tf/participants)">participants</a>.
+        It is published by the Accessibility Guidelines Working Group (<a href="https://www.w3.org/groups/wg/ag">AG WG</a>) and the 
+        Accessible Platform Architectures (<a href="https://www.w3.org/groups/wg/apa">APA</a>) Working Group. This user interface was 
+        designed by the Accessibility Education and Outreach Working Groups (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>) with contributions
+        from Steve Lee, Hidde de Vries, Shadi Abou-Zahra, and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">
+        WAI-Guide project</a>, co-funded by the European Commission.</p>
   - scope:
       path: ""
       type: "pages"
