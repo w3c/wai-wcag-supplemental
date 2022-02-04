@@ -1,6 +1,7 @@
 ---
 doc-note-type: draft
 title: All Supplemental Guidance
+footer: ""
 permalink: /wcag-supplemental/all-supplemental-guidance
 github: 
   repository: w3c/wai-wcag-supplemental
