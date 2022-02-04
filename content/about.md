@@ -15,7 +15,7 @@ Supplemental guidance provides advice for content authors and designers on impro
 
 While the guidance presented here focuses on particular groups, it is important to note that people may require different combinations of accessibility features unique to them and their current situation. For example, someone with a cognitive disability may also have auditory, physical, neurological, speech and visual disabilities. Thus, this guidance must always be applied in conjunction with WCAG in order to maximize accessibility for everyone.
 
-## About Cognitive Accessibility Design Patterns
+## About Cognitive Accessibility Guidance
 
 This guidance provides a set of "Objectives" for reducing barriers experienced by people with cognitive and learning disabilities. The Objectives provide an overview and include a set of Design Patterns. Each Pattern explains what to do in order to improve accessibility, how this helps when applied, and includes examples.
 
