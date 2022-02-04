@@ -57,7 +57,7 @@ This guidance provides practical advice on how to better meet the accessibility 
   {% include excol.html type="end" %}
 {% endfor %}
 
-{% include excol.html type="all" expand-text="Show Patterns" collapse-text="Hide Patterns"%}
+{% include excol.html type="all" %}
 
 ## Low Vision Accessibility Guidance
 
