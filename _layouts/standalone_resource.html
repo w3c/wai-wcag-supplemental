@@ -40,41 +40,48 @@
 
     <a href="#main" class="button button--skip-link">Skip to content</a>
 
-    {% if page.standalone_resource_about_nav %}
-        {% assign docaboutnav = page.standalone_resource_about_nav %}
-        {% assign aboutnav = 'About:<span class="standalone_resource_aboutnavsep"></span>' %}
-        {% for link in docaboutnav %}
-            {% capture navitem %}<a href="{{ link.ref | relative_url }}">{{ link.name }}</a>{% endcapture %}
-            {% if forloop.last == true %}
-                {% assign sep = "" %}
-            {% else %}
-                {% assign sep = '<span class="standalone_resource_aboutnavsep"> | </span>' %}
-            {% endif %}
-            {% assign aboutnav = aboutnav | append: navitem | append: sep %} 
-        {% endfor %}
-    {% endif %}
     <div class="minimal-header-container default-grid">
       {% if site.standalone_resource_doc_name_sub %}
       {% include minimal-header.html translations=translations class="with-subtitle" subtitle=site.standalone_resource_doc_name_sub title=site.standalone_resource_doc_name %}
       {% elsif site.standalone_resource_doc_name %}
       {% include minimal-header.html translations=translations title=site.standalone_resource_doc_name %}
       {% elsif page.standalone_resource_doc_name_sub %}
-      {% include minimal-header.html translations=translations class="with-subtitle" aboutnav=aboutnav subtitle=page.standalone_resource_doc_name_sub title=page.standalone_resource_doc_name %}
+      {% include minimal-header.html translations=translations class="with-subtitle" subtitle=page.standalone_resource_doc_name_sub title=page.standalone_resource_doc_name %}
       {% else %}
       {% include minimal-header.html translations=translations title=page.standalone_resource_doc_name %}
       {% endif %}
     </div>
 
     <div class="default-grid nav-container">
-        {% if page.standalone_resource_pager %}
+        <div class="nav">
+        <nav class="standalone-resource-about" aria-label="Related information">
+            {% if page.standalone_resource_about_nav %}     
+            {% assign docaboutnav = page.standalone_resource_about_nav %}
+            {% assign aboutnav = '<em>About:</em><span class="standalone_resource_aboutnavsep"></span>' %}
+            {% for link in docaboutnav %}
+                {% capture navitem %}<li><a href="{{ link.ref | relative_url }}">{{ link.name }}</a></li>{% endcapture %}
+                {% if forloop.last == true %}
+                    {% assign sep = "" %}
+                {% else %}
+                    {% assign sep = '<span class="standalone_resource_aboutnavsep"> | </span>' %}
+                {% endif %}
+                {% assign aboutnav = aboutnav | append: navitem | append: sep %} 
+            {% endfor %}
+            <ul>{{ aboutnav }}</ul>
+            {% endif %}
+        </nav>
+        {% if page.standalone_resource_pager and page.standalone_resource_about_nav %}
+        <hr class="standalone-resource-navrule"/>
+        {% endif %}
+        {% if page.standalone_resource_about_nav %}
         {% assign pager = page.standalone_resource_pager %}
-        <nav class="nav standalone_resource_pager" aria-label="Content pager">
+        <nav class="standalone-resource-pager" aria-label="Item navigation">
             {% include dg-nav.liquid %}
             <ul>
                 <li>{% include_cached icon.html name=pager.icon %} {% if page.permalink == pager.ref %}{{pager.name}}{%else%}<a href="{{pager.ref}}">{{pager.name}}</a>{%endif%}</li>
                 {% if page.ref %}
                     {% if context %}
-                        <li><a href="{{ context[1] }}">{% include_cached icon.html name="arrow-up" %} {{ context[0] }}: {{context[2]}}</a></li>
+                        <li><a href="{{ context[1] }}">{% include_cached icon.html name="arrow-up" aria-label="Parent item"%} {{ context[0] }}: {{context[2]}}</a></li>
                     {% endif %}
                     {% if prev  %}
                         <li><a href="{{ prev[1] }}">{% include_cached icon.html name="arrow-left" %} {{ prev[0] }}</a></li>
@@ -85,6 +92,7 @@
                 {% endif %}
             </ul>
         </nav>
+        </div>
         {% elsif site.standalone_resource_nav_links or page.standalone_resource_nav_links %}
            <nav class="nav" aria-label="Context for this document">
             <ul>
@@ -166,37 +174,36 @@
 
 .minimal-header-subtitle {
   display: block;
-  font-size: 70%;
-  display: block;
   font-size: 60%;
   margin-top: 1em;
   font-style: italic;
 }
 
-.minimal-header-aboutnav {
-  display: block;
-  font-size: 100%;
-  display: block;
-  font-size: 60%;
-  margin-top: .7em;
-  margin-bottom: .4em;
-}
 .standalone_resource_aboutnavsep {
-  color: var(--off-white);
+  color: var(--gray);
   margin-left:.8em;
   margin-right:.8em;
 }
 
-.standalone_resource_pager {
-    margin-top: .6em;
-    margin-bottom: .1em;
+.standalone-resource-navrule {
+    border:none;
+    border-top: 1px solid grey
 }
 
-.standalone_resource_pager ul {
+.standalone-resource-about,
+.standalone-resource-pager {
+    margin-top: .5em;
+    margin-left: .5em;
+}
+
+.standalone-resource-about ul,
+.standalone-resource-pager ul {
     list-style: none;
 }
 
-.standalone_resource_pager a {
+
+.standalone-resource-about a,
+.standalone-resource-pager a {
     font-size: 85%;
     margin-left:.8em;
     margin-right:.8em;
