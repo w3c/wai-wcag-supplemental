@@ -70,7 +70,7 @@ defaults:
           ref: /wcag-supplemental/about
       standalone_resource_pager:
         icon: comments
-        name: All Patterns
+        name: All Cognitive
         ref: /wcag-supplemental/all-supplemental-guidance
       footer:
         > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
