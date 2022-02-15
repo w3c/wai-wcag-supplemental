@@ -63,7 +63,7 @@
                 {% if forloop.last == true %}
                     {% assign sep = "" %}
                 {% else %}
-                    {% assign sep = '<span class="standalone_resource_aboutnavsep"> | </span>' %}
+                    {% assign sep = '<span class="standalone_resource_aboutnavsep">  </span>' %}
                 {% endif %}
                 {% assign aboutnav = aboutnav | append: navitem | append: sep %} 
             {% endfor %}
@@ -78,7 +78,8 @@
         <nav class="standalone-resource-pager" aria-label="Item navigation">
             {% include dg-nav.liquid %}
             <ul>
-                <li>{% include_cached icon.html name=pager.icon %} {% if page.permalink == pager.ref %}{{pager.name}}{%else%}<a href="{{pager.ref}}">{{pager.name}}</a>{%endif%}</li>
+                <li><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" style="height: 1.8em;" /></li>
+                <li>{%- if page.permalink == pager.ref %}{{pager.name}}{%else%}<a href="{{pager.ref}}">{{pager.name}}</a>{%endif%}</li>
                 {% if page.ref %}
                     {% if context %}
                         <li><a href="{{ context[1] }}">{% include_cached icon.html name="arrow-up" aria-label="Parent item"%} {{ context[0] }}: {{context[2]}}</a></li>
@@ -122,7 +123,7 @@
 .nav-hack ul {
     list-style: none;
     border-bottom: 1px solid #BCBCBC;
-    padding-left: 1rem
+    padding-left: 0
 }
 .nav-hack li:not(:first-child){
     padding-top: 0.4em;
@@ -194,6 +195,7 @@
 .standalone-resource-pager {
     margin-top: .5em;
     margin-left: .5em;
+    margin-bottom: 
 }
 
 .standalone-resource-about ul,
@@ -201,10 +203,12 @@
     list-style: none;
 }
 
+.nav {
+    font-size: 85%;
+}
 
 .standalone-resource-about a,
 .standalone-resource-pager a {
-    font-size: 85%;
     margin-left:.8em;
     margin-right:.8em;
 }
