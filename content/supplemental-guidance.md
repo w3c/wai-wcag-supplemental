@@ -39,7 +39,7 @@ inline_css: "
 
 {::nomarkdown} {% include box.html type="start" title="Summary" class="" %} {:/}
 
-This pages lists [supplemental guidance](/wcag-supplemental/about/) for improving accessibility beyond what is required by Web Content Accessibility Guidelines [WCAG 2 {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/)).
+This pages lists [supplemental guidance](/wcag-supplemental/about/) for improving accessibility beyond what is required by Web Content Accessibility Guidelines [WCAG 2 {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
 {::nomarkdown} {% include box.html type="end" %} {:/}
 
