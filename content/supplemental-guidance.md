@@ -39,13 +39,24 @@ inline_css: "
 
 {::nomarkdown} {% include box.html type="start" title="Summary" class="" %} {:/}
 
-Supplemental guidance provides advice for developers, designers and content authors on improving the accessibility of content and applications beyond what is required by [Web Content Accessibility Guidelines {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG). To learn more, see: [About Supplemental Guidance](../wcag-supplemental/about) and [All WCAG 2 Guidance {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/docs/).
+This pages lists supplemental guidance for improving accessibility beyond what is required by Web Content Accessibility Guidelines ([WCAG {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/)) 2.
 
 {::nomarkdown} {% include box.html type="end" %} {:/}
 
+{::nomarkdown}
+{% include toc.html type="start" title="Page Contents" %}
+{:/}
+
+- This will be replaced by an automatically generated TOC when using Markdown formatting.
+{:toc}
+
+{::nomarkdown}
+{% include toc.html type="end" %}
+{:/}
+
 ## Cognitive Accessibility Guidance
 
-This guidance provides practical advice on how to better meet the accessibility needs of people with cognitive and learning disabilities. It  consists of a set of "Objectives", each containing several design patterns:
+This guidance provides advice on how to better meet the accessibility needs of people with cognitive and learning disabilities. The guidance listed below is grouped under "Objectives" and provided in "Design Patterns".
 
 {% include excol.html type="all" %}
 
