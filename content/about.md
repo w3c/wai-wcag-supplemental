@@ -41,6 +41,9 @@ Following this guidance is not required to meet WCAG. And, we encourage you to f
 
 The accessibility issues addressed in this guidance are essential for people with certain disabilities to be able to use digital technology.
 
+<div style="float:right; margin-left:1em;">
+{% include image.html src="brain.svg" alt="" class="mini" %}
+</div>
 ## About Cognitive Accessibility Guidance
 
 This guidance provides a set of "Objectives" for reducing barriers experienced by people with cognitive and learning disabilities. The Objectives provide an overview and include a set of "Design Patterns". Each Design Pattern explains what to do in order to improve accessibility, how this helps when applied, and includes examples.
@@ -49,6 +52,9 @@ The Objectives and Design Patterns are from the more comprehensive document “[
 
 Broader information on cognitive accessibility in WCAG and on-going work on cognitive accessibility support at W3C WAI is in [Cognitive Accessibility at W3C <svg focusable="false" aria-hidden="true" class="icon-different-view "><use xlink:href="/assets/images/icons.svg#icon-different-view"></use></svg>](https://www.w3.org/WAI/cognitive/)
 
+<div style="float:right; margin-left:1em;">
+{% include image.html src="eye.svg" alt="" class="mini" %}
+</div>
 ## About Low Vision Accessibility Guidance
 
 Guidance on how to better meet the needs of people with low vision will be added in 2022.
