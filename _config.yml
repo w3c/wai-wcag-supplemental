@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
+# which you are expected to set up once and raFy need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
@@ -64,14 +64,17 @@ defaults:
       standalone_resource_about_nav:
         - name: WCAG 2
           ref: /standards-guidelines/wcag
+          icon: different-view
         - name: The WCAG 2 Documents
           ref: /standards-guidelines/wcag/docs
+          icon: different-view
         - name: Supplemental Guidance
           ref: /wcag-supplemental/about
       standalone_resource_pager:
-        icon: comments
+        image: brain.svg
         name: All Cognitive
         ref: /wcag-supplemental/all-supplemental-guidance
+      content_include: wcag-supplemental.html
       footer:
         > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
         <p><strong>Date:</strong> Content first published 29 April 2021 in <a href="https://www.w3.org/TR/coga-usable/">Making Content 
@@ -93,13 +96,13 @@ defaults:
       path: "_patterns"
     values:
       layout: pattern
-      type_of_guidance: Design Pattern
+      type_of_guidance: Cognitive Accessibility Design Pattern
   - scope:
       type: "objectives"
       path: "_objectives"
     values:
       layout: objective
-      type_of_guidance: Objective
+      type_of_guidance: Cognitive Accessibility Objective
 
 plugins:
   - jekyll-seo-tag
