@@ -8,10 +8,6 @@ github:
   branch: main
   path: content/supplemental-guidance.md
 feedbackemail: wai@w3.org
-xsidebar:
-  footer:
-    content: Supplemental Guidance is informative, <a href="/wcag-supplemental/about">not required to meet WCAG</a>.
-
 inline_css: "
   details ul {
       margin-top: 1rem;

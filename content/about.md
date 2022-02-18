@@ -7,9 +7,6 @@ github:
   repository: w3c/wai-wcag-supplemental
   branch: main
   path: content/about.md
-xsidebar:
-  footer:
-    content: Supplemental Guidance is informative, not required to meet WCAG.
 ---
 
 {::nomarkdown} {% include box.html type="start" title="Summary" %} {:/}
