@@ -7,26 +7,28 @@ github:
   repository: w3c/wai-wcag-supplemental
   branch: main
   path: content/about.md
-sidebar:
+xsidebar:
   footer:
     content: Supplemental Guidance is informative, not required to meet WCAG.
 ---
 
-{::nomarkdown} {% include box.html type="start" title="Summary" class="" %} {:/}
+{::nomarkdown} {% include box.html type="start" title="Summary" %} {:/}
 
 This page explains supplemental guidance for improving accessibility beyond what is required by WCAG 2.
 
-{::nomarkdown} {% include box.html type="end" %} {:/}
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
 
 {::nomarkdown}
-{% include toc.html type="start" title="Page Contents" %}
+{% include_cached toc.html type="start" title="Page Contents" %}
 {:/}
 
 - This will be replaced by an automatically generated TOC when using Markdown formatting.
 {:toc}
 
 {::nomarkdown}
-{% include toc.html type="end" %}
+{% include_cached toc.html type="end" %}
 {:/}
 
 ## About WCAG and Supplemental Guidance

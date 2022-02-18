@@ -8,7 +8,7 @@ github:
   branch: main
   path: content/supplemental-guidance.md
 feedbackemail: wai@w3.org
-sidebar:
+xsidebar:
   footer:
     content: Supplemental Guidance is informative, <a href="/wcag-supplemental/about">not required to meet WCAG</a>.
 
@@ -16,7 +16,7 @@ inline_css: "
   details ul {
       margin-top: 1rem;
   }  
-#"
+"
 #  summary > :first-child::before
 #  {
 #    display: none;
@@ -37,21 +37,26 @@ inline_css: "
 #  }
 ---
 
-{::nomarkdown} {% include box.html type="start" title="Summary" class="" %} {:/}
+
+{::nomarkdown}
+{% include box.html type="start" title="Summary" %}
+{:/}
 
 This pages lists [supplemental guidance](/wcag-supplemental/about/) for improving accessibility beyond what is required by Web Content Accessibility Guidelines [WCAG 2 {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
-{::nomarkdown} {% include box.html type="end" %} {:/}
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
 
 {::nomarkdown}
-{% include toc.html type="start" title="Page Contents" %}
+{% include_cached toc.html type="start" title="Page Contents" %}
 {:/}
 
 - This will be replaced by an automatically generated TOC when using Markdown formatting.
 {:toc}
 
 {::nomarkdown}
-{% include toc.html type="end" %}
+{% include_cached toc.html type="end" %}
 {:/}
 
 <div style="float:right; margin-left:1em;">
