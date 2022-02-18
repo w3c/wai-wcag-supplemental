@@ -7,27 +7,53 @@ github:
   repository: w3c/wai-wcag-supplemental
   branch: main
   path: content/about.md
-sidebar:
-  footer:
-    content: Supplemental Guidance is informative, not required to meet WCAG.
 ---
 
-Supplemental guidance provides advice for content authors and designers on improving the accessibility of content and applications beyond what is required by [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG).
+{::nomarkdown} {% include box.html type="start" title="Summary" %} {:/}
 
-While the guidance presented here focuses on particular groups, it is important to note that people may require different combinations of accessibility features unique to them and their current situation. For example, someone with a cognitive disability may also have auditory, physical, neurological, speech and visual disabilities. Thus, this guidance must always be applied in conjunction with WCAG in order to maximize accessibility for everyone.
+This page explains supplemental guidance for improving accessibility beyond what is required by WCAG 2.
 
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+{::nomarkdown}
+{% include_cached toc.html type="start" title="Page Contents" %}
+{:/}
+
+- This will be replaced by an automatically generated TOC when using Markdown formatting.
+{:toc}
+
+{::nomarkdown}
+{% include_cached toc.html type="end" %}
+{:/}
+
+## About WCAG and Supplemental Guidance
+
+Web Content Accessibility Guidelines (WCAG) provides requirements for making websites, applications, and other digital content accessible to people with disabilities. It is introduced in the [WCAG 2 Overview {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/).
+
+There are additional resources that help you understand and implement WCAG. They are explained in the [WCAG 2 Documents {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/docs/).
+
+Some accessibility issues did not fit as WCAG 2 requirements (called "success criteria"). This supplemental guidance provides advice on addressing many of those accessibility issues.
+
+Following this guidance is not required to meet WCAG. And, we encourage you to follow this guidance in order meet more user needs.
+
+The accessibility issues addressed in this guidance are essential for people with certain disabilities to be able to use digital technology.
+
+<div style="float:right; margin-left:1em;">
+{% include image.html src="brain.svg" alt="" class="mini" %}
+</div>
 ## About Cognitive Accessibility Guidance
 
-This guidance provides a set of "Objectives" for reducing barriers experienced by people with cognitive and learning disabilities. The Objectives provide an overview and include a set of Design Patterns. Each Pattern explains what to do in order to improve accessibility, how this helps when applied, and includes examples.
+This guidance provides a set of "Objectives" for reducing barriers experienced by people with cognitive and learning disabilities. The Objectives provide an overview and include a set of "Design Patterns". Each Design Pattern explains what to do in order to improve accessibility, how this helps when applied, and includes examples.
 
-The Objectives and Design Patterns are drawn from the more comprehensive document “[Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable/)”. This provides additional background, user stories, personas, a glossary, and other guidance.
+The Objectives and Design Patterns are from the more comprehensive document “[Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable/)”. That document provides additional background, user stories, personas, a glossary, and other guidance.
 
-### Related Resources
+Broader information on cognitive accessibility in WCAG and on-going work on cognitive accessibility support at W3C WAI is in [Cognitive Accessibility at W3C <svg focusable="false" aria-hidden="true" class="icon-different-view "><use xlink:href="/assets/images/icons.svg#icon-different-view"></use></svg>](https://www.w3.org/WAI/cognitive/)
 
-- [Cognitive Accessibility <svg focusable="false" aria-hidden="true" class="icon-different-view "><use xlink:href="/assets/images/icons.svg#icon-different-view"></use></svg>](https://www.w3.org/WAI/cognitive/)
-- [Making Content Usable for People with Cognitive and Learning Disabilities <svg focusable="false" aria-hidden="true" class="icon-different-view "><use xlink:href="/assets/images/icons.svg#icon-different-view"></use></svg>](https://www.w3.org/TR/coga-usable)
-- [WCAG Quick Reference <svg focusable="false" aria-hidden="true" class="icon-different-view "><use xlink:href="/assets/images/icons.svg#icon-different-view"></use></svg>](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1)
-
+<div style="float:right; margin-left:1em;">
+{% include image.html src="eye.svg" alt="" class="mini" %}
+</div>
 ## About Low Vision Accessibility Guidance
 
 Guidance on how to better meet the needs of people with low vision will be added in 2022.

@@ -8,15 +8,11 @@ github:
   branch: main
   path: content/supplemental-guidance.md
 feedbackemail: wai@w3.org
-sidebar:
-  footer:
-    content: Supplemental Guidance is informative, <a href="/wcag-supplemental/about">not required to meet WCAG</a>.
-
 inline_css: "
   details ul {
       margin-top: 1rem;
   }  
-#"
+"
 #  summary > :first-child::before
 #  {
 #    display: none;
@@ -37,15 +33,34 @@ inline_css: "
 #  }
 ---
 
-{::nomarkdown} {% include box.html type="start" title="Summary" class="" %} {:/}
 
-Supplemental guidance provides advice for developers, designers and content authors on improving the accessibility of content and applications beyond what is required by [Web Content Accessibility Guidelines {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG). To learn more, see: [About Supplemental Guidance](../wcag-supplemental/about) and [All WCAG 2 Guidance {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/docs/).
+{::nomarkdown}
+{% include box.html type="start" title="Summary" %}
+{:/}
 
-{::nomarkdown} {% include box.html type="end" %} {:/}
+This pages lists [supplemental guidance](/wcag-supplemental/about/) for improving accessibility beyond what is required by Web Content Accessibility Guidelines [WCAG 2 {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+{::nomarkdown}
+{% include_cached toc.html type="start" title="Page Contents" %}
+{:/}
+
+- This will be replaced by an automatically generated TOC when using Markdown formatting.
+{:toc}
+
+{::nomarkdown}
+{% include_cached toc.html type="end" %}
+{:/}
+
+<div style="float:right; margin-left:1em;">
+{% include image.html src="brain.svg" alt="" class="mini" %}
+</div>
 ## Cognitive Accessibility Guidance
 
-This guidance provides practical advice on how to better meet the accessibility needs of people with cognitive and learning disabilities. It  consists of a set of "Objectives", each containing several design patterns:
+This guidance provides advice on how to better meet the accessibility needs of people with cognitive and learning disabilities. The guidance listed below is grouped under "Objectives" and provided in "Design Patterns".
 
 {% include excol.html type="all" %}
 
@@ -60,6 +75,9 @@ This guidance provides practical advice on how to better meet the accessibility 
 
 {% include excol.html type="all" %}
 
+<div style="float:right; margin-left:1em;">
+{% include image.html src="eye.svg" alt="" class="mini" %}
+</div>
 ## Low Vision Accessibility Guidance
 
 Guidance on how to better meet the needs of people with low vision will be added in 2022.
