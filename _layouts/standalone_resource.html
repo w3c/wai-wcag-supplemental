@@ -124,7 +124,7 @@
     {% if sidebar != nil %}
         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
             <header class="box-h ">This Page Contents</header>
-            {% capture content %}{{ content | add_h2_ids }} {% endcapture %}
+            {% capture expanded_content %}{{ expanded_content | add_h2_ids }} {% endcapture %}
             <div class="box-i">
                 <ul>
                 {% assign h2links = expanded_content | get_h2_links %}
