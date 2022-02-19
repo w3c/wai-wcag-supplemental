@@ -54,24 +54,16 @@
 
     <div class="default-grid nav-container">
         <div class="nav">
-        <nav class="standalone-resource-about" aria-label="Related information">
-            {% if page.standalone_resource_about_nav %}     
-            {% assign docaboutnav = page.standalone_resource_about_nav %}
-            {% assign aboutnav = '<em>About:</em><span class="standalone_resource_aboutnavsep"></span>' %}
-            {% for link in docaboutnav %}
-                {% capture navitem %}<li><a href="{{ link.ref | relative_url }}">{{ link.name }}</a></li>{% endcapture %}
-                {% if forloop.last == true %}
-                    {% assign sep = "" %}
-                {% else %}
-                    {% assign sep = '<span class="standalone_resource_aboutnavsep">  </span>' %}
-                {% endif %}
-                {% assign aboutnav = aboutnav | append: navitem | append: sep %} 
+          {% if page.standalone_resource_about_nav %} 
+          <nav class="standalone-resource-about" aria-label="Related information">
+            <dl>
+              <dt>About:</dt>
+              {% assign docaboutnav = page.standalone_resource_about_nav %}
+              {% for link in docaboutnav %}
+                <dd><a href="{{ link.ref | relative_url }}">{{ link.name }}</a></dd>
             {% endfor %}
-            <ul>{{ aboutnav }}</ul>
-            {% endif %}
+            </dl>
         </nav>
-        {% if page.standalone_resource_pager and page.standalone_resource_about_nav %}
-        <hr class="standalone-resource-navrule"/>
         {% endif %}
         {% if page.standalone_resource_about_nav %}
         {% assign pager = page.standalone_resource_pager %}
