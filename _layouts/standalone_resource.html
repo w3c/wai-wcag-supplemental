@@ -70,23 +70,23 @@
         <nav class="standalone-resource-pager" aria-label="Item navigation">
             {% include dg-nav.liquid %}
             <ul>
-                <li>{%- if page.permalink == pager.ref %}<span class="pagename">{{pager.name}}</span>{%else%}<img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="pager-icon" /> <a href="{{pager.ref}}">{{pager.name}}</a>{%endif%}</li>
+                <li>{%- if page.permalink == pager.ref %}<span class="pagename">{{pager.name}}</span>{%else%}<a href="{{pager.ref}}"><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="category-icon">{{pager.name}}</a>{%endif%}</li>
                 {% if page.ref %}
                     {% if context %}
-                        <li><a href="{{ context[1] }}">{% include_cached icon.html name="arrow-up" aria-label="Parent item"%} {{ context[0] }}: {{context[2]}}</a></li>
+                        <li><a href="{{ context[1] }}"><img src="/content-images/wai-wcag-supplemental/caret-up.svg" alt="Parent page" class="pager-icon">{{ context[0] }}: {{context[2]}}</a></li>
                     {% endif %}
                     {% if prev  %}
-                        <li><a href="{{ prev[1] }}">{% include_cached icon.html name="arrow-left" %} {{ prev[0] }}</a></li>
+                        <li><a href="{{ prev[1] }}"><img src="/content-images/wai-wcag-supplemental/caret-left.svg" alt="" class="pager-icon">{{ prev[0] }}</a></li>
                     {% endif %}
                     {% if next %}
-                        <li><a href="{{ next[1] }}">{% include_cached icon.html name="arrow-right" %} {{ next[0] }}</a></li>
+                        <li><a href="{{ next[1] }}">{{ next[0] }}<img src="/content-images/wai-wcag-supplemental/caret-right.svg" alt="" class="pager-icon"></a></li>
                     {% endif %}
                 {% endif %}
             </ul>
         </nav>
         </div>
         {% elsif site.standalone_resource_nav_links or page.standalone_resource_nav_links %}
-           <nav class="nav" aria-label="Context for this document">
+          <nav class="nav" aria-label="Context for this document">
             <ul>
             {% for link in site.standalone_resource_nav_links %}
                 <li class="nav__item"><a href="{{ link.ref | relative_url }}"{% if page.permalink == link.ref %} class="active" aria-current="page"{% endif %}>{{ link.name }}</a></li>
@@ -107,11 +107,11 @@
 <style>
 /* Patrick H. Lauke additions */
 #site-header.minimal-header.with-subtitle {
-	padding: 1.25em 0;
+  padding: 1.25em 0;
 }
 
 nav.standalone-resource-about {
-    padding: 1em 0;
+  padding: 1em 0;
 }
 
 .standalone-resource-about dl, .standalone-resource-about dt, .standalone-resource-about dd {
@@ -122,23 +122,38 @@ nav.standalone-resource-about {
 
 .standalone-resource-about dl a {
 	margin: 0;
-    padding: 0 1em 0 1em;
-    border-right: 1px #999 solid;
+  padding: 0 1em 0 1em;
+  border-right: 1px #999 solid;
 }
 
 .standalone-resource-about dd:last-of-type a {
 	border-right: 0;
 }
 
+.nav .standalone-resource-pager ul {
+  align-items: center;
+}
+
+.nav .standalone-resource-pager a {
+  margin-left: 0;
+}
+
 .pager-icon {
 	vertical-align: middle;
-    padding-bottom: 0.25em;
-    width: 2em;
-    height: 2em;
+  padding: 0 0.25em 0.25em 0.25em;
+  width: 1em;
+  height: 2em;
+  fill: #005A6A; /* when these are used as actual SVGs */
+}
+
+.category-icon {
+  vertical-align: middle;
+  padding: 0 0.25em 0.25em 0.25em;
+  width: 2em;
+  height: 2em;
 }
 
 /* end Patrick H. Lauke additions */
-
 
 
 .nav-hack {
