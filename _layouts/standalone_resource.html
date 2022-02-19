@@ -70,11 +70,7 @@
         <nav class="standalone-resource-pager" aria-label="Item navigation">
             {% include dg-nav.liquid %}
             <ul>
-<<<<<<< HEAD
                 <li>{%- if page.permalink == pager.ref %}<span class="pagename">{{pager.name}}</span>{%else%}<img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="pager-icon" /> <a href="{{pager.ref}}">{{pager.name}}</a>{%endif%}</li>
-=======
-                <li>{%- if page.permalink == pager.ref %}<span class="pagename">{{pager.name}}</span>{%else%}><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" style="height: 1.8em;" /> <a href="{{pager.ref}}">{{pager.name}}</a>{%endif%}</li>
->>>>>>> f9efed2df9692e2387ce91ca3b98df55fea582ae
                 {% if page.ref %}
                     {% if context %}
                         <li><a href="{{ context[1] }}">{% include_cached icon.html name="arrow-up" aria-label="Parent item"%} {{ context[0] }}: {{context[2]}}</a></li>
@@ -109,6 +105,41 @@
     <div class="default-grid with-gap leftcol">
 
 <style>
+/* Patrick H. Lauke additions */
+#site-header.minimal-header.with-subtitle {
+	padding: 1.25em 0;
+}
+
+nav.standalone-resource-about {
+    padding: 1em 0;
+}
+
+.standalone-resource-about dl, .standalone-resource-about dt, .standalone-resource-about dd {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+.standalone-resource-about dl a {
+	margin: 0;
+    padding: 0 1em 0 1em;
+    border-right: 1px #999 solid;
+}
+
+.standalone-resource-about dd:last-of-type a {
+	border-right: 0;
+}
+
+.pager-icon {
+	vertical-align: middle;
+    padding-bottom: 0.25em;
+    width: 2em;
+    height: 2em;
+}
+
+/* end Patrick H. Lauke additions */
+
+
 
 .nav-hack {
   font-size: .85rem;
