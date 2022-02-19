@@ -70,7 +70,11 @@
         <nav class="standalone-resource-pager" aria-label="Item navigation">
             {% include dg-nav.liquid %}
             <ul>
+<<<<<<< HEAD
                 <li>{%- if page.permalink == pager.ref %}<span class="pagename">{{pager.name}}</span>{%else%}<img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="pager-icon" /> <a href="{{pager.ref}}">{{pager.name}}</a>{%endif%}</li>
+=======
+                <li>{%- if page.permalink == pager.ref %}<span class="pagename">{{pager.name}}</span>{%else%}><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" style="height: 1.8em;" /> <a href="{{pager.ref}}">{{pager.name}}</a>{%endif%}</li>
+>>>>>>> f9efed2df9692e2387ce91ca3b98df55fea582ae
                 {% if page.ref %}
                     {% if context %}
                         <li><a href="{{ context[1] }}">{% include_cached icon.html name="arrow-up" aria-label="Parent item"%} {{ context[0] }}: {{context[2]}}</a></li>
