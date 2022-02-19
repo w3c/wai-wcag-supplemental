@@ -73,13 +73,13 @@
                 <li>{%- if page.permalink == pager.ref %}<span class="pagename">{{pager.name}}</span>{%else%}<a href="{{pager.ref}}"><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="category-icon">{{pager.name}}</a>{%endif%}</li>
                 {% if page.ref %}
                     {% if context %}
-                        <li><a href="{{ context[1] }}"><img src="/content-images/wai-wcag-supplemental/caret-up.svg" alt="Parent page" class="pager-icon">{{ context[0] }}: {{context[2]}}</a></li>
+                        <li><a href="{{ context[1] }}"><svg role="img" aria-label="Parent page"  class="pager-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16"><path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"/></svg>{{ context[0] }}: {{context[2]}}</a></li>
                     {% endif %}
                     {% if prev  %}
-                        <li><a href="{{ prev[1] }}"><img src="/content-images/wai-wcag-supplemental/caret-left.svg" alt="" class="pager-icon">{{ prev[0] }}</a></li>
+                        <li><a href="{{ prev[1] }}"><svg aria-hidden="true" class="pager-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16"><path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/></svg>{{ prev[0] }}</a></li>
                     {% endif %}
                     {% if next %}
-                        <li><a href="{{ next[1] }}">{{ next[0] }}<img src="/content-images/wai-wcag-supplemental/caret-right.svg" alt="" class="pager-icon"></a></li>
+                        <li><a href="{{ next[1] }}">{{ next[0] }}<svg aria-hidden="true" class="pager-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16"><path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/></svg></a></li>
                     {% endif %}
                 {% endif %}
             </ul>
@@ -146,6 +146,7 @@ nav.standalone-resource-about {
 
 .nav .standalone-resource-pager a {
   margin-left: 0;
+  margin-right: 1.5em;
 }
 
 .pager-icon {
