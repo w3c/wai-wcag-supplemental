@@ -17,7 +17,11 @@ inline_css: "
     height: 2em;
     vertical-align: middle;
     padding-bottom: 0.25em;
-  }  
+  }
+  details h4 {
+    font-size: 1rem;
+    color: inherit;
+  }
 "
 #  summary > :first-child::before
 #  {
@@ -72,6 +76,7 @@ This guidance provides advice on how to better meet the accessibility needs of p
   <h3>{{ objective.title }}</h3>
   {% include excol.html type="middle" %}
   Objective: <a href="{{ objective.url | relative_url }}">{{ objective.title }}</a>
+  <h4>Design Patterns:</h4>
   {% include patterns.html obj_ref = objective.ref %}
   {% include excol.html type="end" %}
 {% endfor %}
