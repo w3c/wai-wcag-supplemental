@@ -11,6 +11,12 @@ feedbackemail: wai@w3.org
 inline_css: "
   details ul {
       margin-top: 1rem;
+  }
+  h2 img.mini {
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+    padding-bottom: 0.25em;
   }  
 "
 #  summary > :first-child::before
@@ -55,10 +61,7 @@ This pages lists [supplemental guidance](/wcag-supplemental/about/) for improvin
 {% include_cached toc.html type="end" %}
 {:/}
 
-<div style="float:right; margin-left:1em;">
-{% include image.html src="brain.svg" alt="" class="mini" %}
-</div>
-## Cognitive Accessibility Guidance
+## {% include image.html src="brain.svg" alt="" class="mini" %} Cognitive Accessibility Guidance
 
 This guidance provides advice on how to better meet the accessibility needs of people with cognitive and learning disabilities. The guidance listed below is grouped under "Objectives" and provided in "Design Patterns".
 
@@ -75,9 +78,6 @@ This guidance provides advice on how to better meet the accessibility needs of p
 
 {% include excol.html type="all" %}
 
-<div style="float:right; margin-left:1em;">
-{% include image.html src="eye.svg" alt="" class="mini" %}
-</div>
-## Low Vision Accessibility Guidance
+## {% include image.html src="eye.svg" alt="" class="mini" %} Low Vision Accessibility Guidance
 
 Guidance on how to better meet the needs of people with low vision will be added in 2022.
