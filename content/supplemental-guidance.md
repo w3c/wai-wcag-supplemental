@@ -71,7 +71,7 @@ This guidance provides advice on how to better meet the accessibility needs of p
   {% include excol.html type="start" id=objective.ref %}
   <h3>{{ objective.title }}</h3>
   {% include excol.html type="middle" %}
-  <a href="{{ objective.url | relative_url }}">{{ objective.title }}</a>
+  Objective: <a href="{{ objective.url | relative_url }}">{{ objective.title }}</a>
   {% include patterns.html obj_ref = objective.ref %}
   {% include excol.html type="end" %}
 {% endfor %}
