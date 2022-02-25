@@ -57,7 +57,7 @@
           {% if page.standalone_resource_about_nav %} 
           <nav class="standalone-resource-about" aria-label="Related information">
             <dl>
-              <dt>Related information:</dt>
+              <dt>About:</dt>
               {% assign docaboutnav = page.standalone_resource_about_nav %}
               {% for link in docaboutnav %}
                 <dd><a href="{{ link.ref | relative_url }}">{{ link.name }}</a></dd>
@@ -107,7 +107,7 @@
 <style>
 /* Patrick H. Lauke additions */
 #site-header.minimal-header.with-subtitle {
-  padding: 1.25em 0;
+  padding: 1.5em 0;
 }
 
 .nav a:link, .nav a:visited {
