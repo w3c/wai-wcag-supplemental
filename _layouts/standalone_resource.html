@@ -52,9 +52,9 @@
       {% endif %}
     </div>
 
-    <div class="default-grid nav-container">
+    {% if page.standalone_resource_about_nav %}
+    <div class="default-grid nav-container nav-related-info">
         <div class="nav">
-          {% if page.standalone_resource_about_nav %} 
           <nav class="standalone-resource-about" aria-label="Related information">
             <dl>
               <dt>About:</dt>
@@ -63,11 +63,15 @@
                 <dd><a href="{{ link.ref | relative_url }}">{{ link.name }}</a></dd>
             {% endfor %}
             </dl>
-        </nav>
-        {% endif %}
-        {% if page.standalone_resource_about_nav %}
-        {% assign pager = page.standalone_resource_pager %}
-        <nav class="standalone-resource-pager" aria-label="Item navigation">
+          </nav>
+        </div>
+    </div>
+    {% endif %}
+    <div class="default-grid nav-container nav-page-specific">
+        <div class="nav">
+          {% if page.standalone_resource_about_nav %}
+          {% assign pager = page.standalone_resource_pager %}
+          <nav class="standalone-resource-pager" aria-label="Item navigation">
             {% include dg-nav.liquid %}
             <ul>
                 <li>{%- if page.permalink == pager.ref %}<span class="pagename"><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="category-icon">{{pager.name}}</span>{%else%}<a href="{{pager.ref}}"><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="category-icon">{{pager.name}}</a>{%endif%}</li>
@@ -83,9 +87,8 @@
                     {% endif %}
                 {% endif %}
             </ul>
-        </nav>
-        </div>
-        {% elsif site.standalone_resource_nav_links or page.standalone_resource_nav_links %}
+          </nav>
+          {% elsif site.standalone_resource_nav_links or page.standalone_resource_nav_links %}
           <nav class="nav" aria-label="Context for this document">
             <ul>
             {% for link in site.standalone_resource_nav_links %}
@@ -99,19 +102,41 @@
                 {% include_cached icon.html name="different-view" %}
             </a></li>
             </ul>
-        </nav>
-      {% endif %}
-</div>
+          </nav>
+          {% endif %}
+        </div>
+    </div>
     <div class="default-grid with-gap leftcol">
 
 <style>
 /* Patrick H. Lauke additions */
 #site-header.minimal-header.with-subtitle {
-  padding: 1.5em 0;
+  padding: 1.75em 0 0 0;
 }
 
 .minimal-header.with-subtitle .minimal-header-name {
   font-size: 1.5em;
+}
+
+.nav-container {
+  margin-bottom: 0;
+}
+
+.nav {
+  background: none;
+}
+
+.nav-related-info { /* blue bar with the "About:" links */
+  background: #005a9c;
+  color: #fff;
+}
+
+.nav-related-info a {
+  color: #fff !important;
+}
+
+.nav-page-specific { /* light blue bar with page/section specific navigation/pager */
+  margin-bottom: 1.25em;
 }
 
 .nav a:link, .nav a:visited {
@@ -125,11 +150,11 @@
 }
 
 .standalone-resource-about, .standalone-resource-pager {
-  margin: 0 !important;
+  margin: 0;
 }
 
 nav.standalone-resource-about {
-  padding: 1.5em 0;
+  padding: 1em 0 1.5em 0;
 }
 
 .standalone-resource-about dl, .standalone-resource-about dt, .standalone-resource-about dd {
@@ -163,8 +188,8 @@ nav.standalone-resource-about {
 
 .pager-icon {
 	vertical-align: middle;
-  padding: 0 0.25em 0.25em 0.25em;
-  width: 1.5em;
+  padding: 0 0.15em 0.15em 0.15em;
+  width: 1.65em;
   height: 2em;
   fill: #005A6A; /* when these are used as actual SVGs */
 }
@@ -177,7 +202,7 @@ nav.standalone-resource-about {
 }
 
 .standalone-resource-pager {
-  padding-bottom: 1em;
+  padding: 1em 0;
 }
 
 .standalone-resource-pager ul {
@@ -255,11 +280,13 @@ nav.standalone-resource-about {
     border-top: 1px solid grey
 }
 
+/* Removed by Patrick H. Lauke (as it's being overridden anyway)
 .standalone-resource-about,
 .standalone-resource-pager {
     margin-top: .5em;
     margin-left: .5em;
 }
+*/
 
 .standalone-resource-about ul,
 .standalone-resource-pager ul {
@@ -327,7 +354,7 @@ nav.standalone-resource-about {
                 Rule Mapping 
               </header>
               <div class="box-i"> 
-               <p>This is {% if page.rule_meta.rule_type == "atomic" %}an {% else %}a {% endif %}
+                <p>This is {% if page.rule_meta.rule_type == "atomic" %}an {% else %}a {% endif %}
                 <strong>{{ page.rule_meta.rule_type | capitalize }} rule</strong> 
                 {% if page.rule_meta.scs_tested %}
                 to test 
@@ -335,9 +362,9 @@ nav.standalone-resource-about {
                 <strong>{{ sc.num }}: {{ sc.handle }} (Level {{ sc.level }})</strong>{% if forloop.last == false %}, {% endif %}
                 {% endfor %}
                 {% endif %}
-              </p> 
+                </p> 
               </div>
-             </aside>
+            </aside>
             {% endif %}
           </header>
     
