@@ -59,9 +59,7 @@
             <dl>
               <dt>About:</dt>
               {% assign docaboutnav = page.standalone_resource_about_nav %}
-              {% for link in docaboutnav %}
-                <dd><a href="{{ link.ref | relative_url }}">{{ link.name }}</a></dd>
-            {% endfor %}
+              {% for link in docaboutnav %}<dd><a href="{{ link.ref | relative_url }}">{{ link.name }}</a></dd>{% endfor %}
             </dl>
           </nav>
         </div>
