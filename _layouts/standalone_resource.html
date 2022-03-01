@@ -111,16 +111,6 @@
 </div>
     <div class="default-grid with-gap leftcol">
 
-        {%comment%}
-    {% if page.content_include %} 
-        {% capture expanded_content %}
-        {% include {{page.content_include}} type="initial-content" %}
-        {{ content }}
-        {% include {{page.content_include}} type="final-content" %}
-        {% endcapture %}   
-    {% endif%}
-        {%endcomment%}
-         
     {% assign sidebar = page.sidebar %}
     {% if sidebar == nil %} {% assign sidebar = layout.sidebar %} {% endif %}
     {% if sidebar != nil %}
