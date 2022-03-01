@@ -40,15 +40,7 @@
     <a href="#main" class="button button--skip-link">Skip to content</a>
 
     <div class="minimal-header-container default-grid">
-      {% if site.standalone_resource_doc_name_sub %}
-      {% include minimal-header.html translations=translations class="with-subtitle" subtitle=site.standalone_resource_doc_name_sub title=site.standalone_resource_doc_name %}
-      {% elsif site.standalone_resource_doc_name %}
-      {% include minimal-header.html translations=translations title=site.standalone_resource_doc_name %}
-      {% elsif page.standalone_resource_doc_name_sub %}
-      {% include minimal-header.html translations=translations class="with-subtitle" subtitle=page.standalone_resource_doc_name_sub title=page.standalone_resource_doc_name %}
-      {% else %}
-      {% include minimal-header.html translations=translations title=page.standalone_resource_doc_name %}
-      {% endif %}
+      {% include minimal-header.html translations=translations subtitle=page.standalone_resource_doc_name_sub title=page.standalone_resource_doc_name %}
     </div>
 
     <div class="default-grid nav-container">
@@ -119,7 +111,7 @@
             {% capture expanded_content %}{{ content | add_h2_ids }} {% endcapture %}
             <div class="box-i">
                 <ul>
-                {% assign h2links = content_with_ids | get_h2_links %}
+                {% assign h2links = expanded_content | get_h2_links %}
                 {% for link in h2links %}
                 <li><a href="#{{ link[1] }}">{{ link[0] }}</a></li>
                 {% endfor %}
