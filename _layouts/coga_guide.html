@@ -1,6 +1,9 @@
-{% if include.type == "initial-content" %}
+---
+layout: standalone_resource
+sidebar: true
+---
 
-{% elsif include.type == "final-content" %}
+{{ content }}
 
 <section>
     <h2>User Stories and Personas</h2>
@@ -46,5 +49,3 @@
         name="different-view" %}</a></li>
     </ul>
 </section>
-
-{% endif %}

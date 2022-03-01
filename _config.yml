@@ -74,7 +74,6 @@ defaults:
         image: brain.svg
         name: All Cognitive
         ref: /wcag-supplemental/all-supplemental-guidance
-      content_include: wcag-supplemental.html
       footer:
         > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
         <p><strong>Date:</strong> Content first published 29 April 2021 in <a href="https://www.w3.org/TR/coga-usable/">Making Content 

@@ -111,6 +111,7 @@
 </div>
     <div class="default-grid with-gap leftcol">
 
+        {%comment%}
     {% if page.content_include %} 
         {% capture expanded_content %}
         {% include {{page.content_include}} type="initial-content" %}
@@ -118,22 +119,25 @@
         {% include {{page.content_include}} type="final-content" %}
         {% endcapture %}   
     {% endif%}
+        {%endcomment%}
          
     {% assign sidebar = page.sidebar %}
     {% if sidebar == nil %} {% assign sidebar = layout.sidebar %} {% endif %}
     {% if sidebar != nil %}
         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
             <header class="box-h ">This Page Contents</header>
-            {% capture expanded_content %}{{ expanded_content | add_h2_ids }} {% endcapture %}
+            {% capture expanded_content %}{{ content | add_h2_ids }} {% endcapture %}
             <div class="box-i">
                 <ul>
-                {% assign h2links = expanded_content | get_h2_links %}
+                {% assign h2links = content_with_ids | get_h2_links %}
                 {% for link in h2links %}
                 <li><a href="#{{ link[1] }}">{{ link[0] }}</a></li>
                 {% endfor %}
                 </ul>    
             </div>
         </aside>
+    {%else%}
+        {% assign expanded_content = content %}
     {% endif %}
 
     <main id="main"{% if page.lang %} lang="{{page.lang}}"{% endif %} class="standalone-resource__main">
