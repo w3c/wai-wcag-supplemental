@@ -64,12 +64,14 @@ defaults:
       standalone_resource_about_nav:
         - name: WCAG 2
           ref: /standards-guidelines/wcag
+          icon: different-view
         - name: The WCAG 2 Documents
           ref: /standards-guidelines/wcag/docs
+          icon: different-view
         - name: Supplemental Guidance
           ref: /wcag-supplemental/about
       standalone_resource_pager:
-        icon: comments
+        icon: brain.svg
         name: All Cognitive
         ref: /wcag-supplemental/all-supplemental-guidance
       footer:
@@ -93,13 +95,13 @@ defaults:
       path: "_patterns"
     values:
       layout: pattern
-      type_of_guidance: Design Pattern
+      type_of_guidance: Cognitive Accessibility Design Pattern
   - scope:
       type: "objectives"
       path: "_objectives"
     values:
       layout: objective
-      type_of_guidance: Objective
+      type_of_guidance: Cognitive Accessibility Objective
 
 plugins:
   - jekyll-seo-tag
