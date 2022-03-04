@@ -23,24 +23,6 @@ inline_css: "
     color: inherit;
   }
 "
-#  summary > :first-child::before
-#  {
-#    display: none;
-#  }
-#  summary > :first-child::marker
-#  {
-#    content: \"\";
-#  }
-#  summary > :first-child > span
-#  {
-#    display: list-item;
-#    list-style-position: inside;
-#    list-style-type: disc;
-#  }
-#  div[data-details][aria-expanded=false] div:not([data-summary])
-#  {
-#    display:none;
-#  }
 ---
 
 
@@ -54,16 +36,17 @@ This pages lists [supplemental guidance](/wcag-supplemental/about/) for improvin
 {% include box.html type="end" %}
 {:/}
 
-{::nomarkdown}
-{% include_cached toc.html type="start" title="Page Contents" %}
-{:/}
+<nav class="box box-simple" aria-labelledby="tocheading" id="toc">
+  <header id="tocheading" class="box-h box-h-simple"> Page Contents</header>
+  <div class="box-i">
 
-- This will be replaced by an automatically generated TOC when using Markdown formatting.
-{:toc}
+<ul id="markdown-toc">
+  <li><a href="#-cognitive-accessibility-guidance" id="markdown-toc--cognitive-accessibility-guidance">Cognitive Accessibility Guidance</a></li>
+  <li><a href="#-low-vision-accessibility-guidance" id="markdown-toc--low-vision-accessibility-guidance">Low Vision Accessibility Guidance</a></li>
+</ul>
 
-{::nomarkdown}
-{% include_cached toc.html type="end" %}
-{:/}
+  </div>
+</nav>
 
 ## {% include image.html src="brain.svg" alt="" class="mini" %} Cognitive Accessibility Guidance
 
