@@ -39,12 +39,10 @@ This pages lists [supplemental guidance](/wcag-supplemental/about/) for improvin
 <nav class="box box-simple" aria-labelledby="tocheading" id="toc">
   <header id="tocheading" class="box-h box-h-simple"> Page Contents</header>
   <div class="box-i">
-
-<ul id="markdown-toc">
-  <li><a href="#-cognitive-accessibility-guidance" id="markdown-toc--cognitive-accessibility-guidance">Cognitive Accessibility Guidance</a></li>
-  <li><a href="#-low-vision-accessibility-guidance" id="markdown-toc--low-vision-accessibility-guidance">Low Vision Accessibility Guidance</a></li>
-</ul>
-
+    <ul id="markdown-toc">
+        <li><a href="#-cognitive-accessibility-guidance" id="markdown-toc--cognitive-accessibility-guidance">Cognitive Accessibility Guidance</a></li>
+        <li><a href="#-low-vision-accessibility-guidance" id="markdown-toc--low-vision-accessibility-guidance">Low Vision Accessibility Guidance</a></li>
+    </ul>
   </div>
 </nav>
 
