@@ -115,7 +115,6 @@
     <div class="default-grid with-gap leftcol">
 
 <style>
-/* Patrick H. Lauke additions */
 #site-header.minimal-header.with-subtitle {
   padding: 1.75em 0 0 0;
 }
@@ -160,7 +159,8 @@
 }
 
 nav.standalone-resource-about {
-  padding: 1em 0 1.5em 0;
+  padding: .5em 0 1.0em 0;
+  font-style: italic;
 }
 
 .standalone-resource-about dl, .standalone-resource-about dt, .standalone-resource-about dd {
@@ -171,20 +171,24 @@ nav.standalone-resource-about {
 
 .standalone-resource-about dt{
     font-weight: normal;
-    font-style: italic;
 }
 
 .standalone-resource-about dl a {
-	margin: 0;
-  padding: 0 1em 0 1em;
+    margin: 0;
+    padding: 0 1em 0 1em;
 }
 
 .standalone-resource-about dd {
-  border-right: 1px var(--gold) solid;
+    border-right: 1px var(--gold) solid;
 }
 
 .standalone-resource-about dd:last-of-type {
 	border-right: 0;
+}
+
+.standalone-resource-about dd svg {
+    margin-left: 0.25rem;
+    vertical-align: middle;
 }
 
 .nav .standalone-resource-pager ul {
@@ -223,9 +227,6 @@ nav.standalone-resource-about {
 .standalone-resource-pager ul li {
   display: inline;
 }
-
-/* end Patrick H. Lauke additions */
-
 
 .nav-hack {
   font-size: .85rem;
@@ -282,7 +283,7 @@ nav.standalone-resource-about {
 .minimal-header-subtitle {
   display: block;
   font-size: 60%;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   font-style: italic;
 }
 
@@ -290,14 +291,6 @@ nav.standalone-resource-about {
     border:none;
     border-top: 1px solid grey
 }
-
-/* Removed by Patrick H. Lauke (as it's being overridden anyway)
-.standalone-resource-about,
-.standalone-resource-pager {
-    margin-top: .5em;
-    margin-left: .5em;
-}
-*/
 
 .standalone-resource-about ul,
 .standalone-resource-pager ul {
@@ -383,97 +376,7 @@ nav.standalone-resource-about {
   {% include footer.html lang=pagelang %}
 
   
-  <style>
-
-    .nav-hack {
-      font-size: .85rem;
-      /*justify-self: end;*/
-      align-self: start;
-    }
-    .nav-hack ul {
-        list-style: none;
-        border-bottom: 1px solid #BCBCBC;
-        padding-left: 0
-    }
-    .nav-hack li:not(:first-child){
-        padding-top: 0.4em;
-        line-height: 1.2;
-        border-top: 1px solid #BCBCBC;
-    }
-    .nav-hack li a {
-        text-decoration: none;
-    }
-    .nav-hack h3 {
-      margin: 0;
-      font-size: 1rem;
-    }
-    
-    .nav-hack p {
-      margin: 0;
-    }
-    
-    
-    /* skip link */
-    .button--skip-link {
-      background-color: var(--gold) !important;
-      border-color: var(--gold) !important;
-      outline-color: currentColor !important;
-      color: var(--off-black) !important;
-      font-weight: 600;
-      font-size: larger;
-      margin: 0 auto;
-      position: absolute;
-      z-index: 20;
-      left: 0;
-      right: 0;
-      top: 0.5em;
-      width: 10em;
-      opacity: 1;
-      transition: transform 0.1875s ease-out, opacity 0.1875s ease-out;
-    }
-    
-    .button--skip-link:not(:focus):not(:hover) {
-      transform: translateY(-4em);
-      opacity: 0;
-    }
-    
-    .minimal-header-subtitle {
-      display: block;
-      font-size: 60%;
-      margin-top: 1em;
-      font-style: italic;
-    }
-    
-    .standalone-resource-navrule {
-        border:none;
-        border-top: 1px solid grey
-    }
-    
-    .standalone-resource-about,
-    .standalone-resource-pager {
-        margin-top: .5em;
-        margin-left: .5em;
-    }
-    
-    .standalone-resource-about ul,
-    .standalone-resource-pager ul {
-        list-style: none;
-    }
-    
-    .nav {
-        font-size: 85%;
-    }
-    
-    .standalone-resource-about a,
-    .standalone-resource-pager a,
-    .standalone-resource-about span,
-    .standalone-resource-pager span 
-    {
-        margin-left:.8em;
-        margin-right:.8em;
-    }
-    
-    </style>
+  
     
   </body>
 
