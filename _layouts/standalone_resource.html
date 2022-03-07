@@ -322,7 +322,7 @@ nav.standalone-resource-about {
     {% if sidebar == nil %} {% assign sidebar = layout.sidebar %} {% endif %}
     {% if sidebar != nil %}
         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
-            <header class="box-h ">This Page Contents</header>
+            <header class="box-h ">Page Contents</header>
             {% capture expanded_content %}{{ content | add_h2_ids }} {% endcapture %}
             <div class="box-i">
                 <ul>
