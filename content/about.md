@@ -1,5 +1,4 @@
 ---
-doc-note-type: draft
 title: About Supplemental Guidance
 footer: ""
 permalink: /wcag-supplemental/about
