@@ -92,7 +92,7 @@
                         <li><a href="{{ prev[1] }}">{% include_cached icon.html class="pager-icon" name="arrow-left-thin" %} {{ prev[0] }}</a></li>
                     {% endif %}
                     {% if next %}
-                        <li><a href="{{ next[1] }}">{% include_cached icon.html class="pager-icon" name="arrow-right-thin" %} {{ next[0] }}</a></li>
+                        <li><a href="{{ next[1] }}">{{ next[0] }} {% include_cached icon.html class="pager-icon" name="arrow-right-thin" %}</a></li>
                     {% endif %}
                 {% endif %}
             </ul>
@@ -152,6 +152,14 @@
 .nav a:hover, .nav a:active {
   color: #005a6a;
   color: var(--wai-green);
+}
+
+.nav-hack.sidebar a:hover,
+.nav-hack.sidebar a:focus
+ {
+  color: #005a6a;
+  color: var(--wai-green);
+  text-decoration: underline;
 }
 
 .standalone-resource-about, .standalone-resource-pager {
