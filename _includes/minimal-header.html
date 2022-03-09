@@ -1,4 +1,7 @@
-<div class="minimal-header{% if include.class %} {{ include.class }}{% endif %}" id="site-header">
+{% if include.subtitle %}
+  {% assign class_sub = "with-subtitle" %}
+{% endif %}
+<div class="minimal-header {{ class_sub }}" id="site-header">
     <span class="minimal-header-name">
         {{ include.title }}
         {% if include.subtitle %}

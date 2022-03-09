@@ -11,7 +11,7 @@
   {%- endunless -%}
 {%- endif -%}
 {%- assign englishpageurl = enpage.url %}
-{% assign translations=site.documents | where:"ref", page.ref | where_exp:"item", "item.lang != 'en'" | sort: 'lang' %}
+{%- assign translations=site.documents | where:"ref", page.ref | where_exp:"item", "item.lang != 'en'" | sort: 'lang' %}
 {%- unless translations[0].ref -%}
   {% assign translations=site.pages | where:"ref", page.ref | where_exp:"item", "item.lang != 'en'" | sort: 'lang' %}
 {%- endunless -%}
@@ -37,69 +37,69 @@
   {%- endunless -%}
   {% include_cached head.html type="end" %}
   <body id="top" class="page-{{page.title | slugify}} {% include_cached body-class.html collection=page.collection doc-note-type=page.doc-note-type %}">
-
     <a href="#main" class="button button--skip-link">Skip to content</a>
 
     <div class="minimal-header-container default-grid">
-      {% if site.standalone_resource_doc_name_sub %}
-      {% include minimal-header.html translations=translations class="with-subtitle" subtitle=site.standalone_resource_doc_name_sub title=site.standalone_resource_doc_name %}
-      {% elsif site.standalone_resource_doc_name %}
-      {% include minimal-header.html translations=translations title=site.standalone_resource_doc_name %}
-      {% elsif page.standalone_resource_doc_name_sub %}
-      {% include minimal-header.html translations=translations class="with-subtitle" subtitle=page.standalone_resource_doc_name_sub title=page.standalone_resource_doc_name %}
-      {% else %}
-      {% include minimal-header.html translations=translations title=page.standalone_resource_doc_name %}
-      {% endif %}
+      {% include minimal-header.html translations=translations subtitle=page.standalone_resource_doc_name_sub title=page.standalone_resource_doc_name %}
     </div>
 
-    <div class="default-grid nav-container">
+    {% if page.standalone_resource_about_nav %}
+    <div class="default-grid nav-container nav-related-info">
         <div class="nav">
-        <nav class="standalone-resource-about" aria-label="Related information">
-            {% if page.standalone_resource_about_nav %}     
-            {% assign docaboutnav = page.standalone_resource_about_nav %}
-            {% assign aboutnav = '<em>About:</em><span class="standalone_resource_aboutnavsep"></span>' %}
-            {% for link in docaboutnav %}
-                {% capture navitem %}<li><a href="{{ link.ref | relative_url }}">{{ link.name }}</a></li>{% endcapture %}
-                {% if forloop.last == true %}
-                    {% assign sep = "" %}
+          <nav class="standalone-resource-about" aria-label="Related information">
+            <dl>
+              <dt>About:</dt>
+              {% assign docaboutnav = page.standalone_resource_about_nav %}
+              {% for link in docaboutnav %}
+              <dd>
+                {%- if page.permalink == link.ref %}
+                    <span>{{link.name}}</span>
                 {% else %}
-                    {% assign sep = '<span class="standalone_resource_aboutnavsep">  </span>' %}
+                    <a href="{{ link.ref | relative_url }}">{{ link.name }}
+                    {%- if link.icon %}
+                        {%- capture icon -%}{{link.icon}}{%- endcapture -%}
+                        {%- include_cached icon.html name=icon -%}
+                    {%- endif -%}
+                    </a>
                 {% endif %}
-                {% assign aboutnav = aboutnav | append: navitem | append: sep %} 
-            {% endfor %}
-            <ul>{{ aboutnav }}</ul>
-            {% endif %}
-        </nav>
-        {% if page.standalone_resource_pager and page.standalone_resource_about_nav %}
-        <hr class="standalone-resource-navrule"/>
-        {% endif %}
-        {% if page.standalone_resource_about_nav %}
-        {% assign pager = page.standalone_resource_pager %}
-        <nav class="standalone-resource-pager" aria-label="Item navigation">
+            </dd>
+              {% endfor %}
+            </dl>
+          </nav>
+        </div>
+    </div>
+    {% endif %}
+    <div class="default-grid nav-container nav-page-specific">
+        <div class="nav">
+          {% if page.standalone_resource_about_nav %}
+          {% assign pager = page.standalone_resource_pager %}
+          <nav class="standalone-resource-pager" aria-label="Item navigation">
             {% include dg-nav.liquid %}
             <ul>
-                <li><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" style="height: 1.8em;" /></li>
-                <li>{%- if page.permalink == pager.ref %}<span class="pagename">{{pager.name}}</span>{%else%}<a href="{{pager.ref}}">{{pager.name}}</a>{%endif%}</li>
+                <li>
+                {%- if page.permalink == pager.ref %}
+                    <span class="pagename"><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="category-icon">{{pager.name}}</span>
+                {%else%}
+                    <a href="{{pager.ref}}"><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="category-icon">{{pager.name}}</a>
+                {%endif%}
+                </li>
+        
                 {% if page.ref %}
                     {% if context %}
-                        <li><a href="{{ context[1] }}">{% include_cached icon.html name="arrow-up" aria-label="Parent item"%} {{ context[0] }}: {{context[2]}}</a></li>
+                        <li><a href="{{ context[1] }}">{% include_cached icon.html class="pager-icon" name="arrow-up-thin" %} {{ context[0] }}: {{context[2]}}</a></li>
                     {% endif %}
                     {% if prev  %}
-                        <li><a href="{{ prev[1] }}">{% include_cached icon.html name="arrow-left" %} {{ prev[0] }}</a></li>
+                        <li><a href="{{ prev[1] }}">{% include_cached icon.html class="pager-icon" name="arrow-left-thin" %} {{ prev[0] }}</a></li>
                     {% endif %}
                     {% if next %}
-                        <li><a href="{{ next[1] }}">{% include_cached icon.html name="arrow-right" %} {{ next[0] }}</a></li>
+                        <li><a href="{{ next[1] }}">{{ next[0] }} {% include_cached icon.html class="pager-icon" name="arrow-right-thin" %}</a></li>
                     {% endif %}
                 {% endif %}
             </ul>
-        </nav>
-        </div>
-        {% elsif site.standalone_resource_nav_links or page.standalone_resource_nav_links %}
+          </nav>
+        {% elsif page.standalone_resource_nav_links %}
            <nav class="nav" aria-label="Context for this document">
             <ul>
-            {% for link in site.standalone_resource_nav_links %}
-                <li class="nav__item"><a href="{{ link.ref | relative_url }}"{% if page.permalink == link.ref %} class="active" aria-current="page"{% endif %}>{{ link.name }}</a></li>
-            {% endfor %}
             {% for link in page.standalone_resource_nav_links %}
                 <li class="nav__item"><a href="{{ link.ref | relative_url }}"{% if page.permalink == link.ref %} class="active" aria-current="page"{% endif %}>{{ link.name }}</a></li>
             {% endfor %}
@@ -108,12 +108,131 @@
                 {% include_cached icon.html name="different-view" %}
             </a></li>
             </ul>
-        </nav>
-      {% endif %}
-</div>
+          </nav>
+          {% endif %}
+        </div>
+    </div>
     <div class="default-grid with-gap leftcol">
 
 <style>
+#site-header.minimal-header.with-subtitle {
+  padding: 1.75em 0 0 0;
+}
+
+.minimal-header.with-subtitle .minimal-header-name {
+  font-size: 1.5em;
+}
+
+.nav-container {
+  margin-bottom: 0;
+}
+
+.nav {
+  background: none;
+}
+
+.nav-related-info { /* blue bar with the "About:" links */
+  background: #005a9c;
+  color: #fff;
+}
+
+.nav-related-info a {
+  color: #fff !important;
+}
+
+.nav-page-specific { /* light blue bar with page/section specific navigation/pager */
+  margin-bottom: 1.25em;
+}
+
+.nav a:link, .nav a:visited {
+  color: #036;
+  color: var(--w3c-blue);
+}
+
+.nav a:hover, .nav a:active {
+    color: var(--dk-blue);
+}
+
+.nav-hack.sidebar a:hover,
+.nav-hack.sidebar a:active
+ {
+    color: var(--dk-blue);
+    text-decoration: underline;
+}
+
+.standalone-resource-about, .standalone-resource-pager {
+  margin: 0;
+}
+
+nav.standalone-resource-about {
+  padding: .5em 0 1.5em 0;
+  font-style: italic;
+}
+
+.standalone-resource-about dl, .standalone-resource-about dt, .standalone-resource-about dd {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+.standalone-resource-about dt{
+    font-weight: normal;
+}
+
+.standalone-resource-about dl a {
+    margin: 0;
+    padding: 0 1em 0 1em;
+}
+
+.standalone-resource-about dd {
+    border-right: 1px var(--gold) solid;
+}
+
+.standalone-resource-about dd:last-of-type {
+	border-right: 0;
+}
+
+.standalone-resource-about dd svg {
+    margin-left: 0.25rem;
+    vertical-align: middle;
+}
+
+.nav .standalone-resource-pager ul {
+  align-items: center;
+}
+
+.nav .standalone-resource-pager a,
+.nav .standalone-resource-pager span {
+  margin-left: 0;
+  margin-right: 1.5em;
+}
+
+.pager-icon {
+	vertical-align: middle;
+  padding: 0 0.15em 0.15em 0.15em;
+  width: 1.65em;
+  height: 2em;
+  fill: #005A6A; /* when these are used as actual SVGs */
+}
+
+.category-icon {
+  vertical-align: middle;
+  padding: 0 0.25em 0.25em 0.25em;
+  width: 2em;
+  height: 2em;
+}
+
+.standalone-resource-pager {
+  padding: 1em 0;
+}
+
+.standalone-resource-pager ul {
+  display: block;
+}
+
+.standalone-resource-pager ul li {
+  display: inline;
+}
 
 .nav-hack {
   font-size: .85rem;
@@ -170,19 +289,13 @@
 .minimal-header-subtitle {
   display: block;
   font-size: 60%;
-  margin-top: 1em;
+  margin-top: 1.5em;
   font-style: italic;
 }
 
 .standalone-resource-navrule {
     border:none;
     border-top: 1px solid grey
-}
-
-.standalone-resource-about,
-.standalone-resource-pager {
-    margin-top: .5em;
-    margin-left: .5em;
 }
 
 .standalone-resource-about ul,
@@ -215,17 +328,19 @@
     {% if sidebar == nil %} {% assign sidebar = layout.sidebar %} {% endif %}
     {% if sidebar != nil %}
         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
-            <header class="box-h ">This Page Contents</header>
-            {% capture content %}{{ content | add_h2_ids }} {% endcapture %}
+            <header class="box-h ">Page Contents</header>
+            {% capture expanded_content %}{{ content | add_h2_ids }} {% endcapture %}
             <div class="box-i">
                 <ul>
-                {% assign h2links = content | get_h2_links %}
+                {% assign h2links = expanded_content | get_h2_links %}
                 {% for link in h2links %}
                 <li><a href="#{{ link[1] }}">{{ link[0] }}</a></li>
                 {% endfor %}
                 </ul>    
             </div>
         </aside>
+    {%else%}
+        {% assign expanded_content = content %}
     {% endif %}
 
     <main id="main"{% if page.lang %} lang="{{page.lang}}"{% endif %} class="standalone-resource__main">
@@ -233,45 +348,17 @@
             <h1>
               {% if page.type_of_guidance %}
               <span class="standalone-resource__type-of-guidance">
-                {% if page.type_of_guidance == "Test Rule" and page.proposed %}
+                {% if page.proposed %}
                   Proposed
-                {% endif %}
-                {% if page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
-                Cognitive Accessibility 
                 {% endif %}
                 {{ page.type_of_guidance }}:
               </span>
               {% endif %}
               {% if page.title_html %}{{ page.title_html }}{% else %}{{ page.title }}{% endif %}
             </h1>
-    
-            {% if page.type_of_guidance == "Test Rule" %}
-            <aside class="box"> 
-              <header class="box-h box-h-icon"> 
-                Rule Mapping 
-              </header>
-              <div class="box-i"> 
-               <p>This is {% if page.rule_meta.rule_type == "atomic" %}an {% else %}a {% endif %}
-                <strong>{{ page.rule_meta.rule_type | capitalize }} rule</strong> 
-                {% if page.rule_meta.scs_tested %}
-                to test 
-                {% for sc in page.rule_meta.scs_tested %}
-                <strong>{{ sc.num }}: {{ sc.handle }} (Level {{ sc.level }})</strong>{% if forloop.last == false %}, {% endif %}
-                {% endfor %}
-                {% endif %}
-              </p> 
-              </div>
-             </aside>
-            {% endif %}
-          </header>
-    
+        </header>    
 
-        {% if page.type_of_guidance == "Test Rule" %}
-        <h2>Description</h2>
-        {{ page.rule_meta.description | markdownify }}
-        {% endif %}
-
-        {{ content }}
+        {{ expanded_content }}
 
       </main>
     
@@ -293,5 +380,10 @@
     {% include_cached backtotop.html lang=page.lang %}
   </div>
   {% include footer.html lang=pagelang %}
+
+  
+  
+    
   </body>
+
 </html>

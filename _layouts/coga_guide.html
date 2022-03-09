@@ -1,7 +1,14 @@
+---
+layout: standalone_resource
+sidebar: true
+---
+
+{{ content }}
+
 <section>
     <h2>User Stories and Personas</h2>
 
-    {% for section in include.sections %}
+    {% for section in page.related.sections %}
         <h3>{{ section.name }}</h3>
         <ul>
             {% if section.name == "Personas" or section.name == "User Story" or

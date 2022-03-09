@@ -1,5 +1,4 @@
 ---
-doc-note-type: draft
 title: About Supplemental Guidance
 footer: ""
 permalink: /wcag-supplemental/about
@@ -17,16 +16,16 @@ This page explains supplemental guidance for improving accessibility beyond what
 {% include box.html type="end" %}
 {:/}
 
-{::nomarkdown}
-{% include_cached toc.html type="start" title="Page Contents" %}
-{:/}
-
-- This will be replaced by an automatically generated TOC when using Markdown formatting.
-{:toc}
-
-{::nomarkdown}
-{% include_cached toc.html type="end" %}
-{:/}
+<nav class="box box-simple" aria-labelledby="tocheading" id="toc">
+  <header id="tocheading" class="box-h box-h-simple"> Page Contents</header>
+  <div class="box-i">
+    <ul id="markdown-toc">
+        <li><a href="#about-wcag-and-supplemental-guidance" id="markdown-toc-about-wcag-and-supplemental-guidance">About WCAG and Supplemental Guidance</a></li>
+        <li><a href="#-about-cognitive-accessibility-guidance" id="markdown-toc--about-cognitive-accessibility-guidance">About Cognitive Accessibility Guidance</a></li>
+        <li><a href="#about-low-vision-accessibility-guidance" id="markdown-toc-about-low-vision-accessibility-guidance">About Low Vision Accessibility Guidance</a></li>
+    </ul>
+  </div>
+</nav>
 
 ## About WCAG and Supplemental Guidance
 
@@ -39,21 +38,14 @@ Some accessibility issues did not fit as WCAG 2 requirements (called "success cr
 Following this guidance is not required to meet WCAG. And, we encourage you to follow this guidance in order meet more user needs.
 
 The accessibility issues addressed in this guidance are essential for people with certain disabilities to be able to use digital technology.
+## {% include image.html src="brain.svg" alt="" class="category-icon" %} About Cognitive Accessibility Guidance
 
-<div style="float:right; margin-left:1em;">
-{% include image.html src="brain.svg" alt="" class="mini" %}
-</div>
-## About Cognitive Accessibility Guidance
-
-This guidance provides a set of "Objectives" for reducing barriers experienced by people with cognitive and learning disabilities. The Objectives provide an overview and include a set of "Design Patterns". Each Design Pattern explains what to do in order to improve accessibility, how this helps when applied, and includes examples.
+The [Cognitive Accessibility Guidance](./all-supplemental-guidance/#-cognitive-accessibility-guidance) provides a set of "Objectives" for reducing barriers experienced by people with cognitive and learning disabilities. The Objectives provide an overview and include a set of "Design Patterns". Each Design Pattern explains what to do in order to improve accessibility, how this helps when applied, and includes examples.
 
 The Objectives and Design Patterns are from the more comprehensive document “[Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable/)”. That document provides additional background, user stories, personas, a glossary, and other guidance.
 
 Broader information on cognitive accessibility in WCAG and on-going work on cognitive accessibility support at W3C WAI is in [Cognitive Accessibility at W3C <svg focusable="false" aria-hidden="true" class="icon-different-view "><use xlink:href="/assets/images/icons.svg#icon-different-view"></use></svg>](https://www.w3.org/WAI/cognitive/)
 
-<div style="float:right; margin-left:1em;">
-{% include image.html src="eye.svg" alt="" class="mini" %}
-</div>
-## About Low Vision Accessibility Guidance
+## {% include image.html src="eye.svg" alt="" class="category-icon" %}About Low Vision Accessibility Guidance
 
 Guidance on how to better meet the needs of people with low vision will be added in 2022.

@@ -1,5 +1,4 @@
 ---
-doc-note-type: draft
 title: All Supplemental Guidance
 footer: ""
 permalink: /wcag-supplemental/all-supplemental-guidance
@@ -11,26 +10,18 @@ feedbackemail: wai@w3.org
 inline_css: "
   details ul {
       margin-top: 1rem;
-  }  
+  }
+  h2 img.mini {
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+    padding-bottom: 0.25em;
+  }
+  details h4 {
+    font-size: 1rem;
+    color: inherit;
+  }
 "
-#  summary > :first-child::before
-#  {
-#    display: none;
-#  }
-#  summary > :first-child::marker
-#  {
-#    content: \"\";
-#  }
-#  summary > :first-child > span
-#  {
-#    display: list-item;
-#    list-style-position: inside;
-#    list-style-type: disc;
-#  }
-#  div[data-details][aria-expanded=false] div:not([data-summary])
-#  {
-#    display:none;
-#  }
 ---
 
 
@@ -44,21 +35,17 @@ This pages lists [supplemental guidance](/wcag-supplemental/about/) for improvin
 {% include box.html type="end" %}
 {:/}
 
-{::nomarkdown}
-{% include_cached toc.html type="start" title="Page Contents" %}
-{:/}
+<nav class="box box-simple" aria-labelledby="tocheading" id="toc">
+  <header id="tocheading" class="box-h box-h-simple"> Page Contents</header>
+  <div class="box-i">
+    <ul id="markdown-toc">
+        <li><a href="#-cognitive-accessibility-guidance" id="markdown-toc--cognitive-accessibility-guidance">Cognitive Accessibility Guidance</a></li>
+        <li><a href="#-low-vision-accessibility-guidance" id="markdown-toc--low-vision-accessibility-guidance">Low Vision Accessibility Guidance</a></li>
+    </ul>
+  </div>
+</nav>
 
-- This will be replaced by an automatically generated TOC when using Markdown formatting.
-{:toc}
-
-{::nomarkdown}
-{% include_cached toc.html type="end" %}
-{:/}
-
-<div style="float:right; margin-left:1em;">
-{% include image.html src="brain.svg" alt="" class="mini" %}
-</div>
-## Cognitive Accessibility Guidance
+## {% include image.html src="brain.svg" alt="" class="mini" %} Cognitive Accessibility Guidance
 
 This guidance provides advice on how to better meet the accessibility needs of people with cognitive and learning disabilities. The guidance listed below is grouped under "Objectives" and provided in "Design Patterns".
 
@@ -68,16 +55,14 @@ This guidance provides advice on how to better meet the accessibility needs of p
   {% include excol.html type="start" id=objective.ref %}
   <h3>{{ objective.title }}</h3>
   {% include excol.html type="middle" %}
-  <a href="{{ objective.url | relative_url }}">{{ objective.title }}</a>
+  Objective: <a href="{{ objective.url | relative_url }}">{{ objective.title }}</a>
+  <h4>Design Patterns:</h4>
   {% include patterns.html obj_ref = objective.ref %}
   {% include excol.html type="end" %}
 {% endfor %}
 
 {% include excol.html type="all" %}
 
-<div style="float:right; margin-left:1em;">
-{% include image.html src="eye.svg" alt="" class="mini" %}
-</div>
-## Low Vision Accessibility Guidance
+## {% include image.html src="eye.svg" alt="" class="mini" %} Low Vision Accessibility Guidance
 
 Guidance on how to better meet the needs of people with low vision will be added in 2022.
