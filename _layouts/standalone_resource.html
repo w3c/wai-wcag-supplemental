@@ -74,17 +74,20 @@
           {% if page.standalone_resource_about_nav %}
           {% assign pager = page.standalone_resource_pager %}
           <nav class="standalone-resource-pager" aria-label="Item navigation">
-            {% include dg-nav.liquid %}
             <ul>
                 <li>
+                {%- if page.standalone_resource_pager.icon -%}
+                    {%- capture icon-element -%}<img src="{{page.standalone_resource_pager.icon}}" alt="" class="category-icon">{%- endcapture -%}
+                {%- endif -%}
                 {%- if page.permalink == pager.ref %}
-                    <span class="pagename"><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="category-icon">{{pager.name}}</span>
+                    <span class="pagename">{{icon-element}}{{pager.name}}</span>
                 {%else%}
-                    <a href="{{pager.ref}}"><img src="/content-images/wai-wcag-supplemental/brain.svg" alt="" class="category-icon">{{pager.name}}</a>
+                    <a href="{{pager.ref}}">{{icon-element}}{{pager.name}}</a>
                 {%endif%}
                 </li>
-        
-                {% if page.ref %}
+
+                {% if page.standalone_resource_pager.include %}
+                    {% include {{ page.standalone_resource_pager.include }} %}
                     {% if context %}
                         <li><a href="{{ context[1] }}">{% include_cached icon.html class="pager-icon" name="arrow-up-thin" %} {{ context[0] }}: {{context[2]}}</a></li>
                     {% endif %}

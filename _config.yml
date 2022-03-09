@@ -70,9 +70,10 @@ defaults:
         - name: Supplemental Guidance
           ref: /wcag-supplemental/about
       standalone_resource_pager:
-        image: brain.svg
+        icon: /content-images/wai-wcag-supplemental/brain.svg
         name: All Cognitive
         ref: /wcag-supplemental/all-supplemental-guidance#-cognitive-accessibility-guidance
+        include: dg-pager.liquid
       footer:
         > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
         <p><strong>Date:</strong> Content first published 29 April 2021 in <a href="https://www.w3.org/TR/coga-usable/">Making Content 
