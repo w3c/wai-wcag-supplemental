@@ -1,7 +1,9 @@
 ---
 title: About Supplemental Guidance
+sidebar: true
 footer: ""
-permalink: /wcag-supplemental/about
+permalink: /WCAG2/supplemental/about
+feedbackemail: wai@w3.org
 github:
   repository: w3c/wai-wcag-supplemental
   branch: main
@@ -15,17 +17,6 @@ This page explains supplemental guidance for improving accessibility beyond what
 {::nomarkdown}
 {% include box.html type="end" %}
 {:/}
-
-<nav class="box box-simple" aria-labelledby="tocheading" id="toc">
-  <header id="tocheading" class="box-h box-h-simple"> Page Contents</header>
-  <div class="box-i">
-    <ul id="markdown-toc">
-        <li><a href="#about-wcag-and-supplemental-guidance" id="markdown-toc-about-wcag-and-supplemental-guidance">About WCAG and Supplemental Guidance</a></li>
-        <li><a href="#-about-cognitive-accessibility-guidance" id="markdown-toc--about-cognitive-accessibility-guidance">About Cognitive Accessibility Guidance</a></li>
-        <li><a href="#about-low-vision-accessibility-guidance" id="markdown-toc-about-low-vision-accessibility-guidance">About Low Vision Accessibility Guidance</a></li>
-    </ul>
-  </div>
-</nav>
 
 ## About WCAG and Supplemental Guidance
 

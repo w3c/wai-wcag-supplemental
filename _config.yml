@@ -41,12 +41,12 @@ collections_dir: _collections
 collections:
   patterns:
     title: Patterns
-    permalink: /wcag-supplemental/:collection/:name/
+    permalink: /WCAG2/supplemental/:collection/:name/
     output: true
     sort_by: ref
   objectives:
     title: Objectives
-    permalink: /wcag-supplemental/:collection/:name/
+    permalink: /WCAG2/supplemental/:collection/:name/
     output: true
     sort_by: ref
 
@@ -68,11 +68,11 @@ defaults:
           ref: /standards-guidelines/wcag/docs
           icon: different-view
         - name: Supplemental Guidance
-          ref: /wcag-supplemental/about
+          ref: /WCAG2/supplemental/about
       standalone_resource_pager:
         icon: /content-images/wai-wcag-supplemental/brain.svg
         name: All Cognitive
-        ref: /wcag-supplemental/all-supplemental-guidance#-cognitive-accessibility-guidance
+        ref: /WCAG2/supplemental/all-supplemental-guidance#-cognitive-accessibility-guidance
         include: dg-pager.liquid
       footer:
         > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
@@ -86,11 +86,6 @@ defaults:
         from Steve Lee, Hidde de Vries, Shadi Abou-Zahra, and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">
         WAI-Guide project</a>, co-funded by the European Commission.</p>
   - scope:
-      path: ""
-      type: "pages"
-    values:
-      permalink: /:path/:basename/
-  - scope:
       type: "patterns"
       path: "_patterns"
     values:
@@ -102,6 +97,7 @@ defaults:
     values:
       layout: objective
       type_of_guidance: Cognitive Accessibility Objective
+      permalink: /WCAG2/supplemental/:collection/:path/
 
 plugins:
   - jekyll-seo-tag

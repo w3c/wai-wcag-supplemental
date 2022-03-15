@@ -1,12 +1,13 @@
 ---
 title: All Supplemental Guidance
 footer: ""
-permalink: /wcag-supplemental/all-supplemental-guidance
+sidebar: true
+permalink: /WCAG2/supplemental/all-supplemental-guidance
+feedbackemail: wai@w3.org
 github: 
   repository: w3c/wai-wcag-supplemental
   branch: main
   path: content/supplemental-guidance.md
-feedbackemail: wai@w3.org
 inline_css: "
   details ul {
       margin-top: 1rem;
@@ -29,21 +30,11 @@ inline_css: "
 {% include box.html type="start" title="Summary" %}
 {:/}
 
-This pages lists [supplemental guidance](/wcag-supplemental/about/) for improving accessibility beyond what is required by Web Content Accessibility Guidelines [WCAG 2 {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/).
+This pages lists [supplemental guidance](/WCAG2/supplemental/about/) for improving accessibility beyond what is required by Web Content Accessibility Guidelines [WCAG 2 {% include_cached icon.html name="different-view" %}](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
 {::nomarkdown}
 {% include box.html type="end" %}
 {:/}
-
-<nav class="box box-simple" aria-labelledby="tocheading" id="toc">
-  <header id="tocheading" class="box-h box-h-simple"> Page Contents</header>
-  <div class="box-i">
-    <ul id="markdown-toc">
-        <li><a href="#-cognitive-accessibility-guidance" id="markdown-toc--cognitive-accessibility-guidance">Cognitive Accessibility Guidance</a></li>
-        <li><a href="#-low-vision-accessibility-guidance" id="markdown-toc--low-vision-accessibility-guidance">Low Vision Accessibility Guidance</a></li>
-    </ul>
-  </div>
-</nav>
 
 ## {% include image.html src="brain.svg" alt="" class="mini" %} Cognitive Accessibility Guidance
 
