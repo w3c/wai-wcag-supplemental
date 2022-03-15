@@ -8,6 +8,7 @@ sidebar: true
 <section>
     <h2>User Stories and Personas</h2>
 
+    {% assign links = site.data.wai-wcag-supplimental.design-guide-links %}
     {% for section in page.related.sections %}
         <h3>{{ section.name }}</h3>
         <ul>
@@ -16,15 +17,11 @@ sidebar: true
                 {% assign items = section.items | split:
     ", " %}
                 {% if section.name == "Personas" %}
-                    {% assign url-base =
-    site.data.design-guide-links.persona-url-base %}
-                    {% assign mappings =
-    site.data.design-guide-links.persona-url-mappings %}
+                    {% assign url-base = links.persona-url-base %}
+                    {% assign mappings = links.persona-url-mappings %}
                 {% else %}
-                    {% assign
-    url-base = site.data.design-guide-links.userstory-url-base %}
-                    {% assign
-    mappings = site.data.design-guide-links.userstory-url-mappings %}
+                    {% assign url-base = links.userstory-url-base %}
+                    {% assign mappings = links.userstory-url-mappings %}
                 {% endif %}
                 {% for item in items %}
                     {% assign match = mappings | find_exp:"mapping",

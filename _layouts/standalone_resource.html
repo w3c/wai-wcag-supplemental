@@ -321,12 +321,6 @@ nav.standalone-resource-about {
 
 </style>
 
-    {% if page.type_of_guidance == "Design Pattern" or page.type_of_guidance == "Objective" %}
-      {% if page.related.sections != null %} 
-        {% capture content %}{{ content }}{% include related-info.html sections=page.related.sections %}{% endcapture %}   
-      {% endif%}
-    {% endif%} 
-
     {% assign sidebar = page.sidebar %}
     {% if sidebar == nil %} {% assign sidebar = layout.sidebar %} {% endif %}
     {% if sidebar %}
