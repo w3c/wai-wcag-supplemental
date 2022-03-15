@@ -72,7 +72,7 @@ defaults:
       standalone_resource_pager:
         icon: /content-images/wai-wcag-supplemental/brain.svg
         name: All Cognitive
-        ref: /WCAG2/supplemental/all-supplemental-guidance#-cognitive-accessibility-guidance
+        ref: /WCAG2/supplemental/all-supplemental-guidance#cognitiveaccessibilityguidance
         include: dg-pager.liquid
       footer:
         > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
