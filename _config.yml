@@ -61,14 +61,14 @@ defaults:
       standalone_resource_doc_name: Supplemental Guidance to WCAG 2
       standalone_resource_doc_name_sub: Additional ways to improve accessibility (not required to meet WCAG)
       standalone_resource_about_nav:
-        - name: WCAG 2
-          ref: /standards-guidelines/wcag
-          icon: different-view
-        - name: The WCAG 2 Documents
-          ref: /standards-guidelines/wcag/docs
-          icon: different-view
-        - name: Supplemental Guidance
-          ref: /WCAG2/supplemental/about
+#        - name: " "
+#          ref: /standards-guidelines/wcag
+#          icon: different-view
+#        - name: The WCAG 2 Documents
+#          ref: /standards-guidelines/wcag/docs
+#          icon: different-view
+#        - name: Supplemental Guidance
+#          ref: /WCAG2/supplemental/about
       standalone_resource_pager:
         icon: /content-images/wai-wcag-supplemental/brain.svg
         name: All Cognitive
