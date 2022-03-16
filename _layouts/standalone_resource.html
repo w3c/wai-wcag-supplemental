@@ -40,40 +40,12 @@
     <a href="#main" class="button button--skip-link">Skip to content</a>
 
     <div class="minimal-header-container default-grid">
-      {% include minimal-header.html translations=translations subtitle=page.standalone_resource_doc_name_sub title=page.standalone_resource_doc_name %}
+      {% include minimal-header.html translations = translations 
+                                     title = page.standalone_resource_header.title
+                                     subtitle = page.standalone_resource_header.subtitle 
+                                     link = page.standalone_resource_header.link %}
     </div>
 
-    {% if page.standalone_resource_about_nav %}
-    <div class="default-grid nav-container nav-related-info">
-        <div class="nav">
-          <nav class="standalone-resource-about" aria-label="Related information">
-            <dl>
-              <dt>About:</dt>
-              {% assign docaboutnav = page.standalone_resource_about_nav %}
-              {% for link in docaboutnav %}
-              <dd>
-                {%- if page.permalink == link.ref %}
-                    <span>{{link.name}}</span>
-                {% else %}
-                    <a href="{{ link.ref | relative_url }}">{{ link.name }}
-                    {%- if link.icon %}
-                        {%- capture icon -%}{{link.icon}}{%- endcapture -%}
-                        {%- include_cached icon.html name=icon -%}
-                    {%- endif -%}
-                    </a>
-                {% endif %}
-            </dd>
-              {% endfor %}
-            </dl>
-          </nav>
-        </div>
-    </div>
-    {% else %}
-    <div class="default-grid nav-container nav-related-info">
-        <div class="nav">
-          <nav class="standalone-resource-about" aria-label="Related information">
-            </nav></div></div>
-    {% endif %}
     <div class="default-grid nav-container nav-page-specific">
         <div class="nav">
           {% if page.standalone_resource_pager %}
@@ -127,8 +99,32 @@
   padding: 1.75em 0 0 0;
 }
 
-.minimal-header.with-subtitle .minimal-header-name {
-  font-size: 1.5em;
+#site-header.minimal-header {
+    padding: 0.6em 0 0.6em 0;
+}
+  
+.minimal-header-name {
+    flex: width 0 0;
+}
+
+.minimal-header-subtitle,
+.minimal-header-link {
+    border-left: 1px solid var(--gold);
+    padding-left: 2em;
+    margin-left: 2em;
+    display: block;
+    font-size: 80%;
+    flex: 1 0 0;
+}
+
+.minimal-header-subtitle {
+    font-style: italic;
+  }
+
+.minimal-header-link {
+    text-decoration: underline !important;
+    font-weight: normal;
+    margin-right: 4em;
 }
 
 .nav-container {
@@ -292,13 +288,6 @@ nav.standalone-resource-about {
 .button--skip-link:not(:focus):not(:hover) {
   transform: translateY(-4em);
   opacity: 0;
-}
-
-.minimal-header-subtitle {
-  display: block;
-  font-size: 60%;
-  margin-top: 1.5em;
-  font-style: italic;
 }
 
 .standalone-resource-navrule {

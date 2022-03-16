@@ -58,9 +58,12 @@ defaults:
       last_updated: 2021-@@-@@ # Put the date of this translation YYYY-MM-DD (with month in the middle)
       feedbackmail: public-cognitive-a11y-tf@w3.org # delete this line if it’s an EOWG resource (the default is wai-eo-editors@w3.org)
       layout: standalone_resource
-      standalone_resource_doc_name: Supplemental Guidance to WCAG 2
-      standalone_resource_doc_name_sub: Additional ways to improve accessibility (not required to meet WCAG)
-      standalone_resource_about_ref: /WCAG2/supplemental/about
+      standalone_resource_header:
+        title: Supplemental Guidance to WCAG 2
+        subtitle: Additional ways to improve accessibility (not required to meet WCAG)
+        link:
+          ref: /WCAG2/supplemental/about
+          title: About Supplemental Guidance and WCAG
       standalone_resource_pager:
         icon: /content-images/wai-wcag-supplemental/brain.svg
         name: All Cognitive
