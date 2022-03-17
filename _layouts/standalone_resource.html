@@ -99,10 +99,24 @@
   padding: 1.75em 0 0 0;
 }
 
+.minimal-header-logo img {
+    margin: 0.1em 0 0.1em 0;
+}
+
 #site-header.minimal-header {
-    padding: 0.6em 0 0.6em 0;
+    margin: 1em 0 1em 0;
+    align-items: stretch;
 }
   
+#site-header.minimal-header .minimal-header-name, 
+#site-header.minimal-header .minimal-header-subtitle, 
+#site-header.minimal-header .minimal-header-link 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .minimal-header-name {
     flex: width 0 0;
 }
@@ -110,7 +124,7 @@
 .minimal-header-subtitle,
 .minimal-header-link {
     border-left: 1px solid var(--gold);
-    padding-left: 2em;
+    padding-left: 1em;
     margin-left: 2em;
     display: block;
     font-size: 80%;
