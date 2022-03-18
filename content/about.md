@@ -10,7 +10,9 @@ github:
   path: content/about.md
 ---
 
-{::nomarkdown} {% include box.html type="start" title="Summary" %} {:/}
+{::nomarkdown}
+{% include box.html type="start" title="Summary" %}
+{:/}
 
 This page explains supplemental guidance for improving accessibility beyond what is required by WCAG 2.
 
