@@ -7,7 +7,7 @@ RUBY_VERSION = "2.6.2"
 
 [[redirects]]
   from = "/"
-  to = "/WCAG2/supplemental"
+  to = "/wcag2/supplemental"
 
 [dev]
 # NB on win64 (cmd or bash shells) --live reload is broken - please s/-w --livereload/--no-watch
