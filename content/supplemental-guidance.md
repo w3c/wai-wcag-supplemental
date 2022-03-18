@@ -3,7 +3,7 @@ title: All Supplemental Guidance
 footer: ""
 sidebar: true
 permalink: /wcag2/supplemental/all-supplemental-guidance
-feedbackemail: wai@w3.org
+feedbackmail: wai@w3.org
 github: 
   repository: w3c/wai-wcag-supplemental
   branch: main
