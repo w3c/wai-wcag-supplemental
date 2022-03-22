@@ -1,5 +1,6 @@
 ---
 title: All Supplemental Guidance
+lang: en
 footer: ""
 sidebar: true
 permalink: /WCAG2/supplemental/
