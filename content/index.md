@@ -2,12 +2,12 @@
 title: All Supplemental Guidance
 footer: ""
 sidebar: true
-permalink: /WCAG2/supplemental/all-supplemental-guidance
+permalink: /WCAG2/supplemental/
 feedbackmail: wai@w3.org
 github: 
   repository: w3c/wai-wcag-supplemental
   branch: main
-  path: content/supplemental-guidance.md
+  path: content/index.md
 inline_css: "
   details ul {
       margin-top: 1rem;
