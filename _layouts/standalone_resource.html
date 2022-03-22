@@ -36,7 +36,7 @@
   <meta name="twitter:image" property="og:image" content="{{ twimage | relative_url | prepend: site.url }}">
   {%- endunless -%}
   {% include_cached head.html type="end" %}
-  <body id="top" class="page-{{page.title | slugify}} {% include_cached body-class.html collection=page.collection doc-note-type=page.doc-note-type %}">
+  <body id="top" class="page-{{page.title | slugify}} {% include_cached body-class.html collection=page.collection doc-note-type=page.doc-note-type pageclass=page.class%}">
     <a href="#main" class="button button--skip-link">Skip to content</a>
 
    <div class="minimal-header-container default-grid">
@@ -46,7 +46,7 @@
                                      link = page.standalone_resource_header.link %}
     </div>
 
-    <div class="default-grid nav-container nav-page-specific">
+    <div class="default-grid nav-container">
         <div class="nav">
           {% if page.standalone_resource_pager %}
           {% assign pager = page.standalone_resource_pager %}
@@ -292,7 +292,7 @@ nav.standalone-resource-about {
                 {% for link in h2links %}
                 <li><a href="#{{ link[1] }}">{{ link[0] }}</a></li>
                 {% endfor %}
-                </ul>    
+                </ul>
             </div>
         </aside>
     {%else%}
