@@ -61,7 +61,7 @@ defaults:
       layout: standalone_resource
       standalone_resource_header:
         title: Supplemental Guidance to WCAG 2
-        subtitle: Additional ways to improve accessibility (not required to meet WCAG)
+        subtitle: Additional ways to improve accessibility, not required to meet WCAG
         link:
           ref: /WCAG2/supplemental/about
           title: About Supplemental Guidance and WCAG
