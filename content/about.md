@@ -2,7 +2,7 @@
 title: About Supplemental Guidance
 sidebar: true
 footer: ""
-permalink: /WCAG2/supplemental/about
+permalink: /WCAG2/supplemental/about/
 feedbackmail: wai@w3.org
 github:
   repository: w3c/wai-wcag-supplemental
