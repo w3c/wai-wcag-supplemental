@@ -33,7 +33,7 @@ Following this guidance is not required to meet WCAG. And, we encourage you to f
 The accessibility issues addressed in this guidance are essential for people with certain disabilities to be able to use digital technology.
 ## {% include image.html src="brain.svg" alt="" class="category-icon" %} About Cognitive Accessibility Guidance
 
-The [Cognitive Accessibility Guidance](./#-cognitive-accessibility-guidance) provides a set of "Objectives" for reducing barriers experienced by people with cognitive and learning disabilities. The Objectives provide an overview and include a set of "Design Patterns". Each Design Pattern explains what to do in order to improve accessibility, how this helps when applied, and includes examples.
+The [Cognitive Accessibility Guidance](/#cognitiveaccessibilityguidance) provides a set of "Objectives" for reducing barriers experienced by people with cognitive and learning disabilities. The Objectives provide an overview and include a set of "Design Patterns". Each Design Pattern explains what to do in order to improve accessibility, how this helps when applied, and includes examples.
 
 The Objectives and Design Patterns are from the more comprehensive document “[Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable/)”. That document provides additional background, user stories, personas, a glossary, and other guidance.
 
