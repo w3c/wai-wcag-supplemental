@@ -7,8 +7,8 @@ RUBY_VERSION = "2.6.2"
 
 [[redirects]]
   from = "/"
-  to = "/wcag-supplemental/supplemental-guidance"
+  to = "/WCAG2/supplemental"
 
 [dev]
-publish = "_site"
-framework = "#static"
+# NB on win64 (cmd or bash shells) --live reload is broken - please s/-w --livereload/--no-watch
+command = "bundle exec jekyll serve -w --livereload --config _config.yml,_config_staging.yml"

@@ -1,0 +1,99 @@
+{% comment %}
+include file providing Pager for Design Guide
+
+ Parameters:
+  page.ref
+  site.objectives
+  site.patterns
+
+ Returns:
+  3 x optional 3 tuples: context, prev, next. 
+    Each contains: label, url, text
+{% endcomment %}
+
+
+{% comment %}
+Decode the ref in frontmatter and decide if pattern or objective
+{% endcomment %}
+{% if page.ref %}
+{% assign parts = page.ref | split: "p" %}
+{% if parts.size > 1 %}
+    {% assign pattern_num =  parts | last %}
+    {% assign pattern_ref = 'p' | append: pattern_num %}
+{% endif %}
+{% assign objective_ref = parts | first %}
+{% assign objective_num = objective_ref | remove: "o" %}
+{% if pattern_num != nil %}
+    {% assign is_pattern = true %}
+{% else %}
+    {% assign is_pattern = false %}
+{% endif %}
+
+{% comment %}
+Assign collection and item_num variables 
+{% endcomment %}
+{% if is_pattern %}
+    {% assign collection = site.patterns | where_exp:"item", "item.ref contains objective_ref" %}
+    {% assign item_num = pattern_num %}
+{% else %}
+    {% assign collection = site.objectives %}
+    {% assign item_num = objective_num %}
+{% endif %}
+
+{% comment %}
+Figure out next and prev numbers 
+"upcase" is used to convert number type to a string type and we pad to 2 chars
+{% endcomment %}
+{%- assign nitems = collection.size | prepend: '0' -%}
+{%- assign next_num = item_num | replace: nitems, "-1" | plus: 1 %}
+{%- assign prev_num = item_num | minus: 1 %}
+{% if is_pattern %}
+    {%- assign next_num = next_num | upcase %}
+    {% if next_num.size == 1 %}
+        {% assign next_num = next_num | prepend: '0' %}
+    {% endif %}
+    {%- assign prev_num = prev_num | upcase %}
+    {% if prev_num.size == 1 %}
+        {% assign prev_num = prev_num | prepend: '0' %}
+    {% endif %}
+{% endif %}
+
+{% comment %}
+Figure out next and refs and get items from collections
+{% endcomment %}
+{% if is_pattern %}
+    {% assign prefix = objective_ref | append: "p" %}
+{% else %}
+    {% assign prefix = 'o' %}
+{% endif %}
+{% if prev_num != 0 %}
+    {% assign prev_ref = prefix | append: prev_num %}
+{% endif %}
+{% if next_num != 0 %}
+    {% assign next_ref = prefix | append: next_num %}
+{% endif %}
+{%- assign prev_item = collection | find_exp: "item", "item.ref == prev_ref" -%}
+{%- assign next_item = collection | find_exp: "item", "item.ref == next_ref" -%}
+{% if is_pattern %}
+    {%- assign context_item = site.objectives | find_exp: "obj", "obj.ref == objective_ref" -%}
+{% endif %}
+
+{% comment %}
+Set up tuples for the tag widgets
+{% endcomment %}
+{% if is_pattern %}
+    {% assign item_type = "Pattern" %}
+    {% assign context_type = "Objective" %}
+{% else %}
+    {% assign item_type = "Objective" %}
+{% endif %}
+{% if prev_item %}
+    {% assign prev = "Previous " | append: item_type | append: "??" | append: prev_item.url | append: "??" | append: prev_item.title | split: "??" %}
+{% endif %}
+{% if next_item %}
+    {% assign next = "Next " | append: item_type | append: "??" | append: next_item.url | append: "??" | append: next_item.title | split: "??" %}
+{% endif %}
+{% if context_item %}
+    {% assign context = context_type | append: "??" | append: context_item.url | append: "??" | append: context_item.title | split: "??" %}
+{% endif %}
+{% endif %}

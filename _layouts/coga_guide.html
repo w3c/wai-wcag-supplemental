@@ -1,0 +1,48 @@
+---
+layout: standalone_resource
+sidebar: true
+---
+
+{{ content }}
+
+<section>
+    <h2>User Stories and Personas</h2>
+
+    {% assign links = site.data.wai-wcag-supplemental.design-guide-links %}
+    {% for section in page.related.sections %}
+        <h3>{{ section.name }}</h3>
+        <ul>
+            {% if section.name == "Personas" or section.name == "User Story" or
+    section.name == "User Stories" %}
+                {% assign items = section.items | split:
+    ", " %}
+                {% if section.name == "Personas" %}
+                    {% assign url-base = links.persona-url-base %}
+                    {% assign mappings = links.persona-url-mappings %}
+                {% else %}
+                    {% assign url-base = links.userstory-url-base %}
+                    {% assign mappings = links.userstory-url-mappings %}
+                {% endif %}
+                {% for item in items %}
+                    {% assign match = mappings | find_exp:"mapping",
+    "mapping.name == item" %}
+                    {% if match != nill %}
+                        <li>
+                            <a href="{{ url-base | append: match.url | relative_url }}">{{ item }}
+                                {% if match.title %}:
+                                {% endif %}
+                                {{ match.title }}
+                                {% include_cached icon.html name="different-view" %}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </ul>
+    {% endfor %}
+
+    <h3>Glossary</h3>
+    <ul>
+        <li><a href="https://www.w3.org/TR/coga-usable/#glossary">Cognitive Accessibility Glossary{% include_cached icon.html
+        name="different-view" %}</a></li>
+    </ul>
+</section>
