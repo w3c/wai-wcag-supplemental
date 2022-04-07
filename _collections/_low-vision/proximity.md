@@ -92,19 +92,18 @@ Now looking through the straw examine your web pages and interfaces. Go through 
 
 Set your display to 400%. Check that all content and functionality remains available.
 
-## Related WCAG
+## Related Resources
 
+WCAG:
 *   [G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG21/Techniques/general/G162.html)
 *   [SC 1.4.10](https://www.w3.org/TR/WCAG21/#reflow) (Related to horizontal scrolling text)
 *   [SC 1.4.12](https://www.w3.org/TR/WCAG21/#text-spacing) (Related to text spacing)
 
-## Related UAAG
-
+UAAG:
 *   [UAAG point of regard definition](https://www.w3.org/TR/2015/NOTE-UAAG20-20151215/#def-point-of-regard)
 *   [UAAG SC 1.8.6 Maintain point of regard](https://www.w3.org/TR/2015/NOTE-UAAG20-Reference-20151215/#sc_186)
 
-## Related Accessibility Requirements for People with Low Vision
-
+Accessibility Requirements for People with Low Vision:
 *   [3.6.2 Proximity of Related Information](https://www.w3.org/TR/low-vision-needs/#proximity-of-related-information)
 
 "…point of regard is the area that the user is viewing. In user interface generally, proximity is about using space to group related content and separate unrelated content."
@@ -157,7 +156,7 @@ This is a first draft of the Proximity page for LVTF supplemental guidance.
 
 { optional. how which technologies support it or not }
 
-##  Related WAI Resources
+##  Related Resources
 
 * { list WCAG guidelines, success criteria, techniques }
 * { list UAAG material }
