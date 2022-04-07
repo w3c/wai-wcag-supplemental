@@ -7,7 +7,7 @@ permalink: /WCAG2/supplemental/proximity/
 github: 
   repository: w3c/wai-wcag-supplemental
   branch: lv-proximity
-  path: design-guide/proximity.md  # @@ thought it'd be: _collections/_low-vision/proximity.md
+  path: design-guide/template.html  # @@ thought it'd be: _collections/_low-vision/proximity.md
 
 feedbackmail: wai@w3.org  # @@ change this
 footer: ""                # @@ add footer
