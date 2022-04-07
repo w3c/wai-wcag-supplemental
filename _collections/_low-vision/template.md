@@ -2,22 +2,8 @@
 title: Template for Low Vision Supplemental Guidance
 github: 
   repository: w3c/wai-wcag-supplemental
-  path: design-guide/template.html
+  path: _low-vision/template.md
 ---
-
-{::nomarkdown}
-{% include toc.html type="start" title="Page Contents" %}
-{:/}
-
-{::options toc_levels="2" /}
-
--   TOC is created automatically.
-{:toc}
-
-{::nomarkdown}
-{% include toc.html type="end" %}
-{:/}
-
 
 ## User Needs
 { see examples in [What's New in 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/) }

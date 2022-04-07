@@ -49,8 +49,8 @@ collections:
     permalink: /WCAG2/supplemental/:collection/:name/
     output: true
     sort_by: ref
-  lv:
-    title: LV
+  low-vision:
+    title: Low Vision
     permalink: /:collection/:name/
     output: true
 
@@ -97,14 +97,14 @@ defaults:
     values:
       layout: objective
       type_of_guidance: Cognitive Accessibility Objective
-      permalink: /WCAG2/supplemental/:collection/:path/
+#      permalink: /WCAG2/supplemental/:collection/:path/
   -
     scope: 
-      type: "lv"
-      path: "_lv"
+      type: "low-vision"
+      path: "_low-vision"
     values:
-      layout: standalone_resource
-      type_of_guidance: LV
+      layout: low_vision
+      type_of_guidance: Low Vision
 
 plugins:
   - jekyll-seo-tag
