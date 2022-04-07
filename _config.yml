@@ -105,6 +105,8 @@ defaults:
     values:
       layout: low_vision
       type_of_guidance: Low Vision
+      feedbackmail: wai@w3.org
+      
 
 plugins:
   - jekyll-seo-tag

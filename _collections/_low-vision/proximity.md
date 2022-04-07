@@ -1,32 +1,9 @@
 ---
 title: Proximity
-lang: en
-sidebar: true
-
-permalink: /WCAG2/supplemental/proximity/
 github: 
   repository: w3c/wai-wcag-supplemental
-  branch: lv-proximity
-  path: design-guide/template.html  # @@ thought it'd be: _collections/_low-vision/proximity.md
-
-feedbackmail: wai@w3.org  # @@ change this
-footer: ""                # @@ add footer
-
-inline_css: "
-  details ul {
-      margin-top: 1rem;
-  }
-  h2 img.mini {
-    width: 2em;
-    height: 2em;
-    vertical-align: middle;
-    padding-bottom: 0.25em;
-  }
-  details h4 {
-    font-size: 1rem;
-    color: inherit;
-  }
-"
+  branch: lv-proximity ## need to remove this on publish so perhaps best to avoid
+  path: _collections/_low-vision/proximity.md  # @@ thought it'd be: _collections/_low-vision/proximity.md
 ---
 
 ## User Needs
