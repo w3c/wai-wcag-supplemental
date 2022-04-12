@@ -3,6 +3,9 @@ title: Proximity
 github: 
   repository: w3c/wai-wcag-supplemental
   path: _collections/_low-vision/proximity.md
+footer:
+  > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
+  <p>This is a footer specific to this page</p>
 ---
 
 ## User Needs
