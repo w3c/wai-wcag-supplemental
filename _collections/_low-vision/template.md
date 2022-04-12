@@ -15,23 +15,23 @@ github:
 
 { optional. put here if it will help readers understand the ide. if the check is complex, put it later }
 
-##  [Terms | Key Concepts]
+## [Terms | Key Concepts]
 
 { optional . put up top here only the essential information needed to understand the next section, others can go lower . or integrate in the description}
 
-##  Description
+## Description
 
 { as succinct as feasible to get across important points. put supporting information elsewhere and can put links to it }
 
-##  Examples
+## Examples
 
 { include enough to illustrate the point, but not too many to make it long }
 
-##  What To Do
+## What To Do
 
 { what designers, developers, others need to do }
 
-##  How it Helps Users
+## How it Helps Users
 
 { briefly explain the user experience -- why this is needed }
 
@@ -39,21 +39,21 @@ github:
 
 { can include additional benefits beyond accessibility (e.g., using phone in bright sunlight) }
 
-##  Support
+## Support
 
 { optional. how which technologies support it or not }
 
-##  Related WAI Resources
+## Related WAI Resources
 
 * { list WCAG guidelines, success criteria, techniques }
 * { list UAAG material }
 * { list EOWG material if particularly relevant}
 
-##  Key Terms
+## Key Terms
 
 * { optional. only list here if needed ; otherwise, delete this section. can use WCAG termsor to add new one }
 
-##  <em>Editorial Notes </em>
+## <em>Editorial Notes </em>
 
 <strong>These notes are <em>not</em> for the published document &mdash; just for us working through ideas.</strong>
 
