@@ -83,7 +83,7 @@ defaults:
         It is published by the Accessibility Guidelines Working Group (<a href="https://www.w3.org/groups/wg/ag">AG WG</a>) and the 
         Accessible Platform Architectures (<a href="https://www.w3.org/groups/wg/apa">APA</a>) Working Group. This user interface was 
         designed by the Accessibility Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>) with contributions
-        from Steve Lee, Hidde de Vries, Shadi Abou-Zahra, and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">
+        from Steve Lee, Shadi Abou-Zahra, and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">
         WAI-Guide project</a>, co-funded by the European Commission.</p>
   - scope:
       type: "patterns"
@@ -97,7 +97,6 @@ defaults:
     values:
       layout: objective
       type_of_guidance: Cognitive Accessibility Objective
-#      permalink: /WCAG2/supplemental/:collection/:path/
   -
     scope: 
       type: "low-vision"
