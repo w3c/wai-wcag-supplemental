@@ -10,6 +10,7 @@ footer: >
    <p><strong>Editors:</strong> @@name, @@name. Contributors: @@name, @@name, and <a href="https://www.w3.org/groups/tf/low-vision-a11y-tf/participants">participants of the Low Vision Accessibility Task Force</a> and @@-Community-Group?.<!--  ACKNOWLEDGEMENTS lists contributors and credits. --></p>
    <p>Developed by the Low Vision Accessibility Task Force of the Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">AG WG</a>). @@Funded in part...<!-- with U.S. Federal funds from the Health and Human Services, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR) as part of the [WAI-Core Project](/about/projects/wai-core-2015/). --></p>
 ---
+
 ## User Needs
 { see examples in [What's New in 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/) }
 
