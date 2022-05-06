@@ -90,12 +90,14 @@ defaults:
       path: "_patterns"
     values:
       layout: pattern
+      type_of_guidance_in_content: true
       type_of_guidance: Cognitive Accessibility Design Pattern
   - scope:
       type: "objectives"
       path: "_objectives"
     values:
       layout: objective
+      type_of_guidance_in_content: true
       type_of_guidance: Cognitive Accessibility Objective
   -
     scope: 
@@ -103,6 +105,7 @@ defaults:
       path: "_low-vision"
     values:
       layout: low_vision
+      type_of_guidance_in_content: true
       type_of_guidance: Low Vision
       feedbackmail: wai@w3.org
       
