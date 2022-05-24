@@ -65,6 +65,7 @@ defaults:
       layout: standalone_resource
       standalone_resource_header:
         title: Supplemental Guidance to WCAG 2
+        title-ref: /WCAG2/supplemental/#-cognitiveaccessibilityguidance
         subtitle: Additional ways to improve accessibility, not required to meet WCAG
         link:
           ref: /WCAG2/supplemental/about/
@@ -72,7 +73,7 @@ defaults:
       standalone_resource_pager:
         icon: /content-images/wai-wcag-supplemental/brain.svg
         name: All Cognitive
-        ref: /WCAG2/supplemental/#cognitiveaccessibilityguidance
+        ref: /WCAG2/supplemental/#-cognitiveaccessibilityguidance
         include: dg-pager.liquid
       footer:
         > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
