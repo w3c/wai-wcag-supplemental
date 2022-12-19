@@ -57,4 +57,4 @@ This guidance provides advice on how to better meet the accessibility needs of p
 
 ## {% include image.html src="eye.svg" alt="" class="mini" %} Low Vision Accessibility Guidance
 
-Guidance on how to better meet the needs of people with low vision will be added in 2022.
+Guidance on how to better meet the needs of people with low vision may be added in 2023.
