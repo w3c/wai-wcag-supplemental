@@ -28,7 +28,7 @@ There are additional resources that help you understand and implement WCAG. They
 
 Some accessibility issues did not fit as WCAG 2 requirements (called "success criteria"). This supplemental guidance provides advice on addressing many of those accessibility issues.
 
-Following this guidance is not required to meet WCAG. And, we encourage you to follow this guidance in order meet more user needs.
+Following this guidance is not required to meet WCAG. However, we encourage you to follow this guidance to meet more user needs.
 
 The accessibility issues addressed in this guidance are essential for people with certain disabilities to be able to use digital technology.
 ## {% include image.html src="brain.svg" alt="" class="category-icon" %} About Cognitive Accessibility Guidance
