@@ -41,4 +41,4 @@ Broader information on cognitive accessibility in WCAG and on-going work on cogn
 
 ## {% include image.html src="eye.svg" alt="" class="category-icon" %}About Low Vision Accessibility Guidance
 
-Guidance on how to better meet the needs of people with low vision will be added in 2022.
+Guidance on how to better meet the needs of people with low vision may be added in 2023.
