@@ -1,7 +1,6 @@
 ---
 title: All Supplemental Guidance
 lang: en
-footer: ""
 sidebar: true
 permalink: /WCAG2/supplemental/
 feedbackmail: wai@w3.org
@@ -24,6 +23,16 @@ inline_css: "
     color: inherit;
   }
 "
+footer:
+  > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
+  <p><strong>Date:</strong> Cognitive Accessibility Guidance first published 29 April 2021. User interface updated in January 2022.</p>
+  <p>Cognitive Accessibility Guidance content is from the "Content Usable" Working Group Note by Cognitive and Learning Disabilities Accessibility Task Force 
+  (<a href="https://www.w3.org/groups/tf/cognitive-a11y-tf">Coga TF</a>) <a href="https://www.w3.org/groups/tf/cognitive-a11y-tf/participants">participants</a>.
+  It is published by the Accessibility Guidelines Working Group (<a href="https://www.w3.org/groups/wg/ag">AG WG</a>) and the 
+  Accessible Platform Architectures (<a href="https://www.w3.org/groups/wg/apa">APA</a>) Working Group. This user interface was 
+  designed by the Accessibility Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>) with contributions
+  from Steve Lee, Shadi Abou-Zahra, and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">
+  WAI-Guide project</a>, co-funded by the European Commission.</p>
 ---
 
 
