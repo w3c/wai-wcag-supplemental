@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ef0441b4-e316-47ea-9961-e769a5c4407e/deploy-status)](https://app.netlify.com/sites/wai-wcag-supplemental/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8cdedb84-677c-4126-ac3f-2b4abd48fec9/deploy-status)](https://app.netlify.com/projects/wai-wcag-supplemental/deploys)
 
 This repository includes the content for COGA Design Patterns for People with Cognitive and Learning Disabilities.
 
